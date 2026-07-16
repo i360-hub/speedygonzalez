@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import { business } from '../data/business';
+
+const updated = 'July 16, 2026';
+---
+
+<Base
+  title="SMS Terms & Conditions | Speedy Gonzalez Roofing"
+  description="Terms for text messages from Speedy Gonzalez Roofing. Message and data rates may apply. Reply STOP to opt out."
+  path="/sms-terms"
+  breadcrumbs={[{ href: '/sms-terms', label: 'SMS Terms' }]}
+>
+  <section class="section">
+    <div class="wrap narrow">
+      <h1>SMS Terms &amp; Conditions</h1>
+      <p class="lede">Last updated: {updated}</p>
+
+      <h2>What you are agreeing to</h2>
+      <p>
+        When you give {business.name} your mobile number, you agree we may text you about your
+        roof. That means estimates, scheduling, job updates, and answers to what you asked.
+      </p>
+
+      <h2>How often will you text me?</h2>
+      <p>
+        Only as often as your job needs. There is no set number. Most of it happens while your
+        estimate or your job is active.
+      </p>
+
+      <h2>Does it cost anything?</h2>
+      <p>
+        We do not charge for texts. Your carrier might. Message and data rates may apply,
+        depending on your plan.
+      </p>
+
+      <h2>How do I stop the texts?</h2>
+      <p>
+        Reply <strong>STOP</strong> to any message. We will stop, and you will get one message
+        confirming it. If you want them back, reply <strong>START</strong>.
+      </p>
+
+      <h2>How do I get help?</h2>
+      <p>
+        Reply <strong>HELP</strong> to any message, or call {business.phones.office}. A person
+        here will pick it up.
+      </p>
+
+      <h2>Which carriers are supported?</h2>
+      <p>
+        Most major US carriers. Carriers are not liable for delayed or undelivered messages.
+      </p>
+
+      <h2>Your privacy</h2>
+      <p>
+        We do not sell your number. We do not share it for anyone else's marketing. See our
+        <a href="/privacy">privacy policy</a> for the full picture.
+      </p>
+
+      <h2>Contact us</h2>
+      <address>
+        {business.name}<br />
+        {business.address.street}<br />
+        {business.address.city}, {business.address.state} {business.address.zip}<br />
+        {business.phones.office}<br />
+        <a href={`mailto:${business.email}`}>{business.email}</a>
+      </address>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .narrow {
+    max-width: var(--measure);
+  }
+
+  address {
+    font-style: normal;
+  }
+</style>

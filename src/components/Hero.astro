@@ -1,0 +1,134 @@
+---
+import { business, telHref, rating } from '../data/business';
+import { srcset, fallback, HERO_SIZES } from '../data/images';
+
+export interface Props {
+  eyebrow?: string;
+  h1: string;
+  summary: string;
+  /** Extension-less base path, e.g. "/images/metal-roofing". */
+  image?: string;
+  /** Home page hero is taller. */
+  large?: boolean;
+}
+
+const { eyebrow, h1, summary, image, large = false } = Astro.props;
+---
+
+<section class="hero" data-large={large}>
+  {
+    image && (
+      <picture>
+        <source type="image/avif" srcset={srcset(image, 'avif')} sizes={HERO_SIZES} />
+        <source type="image/webp" srcset={srcset(image, 'webp')} sizes={HERO_SIZES} />
+        <img
+          class="hero-bg"
+          src={fallback(image)}
+          srcset={srcset(image, 'jpg')}
+          sizes={HERO_SIZES}
+          alt=""
+          width="1600"
+          height="900"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
+    )
+  }
+  <div class="wrap inner">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{h1}</h1>
+    <p class="lede">{summary}</p>
+
+    <div class="btn-row">
+      <a href={telHref(business.phones.primary)} class="btn btn-primary">
+        Call {business.phones.primary}
+      </a>
+      <a href="/contact" class="btn btn-ghost">Get a free estimate</a>
+    </div>
+
+    <ul class="trust">
+      <li>
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        {rating.value} stars from local homeowners
+      </li>
+      <li>{business.experience} in Hot Springs</li>
+      <li>Free inspections &amp; estimates</li>
+      <li>Insurance claims welcome</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    isolation: isolate;
+    background: var(--charcoal-900);
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* Scrim keeps text contrast >= 4.5:1 over any photo. */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      rgb(20 23 26 / 0.94) 0%,
+      rgb(20 23 26 / 0.86) 55%,
+      rgb(20 23 26 / 0.62) 100%
+    );
+  }
+
+  .inner {
+    padding-block: var(--space-2xl);
+  }
+
+  .hero[data-large='true'] .inner {
+    padding-block: calc(var(--space-2xl) * 1.35);
+  }
+
+  h1 {
+    max-width: 18ch;
+  }
+
+  .lede {
+    color: var(--charcoal-100);
+    max-width: 56ch;
+    margin-bottom: var(--space-lg);
+  }
+
+  .eyebrow {
+    color: var(--orange-500);
+  }
+
+  .trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+    list-style: none;
+    margin: var(--space-lg) 0 0;
+    padding: 0;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: none;
+    color: var(--charcoal-100);
+  }
+</style>

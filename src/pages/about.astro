@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Faq from '../components/Faq.astro';
+import { faqSchema } from '../data/schema';
+import { business } from '../data/business';
+
+const faqs = [
+  {
+    q: 'Is Speedy Gonzalez Roofing licensed in Arkansas?',
+    a: 'Yes. We hold Arkansas roofing license RR0540931024 and Arkansas home improvement license 0378510824. We carry insurance too. Ask to see proof before any work starts and we will show you.',
+  },
+  {
+    q: 'How long have you been roofing in Hot Springs?',
+    a: 'Over 20 years. Our shop is at 209 Albert Pike in Hot Springs, and we have finished more than 500 projects across Garland County and central Arkansas.',
+  },
+  {
+    q: 'Do you use subcontractors?',
+    a: 'No. We have 20 trained people on staff, and our own crews do the work. The people on your roof work for us. That is how we keep the quality where we want it.',
+  },
+  {
+    q: 'What areas do you cover?',
+    a: 'We roof across central Arkansas from Hot Springs. That includes Hot Springs Village, Benton, Bryant, Malvern, Arkadelphia, and Mount Ida. We also cover the Pine Bluff area with its own local number.',
+  },
+];
+---
+
+<Base
+  title="About Speedy Gonzalez Roofing | Hot Springs, AR"
+  description="Licensed Hot Springs roofing contractor with 20+ years and 500+ projects. Our own crews, free inspections, insurance claim help. Call 501-359-5550."
+  path="/about"
+  preloadImage="/images/shingle-roofing"
+  breadcrumbs={[{ href: '/about', label: 'About' }]}
+  schema={[faqSchema(faqs)]}
+>
+  <Hero
+    eyebrow="About us"
+    h1="Roofers From Hot Springs, For Hot Springs"
+    summary="Speedy Gonzalez Roofing has spent more than 20 years on Arkansas roofs. We are licensed, we run our own crews, and our shop is right here at 209 Albert Pike."
+    image="/images/shingle-roofing"
+  />
+
+  <section class="section">
+    <div class="wrap prose-block">
+      <h2>Who is Speedy Gonzalez Roofing?</h2>
+      <p>
+        We are a licensed roofing contractor in Hot Springs, Arkansas. Our shop sits at 209
+        Albert Pike. We hold Arkansas roofing license {business.licenses.roofing} and home
+        improvement license {business.licenses.homeImprovement}.
+      </p>
+      <p>
+        We have been doing this for over 20 years. In that time we have finished more than 500
+        projects. Most of them are within 30 miles of where we are standing right now.
+      </p>
+
+      <h2>What makes you different from the storm chasers?</h2>
+      <p>
+        We live here. After a big hail storm, out-of-state crews roll into Hot Springs, sign up
+        everyone they can, and leave. When something goes wrong two years later, that number
+        does not work anymore.
+      </p>
+      <p>
+        We are not going anywhere. Our name is on trucks around this town, and our address is
+        public. If you have a problem, you know where to find us.
+      </p>
+
+      <div class="stats">
+        <div>
+          <p class="stat">20+</p>
+          <p class="stat-label">Years roofing in Arkansas</p>
+        </div>
+        <div>
+          <p class="stat">500+</p>
+          <p class="stat-label">Projects finished</p>
+        </div>
+        <div>
+          <p class="stat">20</p>
+          <p class="stat-label">Trained professionals</p>
+        </div>
+        <div>
+          <p class="stat">4.9&#9733;</p>
+          <p class="stat-label">Rating from local homeowners</p>
+        </div>
+      </div>
+
+      <h2>Who actually works on my roof?</h2>
+      <p>
+        Our own crew. We have 20 trained people on staff, and we do not hand your job to a
+        subcontractor you have never met.
+      </p>
+      <p>
+        That matters more than it sounds. A roof is one day of work and 20 years of living with
+        it. The crew that cuts corners is long gone by the time the leak shows up.
+      </p>
+
+      <h2>What do you do for the price?</h2>
+      <p>You get one written number before we start. That number covers the whole job.</p>
+      <ul>
+        <li>A free inspection with photos of what we find</li>
+        <li>A written estimate, not a range scribbled on a card</li>
+        <li>Tear-off and haul away of your old roof</li>
+        <li>New decking where the old wood is rotten</li>
+        <li>A clean yard and a magnet run for nails</li>
+      </ul>
+      <p>
+        If we open up your roof and find something we could not see from outside, we stop and
+        show you before we do anything about it.
+      </p>
+
+      <h2>Can you help with my insurance claim?</h2>
+      <p>
+        Yes. We photograph the damage, write it up, and meet your adjuster on the roof. We have
+        done this hundreds of times in Garland County.
+      </p>
+      <p>
+        Your insurance company decides what it pays. What we can do is make sure nothing gets
+        missed. Read more about <a href="/services/storm-damage-repair">storm damage repair</a>
+        and <a href="/services/hail-damage-repair">hail damage repair</a>.
+      </p>
+
+      <h2>What if I cannot pay for it all at once?</h2>
+      <p>
+        We offer financing. A roof is a big expense and it never comes at a good time. See
+        <a href="/financing">financing options</a> or ask us at your free estimate.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <Faq faqs={faqs} heading="Questions about our company" />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .prose-block {
+    max-width: var(--measure);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-md);
+    margin-block: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-block: 1px solid var(--border);
+  }
+
+  .stat {
+    font-size: var(--step-3);
+    font-weight: 800;
+    color: var(--red-600);
+    margin: 0;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    margin: 0.25rem 0 0;
+  }
+</style>

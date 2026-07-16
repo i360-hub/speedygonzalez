@@ -1,0 +1,178 @@
+---
+import { business, telHref } from '../data/business';
+
+const services = [
+  { href: '/services/shingle-roofing', label: 'Shingle Roofing' },
+  { href: '/services/metal-roofing', label: 'Metal Roofing' },
+  { href: '/services/tpo-flat-roofing', label: 'TPO / Flat Roofing' },
+  { href: '/services/roof-repair', label: 'Roof Repair' },
+  { href: '/services/roof-leak-repair', label: 'Roof Leak Repair' },
+  { href: '/services/storm-damage-repair', label: 'Storm Damage Repair' },
+  { href: '/services/hail-damage-repair', label: 'Hail Damage Repair' },
+  { href: '/services/gutters', label: 'Gutters' },
+  { href: '/services/siding', label: 'Siding' },
+];
+
+const areas = [
+  { href: '/service-areas/hot-springs', label: 'Hot Springs' },
+  { href: '/service-areas/hot-springs-village', label: 'Hot Springs Village' },
+  { href: '/service-areas/benton', label: 'Benton' },
+  { href: '/service-areas/bryant', label: 'Bryant' },
+  { href: '/service-areas/malvern', label: 'Malvern' },
+  { href: '/service-areas/arkadelphia', label: 'Arkadelphia' },
+  { href: '/service-areas/pine-bluff', label: 'Pine Bluff' },
+  { href: '/service-areas/mount-ida', label: 'Mount Ida' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="/logo-white.png" alt="Speedy Gonzalez Roofing" width="170" height="54" />
+        <p class="tagline">
+          Licensed roofing contractor in Hot Springs, Arkansas. {business.experience} of roofs
+          done right.
+        </p>
+        <ul class="contact">
+          <li>{business.address.street}, {business.address.city} {business.address.state}{' '}
+            {business.address.zip}</li>
+          <li>
+            Schedule: <a href={telHref(business.phones.primary)}>{business.phones.primary}</a>
+          </li>
+          <li>Office: <a href={telHref(business.phones.office)}>{business.phones.office}</a></li>
+          <li>
+            Pine Bluff: <a href={telHref(business.phones.pineBluff)}>{business.phones.pineBluff}</a>
+          </li>
+          <li><a href={`mailto:${business.email}`}>{business.email}</a></li>
+          <li>Open {business.hours}</li>
+        </ul>
+        <ul class="social">
+          <li><a href={business.social.facebook} rel="noopener">Facebook</a></li>
+          <li><a href={business.social.instagram} rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+
+      <nav aria-labelledby="foot-services">
+        <h2 id="foot-services">Services</h2>
+        <ul>
+          {services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="foot-areas">
+        <h2 id="foot-areas">Areas Served</h2>
+        <ul>
+          {areas.map((a) => <li><a href={a.href}>{a.label}</a></li>)}
+          <li><a href="/service-areas">All service areas</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="foot-company">
+        <h2 id="foot-company">Company</h2>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/financing">Financing</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Free Estimate</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/sms-terms">SMS Terms</a></li>
+        </ul>
+        <p class="licenses">
+          AR Roofing License: {business.licenses.roofing}<br />
+          AR Home Improvement: {business.licenses.homeImprovement}
+        </p>
+      </nav>
+    </div>
+
+    <div class="legal">
+      <p>&copy; {year} {business.name}. All rights reserved. {business.legalNote}</p>
+      <p>Website by <a href="https://impact360media.com/" rel="noopener">Impact 360 Media</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--charcoal-900);
+    color: var(--charcoal-100);
+    padding-block: var(--space-2xl) var(--space-lg);
+    margin-top: var(--space-2xl);
+    font-size: var(--step--1);
+  }
+
+  .cols {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    .cols {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  .site-footer h2 {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--white);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .site-footer ul {
+    list-style: none;
+    margin: 0 0 var(--space-md);
+    padding: 0;
+  }
+
+  .site-footer li {
+    margin-bottom: 0.45rem;
+    max-width: none;
+  }
+
+  .site-footer a {
+    color: var(--charcoal-100);
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .tagline {
+    margin-block: var(--space-sm) var(--space-md);
+    color: var(--charcoal-300);
+  }
+
+  .social {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .licenses {
+    color: var(--charcoal-300);
+    margin: 0;
+  }
+
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    border-top: 1px solid var(--charcoal-700);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    color: var(--charcoal-300);
+  }
+
+  .legal p {
+    margin: 0;
+    max-width: none;
+  }
+</style>

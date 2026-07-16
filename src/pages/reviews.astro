@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import { reviews } from '../data/reviews';
+import { rating, business } from '../data/business';
+---
+
+<Base
+  title="Reviews | Speedy Gonzalez Roofing Hot Springs, AR"
+  description="Read what Hot Springs homeowners say about Speedy Gonzalez Roofing. Rated 4.9 stars for fast, fair, professional roofing work."
+  path="/reviews"
+  breadcrumbs={[{ href: '/reviews', label: 'Reviews' }]}
+>
+  <section class="section head">
+    <div class="wrap">
+      <p class="eyebrow">Reviews</p>
+      <h1>What Hot Springs Homeowners Say</h1>
+      <p class="lede">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        Rated {rating.value} stars by local homeowners. These are real reviews from real jobs
+        around Garland County.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid grid-2 wall">
+      {reviews.map((review) => <ReviewCard review={review} full />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>Where can I see more reviews?</h2>
+      <p>
+        You can find us on Google and Facebook. Search "Speedy Gonzalez Roofing Hot Springs"
+        and you will see the whole list, good and bad, without us picking which ones show up.
+      </p>
+      <p>
+        <a href={business.social.facebook} rel="noopener">Speedy Gonzalez Roofing on Facebook</a>
+      </p>
+
+      <h2>Had us out to your roof?</h2>
+      <p>
+        Leave us a review. It takes two minutes and it genuinely helps a local business more
+        than you would think.
+      </p>
+      <p>
+        Something not right? Call {business.phones.office} before you write anything. We would
+        rather fix it than read about it.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    heading="Want your roof done like theirs?"
+    body="Free inspection, written estimate, and a crew that works for us — not a subcontractor you have never met."
+  />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: var(--space-lg);
+  }
+
+  .wall {
+    align-items: start;
+  }
+
+  .narrow {
+    max-width: var(--measure);
+  }
+</style>

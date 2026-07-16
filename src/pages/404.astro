@@ -1,0 +1,118 @@
+---
+import Base from '../layouts/Base.astro';
+import { business, telHref } from '../data/business';
+
+/**
+ * Some legacy URLs will always get crawled, so this page links back into the
+ * silos rather than dead-ending (build spec §10).
+ */
+const services = [
+  { href: '/services/shingle-roofing', label: 'Shingle roofing' },
+  { href: '/services/metal-roofing', label: 'Metal roofing' },
+  { href: '/services/roof-repair', label: 'Roof repair' },
+  { href: '/services/roof-leak-repair', label: 'Roof leak repair' },
+  { href: '/services/storm-damage-repair', label: 'Storm damage repair' },
+  { href: '/services/hail-damage-repair', label: 'Hail damage repair' },
+  { href: '/services/tpo-flat-roofing', label: 'TPO / flat roofing' },
+  { href: '/services/gutters', label: 'Gutters' },
+  { href: '/services/siding', label: 'Siding' },
+];
+
+const areas = [
+  { href: '/service-areas/hot-springs', label: 'Hot Springs' },
+  { href: '/service-areas/hot-springs-village', label: 'Hot Springs Village' },
+  { href: '/service-areas/benton', label: 'Benton' },
+  { href: '/service-areas/bryant', label: 'Bryant' },
+  { href: '/service-areas/malvern', label: 'Malvern' },
+  { href: '/service-areas/arkadelphia', label: 'Arkadelphia' },
+  { href: '/service-areas/pine-bluff', label: 'Pine Bluff' },
+  { href: '/service-areas/mount-ida', label: 'Mount Ida' },
+];
+---
+
+<Base
+  title="Page Not Found | Speedy Gonzalez Roofing"
+  description="That page has moved. Find roofing services and service areas for Hot Springs, Arkansas, or call 501-359-5550."
+  path="/404"
+  noindex
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Error 404</p>
+      <h1>That page has moved</h1>
+      <p class="lede">
+        We rebuilt this site, and some old pages are gone. Your roof problem is not. Here is
+        everything, laid out.
+      </p>
+
+      <div class="btn-row cta">
+        <a href={telHref(business.phones.primary)} class="btn btn-primary">
+          Call {business.phones.primary}
+        </a>
+        <a href="/contact" class="btn btn-outline">Get a free estimate</a>
+      </div>
+
+      <div class="cols">
+        <nav aria-labelledby="s-404">
+          <h2 id="s-404">Roofing services</h2>
+          <ul>
+            {services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}
+            <li><a href="/services">All services</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="a-404">
+          <h2 id="a-404">Service areas</h2>
+          <ul>
+            {areas.map((a) => <li><a href={a.href}>{a.label}</a></li>)}
+            <li><a href="/service-areas">All service areas</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="c-404">
+          <h2 id="c-404">Company</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            <li><a href="/financing">Financing</a></li>
+            <li><a href="/blog">Roofing blog</a></li>
+            <li><a href="/contact">Free estimate</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cta {
+    margin-bottom: var(--space-xl);
+  }
+
+  .cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-lg);
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: var(--step-0);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--charcoal-500);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+    max-width: none;
+  }
+</style>

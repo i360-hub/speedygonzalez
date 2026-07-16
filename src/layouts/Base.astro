@@ -1,0 +1,48 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CallBar from '../components/CallBar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { businessSchema } from '../data/business';
+import { breadcrumbSchema } from '../data/schema';
+
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+  preloadImage?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown>[];
+  publishedTime?: string;
+  modifiedTime?: string;
+  /** Deep pages pass a trail; it renders crumbs AND emits BreadcrumbList. */
+  breadcrumbs?: { href: string; label: string }[];
+}
+
+const { breadcrumbs, schema = [], ...head } = Astro.props;
+
+const allSchema = [
+  businessSchema(),
+  ...(breadcrumbs?.length ? [breadcrumbSchema(breadcrumbs)] : []),
+  ...schema,
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead {...head} schema={allSchema} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <Header />
+    {breadcrumbs?.length ? <Breadcrumbs trail={breadcrumbs} /> : null}
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <CallBar />
+  </body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Kill param-URL duplicates (the old site leaked ?keyword/utm variants into the index).
+Disallow: /*?
+
+Sitemap: https://www.speedygonzalezroofing.com/sitemap-index.xml

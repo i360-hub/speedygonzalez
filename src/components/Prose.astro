@@ -1,0 +1,65 @@
+---
+// Wraps markdown body copy. Class name `prose` is what the readability gate scans.
+---
+
+<div class="prose">
+  <slot />
+</div>
+
+<style is:global>
+  .prose h2 {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border);
+  }
+
+  .prose h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .prose ul,
+  .prose ol {
+    padding-left: 1.25rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.4rem;
+  }
+
+  .prose blockquote {
+    margin: var(--space-md) 0;
+    padding: var(--space-sm) var(--space-md);
+    border-left: 4px solid var(--red-600);
+    background: var(--bg-alt);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .prose img {
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Markdown tables get the same scroll container treatment as authored ones. */
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-md);
+  }
+
+  @media (min-width: 700px) {
+    .prose table {
+      display: table;
+      white-space: normal;
+      width: 100%;
+    }
+  }
+</style>

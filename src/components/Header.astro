@@ -1,0 +1,243 @@
+---
+import { business, telHref } from '../data/business';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+
+const nav = [
+  { href: '/services', label: 'Services' },
+  { href: '/service-areas', label: 'Service Areas' },
+  { href: '/reviews', label: 'Reviews' },
+  { href: '/financing', label: 'Financing' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <p>Free roof inspections &amp; estimates &middot; Licensed AR {business.licenses.roofing}</p>
+    <p class="topbar-phone">
+      Pine Bluff:
+      <a href={telHref(business.phones.pineBluff)}>{business.phones.pineBluff}</a>
+    </p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="logo" aria-label="Speedy Gonzalez Roofing — home">
+      <img src="/logo.png" alt="" width="150" height="48" fetchpriority="high" />
+      <span class="visually-hidden">Speedy Gonzalez Roofing</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Menu"
+    >
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a href={telHref(business.phones.primary)} class="btn btn-primary nav-cta">
+        Call {business.phones.primary}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    background: var(--charcoal-900);
+    color: var(--charcoal-100);
+    font-size: var(--step--1);
+  }
+
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: 0.45rem;
+  }
+
+  .topbar p {
+    margin: 0;
+    max-width: none;
+  }
+
+  .topbar a {
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .topbar-phone {
+      display: none;
+    }
+    .topbar-inner {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: 0.6rem;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a:not(.btn) {
+    color: var(--charcoal-800);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--step--1);
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+
+  .nav-cta {
+    white-space: nowrap;
+  }
+
+  .nav a:not(.btn):hover,
+  .nav a[aria-current='page'] {
+    color: var(--red-700);
+    border-bottom-color: var(--red-600);
+  }
+
+  .nav-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  .bars,
+  .bars::before,
+  .bars::after {
+    display: block;
+    height: 2px;
+    width: 22px;
+    background: var(--charcoal-900);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .bars::before,
+  .bars::after {
+    content: '';
+    position: absolute;
+  }
+  .bars::before {
+    top: -7px;
+  }
+  .bars::after {
+    top: 7px;
+  }
+
+  /* The full nav + phone CTA needs ~1060px; below that it wraps, so collapse it. */
+  @media (max-width: 1060px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      inset: 100% 0 auto;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-sm) 1.25rem var(--space-md);
+      box-shadow: var(--shadow);
+    }
+
+    .nav[data-open='true'] {
+      display: flex;
+    }
+
+    .nav ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav li + li {
+      border-top: 1px solid var(--border);
+    }
+
+    .nav a:not(.btn) {
+      display: block;
+      padding: 0.85rem 0;
+      font-size: var(--step-0);
+      border-bottom: 0;
+    }
+
+    .nav-cta {
+      margin-top: var(--space-sm);
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const nav = document.querySelector<HTMLElement>('#primary-nav');
+
+  toggle?.addEventListener('click', () => {
+    const open = nav?.dataset.open === 'true';
+    if (nav) nav.dataset.open = String(!open);
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+</script>

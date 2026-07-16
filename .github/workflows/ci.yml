@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # The overflow gate drives a real headless browser.
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      # Gate 1 — spec §11.1: the build itself must be clean.
+      # Content-collection zod schemas enforce the 60/155 char meta limits here.
+      - name: Build
+        run: npm run build
+
+      # Gates 2-6 — spec §11.3, §11.4, §11.5, §11.6, plus §9 (no layout shift).
+      # Readability (FK grade <= 8), JSON-LD validity, internal links +
+      # zero orphan 404s across all 84 legacy URLs, single-H1/title/canonical,
+      # and no horizontal scroll at 375px.
+      - name: Content + SEO gates
+        run: npm run gates
+
+      # Gate 6 — spec §11.2 / §0 thresholds:
+      # perf >= 95, seo = 100, a11y >= 95, best-practices >= 95,
+      # LCP < 2.0s, CLS < 0.05, TBT < 200ms. Mobile, throttled, 3 runs each.
+      - name: Lighthouse CI
+        run: npx lhci autorun --config=lighthouserc.json
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

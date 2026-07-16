@@ -1,0 +1,205 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { srcset, fallback } from '../../data/images';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+const [featured, ...rest] = posts;
+
+const fmt = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const CARD_SIZES = '(min-width: 900px) 360px, 100vw';
+---
+
+<Base
+  title="Roofing Blog | Speedy Gonzalez Roofing Hot Springs"
+  description="Straight answers on roof costs, hail season, metal vs shingles, and leaks — written for Hot Springs, Arkansas homeowners."
+  path="/blog"
+  breadcrumbs={[{ href: '/blog', label: 'Blog' }]}
+>
+  <section class="section head">
+    <div class="wrap">
+      <p class="eyebrow">Roofing advice</p>
+      <h1>Roofing Answers for Arkansas Homeowners</h1>
+      <p class="lede">
+        No fluff. Real answers about what roofs cost here, how hail season works, and when a
+        repair beats a replacement.
+      </p>
+    </div>
+  </section>
+
+  {
+    featured && (
+      <section class="wrap">
+        <a class="featured" href={`/blog/${featured.id}`}>
+          <picture>
+            <source
+              type="image/avif"
+              srcset={srcset(featured.data.heroImage, 'avif')}
+              sizes="100vw"
+            />
+            <img
+              src={fallback(featured.data.heroImage)}
+              srcset={srcset(featured.data.heroImage, 'jpg')}
+              sizes="100vw"
+              alt=""
+              width="1600"
+              height="900"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="featured-body">
+            <p class="eyebrow">Latest &middot; {featured.data.tags[0]}</p>
+            <h2>{featured.data.title}</h2>
+            <p>{featured.data.description}</p>
+            <p class="meta">
+              <time datetime={featured.data.pubDate.toISOString()}>
+                {fmt(featured.data.pubDate)}
+              </time>
+            </p>
+          </div>
+        </a>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="visually-hidden">More articles</h2>
+      <div class="grid grid-3">
+        {
+          rest.map((post) => (
+            <article class="card post">
+              <a href={`/blog/${post.id}`} class="thumb">
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset={srcset(post.data.heroImage, 'avif')}
+                    sizes={CARD_SIZES}
+                  />
+                  <img
+                    src={fallback(post.data.heroImage)}
+                    srcset={srcset(post.data.heroImage, 'jpg')}
+                    sizes={CARD_SIZES}
+                    alt=""
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+              <p class="eyebrow">{post.data.tags[0]}</p>
+              <h3>
+                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              </h3>
+              <p>{post.data.description}</p>
+              <p class="meta">
+                <time datetime={post.data.pubDate.toISOString()}>{fmt(post.data.pubDate)}</time>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: var(--space-lg);
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 800px) {
+    .featured {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .featured img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+  }
+
+  .featured-body {
+    padding: var(--space-lg);
+    align-self: center;
+  }
+
+  .featured h2 {
+    margin-top: 0;
+    font-size: var(--step-2);
+  }
+
+  .featured:hover h2 {
+    color: var(--red-700);
+  }
+
+  .post {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .thumb img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .post .eyebrow,
+  .post h3,
+  .post p {
+    padding-inline: var(--space-md);
+  }
+
+  .post .eyebrow {
+    margin-top: var(--space-md);
+  }
+
+  .post h3 {
+    margin-top: 0;
+    font-size: var(--step-1);
+  }
+
+  .post h3 a {
+    text-decoration: none;
+    color: var(--charcoal-900);
+  }
+
+  .post h3 a:hover {
+    color: var(--red-700);
+  }
+
+  .post > p {
+    font-size: var(--step--1);
+    color: var(--charcoal-700);
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: var(--step--1);
+    padding-bottom: var(--space-md);
+    margin-bottom: 0;
+  }
+</style>

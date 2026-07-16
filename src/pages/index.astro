@@ -1,0 +1,325 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import { business, telHref, rating } from '../data/business';
+import { faqSchema } from '../data/schema';
+import { reviews } from '../data/reviews';
+
+const services = (await getCollection('services')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const areas = (await getCollection('areas')).sort((a, b) => a.data.order - b.data.order);
+
+/** Real GBP/sales-call questions, mirrored into FAQPage schema. */
+const faqs = [
+  {
+    q: 'How much does a new roof cost in Hot Springs?',
+    a: 'Most shingle roofs in Hot Springs run $8,500 to $18,000. Metal roofs run $14,000 to $32,000. Your price depends on the size of your roof, its shape, and the material you pick. We give you an exact number in writing after a free inspection.',
+  },
+  {
+    q: 'Do you give free roof inspections?',
+    a: 'Yes. We inspect your roof and give you a written estimate at no cost. There is no charge and no pressure. If your roof is fine, we tell you it is fine and you go on with your day.',
+  },
+  {
+    q: 'Do you help with insurance claims?',
+    a: 'Yes. We photograph the damage, write it up, and meet your adjuster on the roof. We have handled hundreds of storm claims in Garland County. Your insurance company decides what it pays, but we make sure nothing gets missed.',
+  },
+  {
+    q: 'How fast can you get here?',
+    a: 'For an active leak, we aim to get out the same day or the next. Hot Springs is our home base, so we are close. Call 501-359-5550 and tell us what your roof is doing.',
+  },
+  {
+    q: 'Are you licensed and insured?',
+    a: 'Yes. We hold Arkansas roofing license RR0540931024 and Arkansas home improvement license 0378510824. We carry insurance, and we are happy to show you proof before any work starts.',
+  },
+  {
+    q: 'Do you offer financing?',
+    a: 'Yes. A roof is a big expense, and it rarely comes at a good time. We offer financing so you can spread the cost out. Ask us about it when we come out for your free estimate.',
+  },
+];
+---
+
+<Base
+  title="Roofing Hot Springs, AR | Speedy Gonzalez Roofing"
+  description="Hot Springs roofers with 20+ years on Arkansas roofs. Shingle, metal, repairs, storm damage. Free inspections and estimates. Call 501-359-5550."
+  path="/"
+  preloadImage="/images/hot-springs-roofing-hero"
+  schema={[faqSchema(faqs)]}
+>
+  <Hero
+    large
+    eyebrow="Hot Springs, Arkansas"
+    h1="Hot Springs Roofing Contractors — Repair, Replace, Done Right"
+    summary="Speedy Gonzalez Roofing is a licensed roofing contractor in Hot Springs, Arkansas. We have spent 20+ years fixing and replacing roofs across Garland County. Free inspection, free estimate, no pressure."
+    image="/images/hot-springs-roofing-hero"
+  />
+
+  <!-- Entity clarity block: states who/what/where plainly for AI answer engines. -->
+  <section class="section entity">
+    <div class="wrap">
+      <p class="lede">
+        <strong>Speedy Gonzalez Roofing</strong> is a licensed roofing contractor at{' '}
+        {business.address.street}, {business.address.city}, {business.address.state}{' '}
+        {business.address.zip} (Arkansas roofing license {business.licenses.roofing}). We
+        install and repair shingle, metal, and flat roofs for homeowners in Hot Springs and
+        across central Arkansas. We are open {business.hours}.
+      </p>
+      <ul class="proof">
+        {business.proofPoints.map((point) => <li>{point}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Roofing services in Hot Springs, Arkansas</h2>
+      <p class="lede intro">
+        Every roof we touch gets the same thing: a real look, an honest answer, and a written
+        price before we start.
+      </p>
+
+      <div class="grid grid-3">
+        {
+          services.map((service) => (
+            <article class="card service-card">
+              <h3>
+                <a href={`/services/${service.id}`}>{service.data.title}</a>
+              </h3>
+              <p>{service.data.summary}</p>
+              {service.data.priceRange && <p class="price">{service.data.priceRange}</p>}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>What happens after you call?</h2>
+      <p class="lede intro">
+        Five steps, no surprises. Most homeowners go from first call to finished roof in a
+        couple of weeks.
+      </p>
+
+      <ol class="steps">
+        <li>
+          <h3>You call</h3>
+          <p>Tell us what your roof is doing. We ask a few questions and pick a time.</p>
+        </li>
+        <li>
+          <h3>We inspect</h3>
+          <p>We get on the roof, take photos, and show you what we find. This is free.</p>
+        </li>
+        <li>
+          <h3>You get a price</h3>
+          <p>A written estimate. One number. No hidden line items later.</p>
+        </li>
+        <li>
+          <h3>We build it</h3>
+          <p>Our own crew does the work. Most roofs take one to three days.</p>
+        </li>
+        <li>
+          <h3>We check it</h3>
+          <p>We walk the roof, clean the yard, and run a magnet for nails.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <CtaBand />
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Reviews</p>
+      <h2>What Hot Springs homeowners say</h2>
+      <p class="lede intro">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        {rating.value} stars from local homeowners.
+      </p>
+
+      <div class="grid grid-3">
+        {reviews.slice(0, 3).map((review) => <ReviewCard review={review} />)}
+      </div>
+
+      <p><a href="/reviews">Read more local roofing reviews</a></p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">Where we work</p>
+      <h2>Roofing across central Arkansas</h2>
+      <p class="lede intro">
+        Hot Springs is home. We also roof in the Village, Benton, Bryant, Malvern, and out to
+        Pine Bluff.
+      </p>
+
+      <ul class="areas">
+        {
+          areas.map((area) => (
+            <li>
+              <a href={`/service-areas/${area.id}`}>{area.data.city}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <p><a href="/service-areas">See every area we serve</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <Faq faqs={faqs} heading="Hot Springs roofing questions" />
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap call-now">
+      <div>
+        <h2>Talk to a real roofer</h2>
+        <p>
+          Call {business.phones.primary}. If we are on a roof, leave a message and we call you
+          back. Open {business.hours}.
+        </p>
+      </div>
+      <div class="btn-row">
+        <a href={telHref(business.phones.primary)} class="btn btn-primary">
+          Call {business.phones.primary}
+        </a>
+        <a href="/contact" class="btn btn-outline">Get a free estimate</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .entity .lede {
+    max-width: 72ch;
+  }
+
+  .proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0 0;
+  }
+
+  .proof li {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+    max-width: none;
+  }
+
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .service-card h3 a {
+    text-decoration: none;
+    color: var(--charcoal-900);
+  }
+
+  .service-card h3 a:hover {
+    color: var(--red-700);
+  }
+
+  .price {
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--charcoal-500);
+    margin-bottom: 0;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-md);
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    border-top: 3px solid var(--red-600);
+    padding-top: var(--space-sm);
+    max-width: none;
+  }
+
+  .steps li::before {
+    content: '0' counter(step);
+    display: block;
+    font-weight: 800;
+    color: var(--red-600);
+    font-size: var(--step--1);
+  }
+
+  .steps h3 {
+    margin-top: 0.2rem;
+    font-size: var(--step-0);
+  }
+
+  .steps p {
+    font-size: var(--step--1);
+    color: var(--charcoal-700);
+    margin-bottom: 0;
+  }
+
+  .areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+  }
+
+  .areas li {
+    max-width: none;
+  }
+
+  .areas a {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.45rem 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--charcoal-800);
+  }
+
+  .areas a:hover {
+    border-color: var(--red-600);
+    color: var(--red-700);
+  }
+
+  .call-now {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .call-now h2 {
+    margin-top: 0;
+  }
+
+  .call-now p {
+    margin-bottom: 0;
+  }
+</style>

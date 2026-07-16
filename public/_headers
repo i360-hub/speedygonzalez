@@ -1,0 +1,22 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'
+
+# Hashed build assets never change under the same name.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Photos are content-addressed by hand, so revalidate weekly rather than forever.
+/images/*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+# HTML always revalidates so content fixes go live immediately.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

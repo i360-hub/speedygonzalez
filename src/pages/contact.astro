@@ -1,0 +1,251 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { business, telHref } from '../data/business';
+---
+
+<Base
+  title="Free Roof Estimate in Hot Springs | Speedy Gonzalez"
+  description="Get a free roof inspection and written estimate in Hot Springs, AR. Call 501-359-5550 or send us your details. Open 7 days a week."
+  path="/contact"
+  breadcrumbs={[{ href: '/contact', label: 'Contact' }]}
+>
+  <section class="section head">
+    <div class="wrap">
+      <p class="eyebrow">Free estimate</p>
+      <h1>Get a Free Roof Inspection</h1>
+      <p class="lede">
+        Tell us what your roof is doing. We come out, get on the roof, take photos, and hand
+        you a written price. It costs nothing and there is no pressure.
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="form-side">
+      <h2>Send us your details</h2>
+      <p>Fill this out and we will call you back. Four fields, that is it.</p>
+
+      <!--
+        Posts to Formspree. Swap FORM_ENDPOINT for the client's real endpoint
+        (or a Cloudflare Pages Function) before launch — see REVIEW-BEFORE-LAUNCH.md.
+      -->
+      <form action="https://formspree.io/f/FORM_ENDPOINT" method="POST" class="lead-form">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+        </div>
+
+        <div class="field">
+          <label for="zip">Zip code</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            autocomplete="postal-code"
+            inputmode="numeric"
+            pattern="[0-9]{5}"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service" required>
+            <option value="">Choose one</option>
+            <option>Roof leak or repair</option>
+            <option>New roof / replacement</option>
+            <option>Storm or hail damage</option>
+            <option>Metal roof</option>
+            <option>Gutters</option>
+            <option>Siding</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Anything else? <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full">Get my free estimate</button>
+        <p class="fine">We call you back. We do not sell your info to anyone.</p>
+      </form>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h2>Call us</h2>
+        <p class="phone"><a href={telHref(business.phones.primary)}>{business.phones.primary}</a></p>
+        <p class="note">Schedule an estimate. Fastest way to reach us.</p>
+        <hr />
+        <p class="line">
+          <strong>Office:</strong>
+          <a href={telHref(business.phones.office)}>{business.phones.office}</a>
+        </p>
+        <p class="line">
+          <strong>Pine Bluff:</strong>
+          <a href={telHref(business.phones.pineBluff)}>{business.phones.pineBluff}</a>
+        </p>
+        <p class="line">
+          <strong>Email:</strong>
+          <a href={`mailto:${business.email}`}>{business.email}</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Come by the shop</h2>
+        <address>
+          {business.address.street}<br />
+          {business.address.city}, {business.address.state} {business.address.zip}
+        </address>
+        <p class="note">Open {business.hours}</p>
+        <p class="note">
+          AR Roofing License {business.licenses.roofing}<br />
+          AR Home Improvement License {business.licenses.homeImprovement}
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Roof leaking right now?</h2>
+        <p class="note">
+          Do not wait on a form. Call {business.phones.primary}. Put a bucket under it and
+          move anything that can get wet.
+        </p>
+        <a href={telHref(business.phones.primary)} class="btn btn-primary full">Call now</a>
+      </div>
+    </aside>
+  </div>
+
+  <CtaBand
+    heading="Rather just talk to someone?"
+    body="Call 501-359-5550. If we are up on a roof, leave a message and we call you back."
+  />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: var(--space-md);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: var(--space-xl);
+    align-items: start;
+    padding-bottom: var(--space-xl);
+  }
+
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .form-side h2 {
+    margin-top: 0;
+  }
+
+  .lead-form {
+    display: grid;
+    gap: var(--space-md);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    max-width: 34rem;
+  }
+
+  .field {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  label {
+    font-weight: 700;
+    font-size: var(--step--1);
+  }
+
+  .optional {
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  input,
+  select,
+  textarea {
+    font: inherit;
+    font-size: var(--step-0);
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--charcoal-300);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--text);
+    min-height: 48px;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .full {
+    width: 100%;
+  }
+
+  .fine {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    margin: 0;
+    text-align: center;
+  }
+
+  aside {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  aside h2 {
+    margin-top: 0;
+    font-size: var(--step-0);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--charcoal-500);
+  }
+
+  .phone {
+    font-size: var(--step-2);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+  }
+
+  .phone a {
+    text-decoration: none;
+  }
+
+  .note {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+
+  .line {
+    margin-bottom: 0.3rem;
+    font-size: var(--step--1);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: var(--space-md) 0;
+  }
+
+  address {
+    font-style: normal;
+    margin-bottom: var(--space-sm);
+  }
+</style>

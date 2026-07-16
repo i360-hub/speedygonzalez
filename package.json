@@ -1,0 +1,28 @@
+{
+  "name": "speedy-gonzalez-roofing",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "readability": "node scripts/readability.js",
+    "validate:schema": "node scripts/validate-schema.js",
+    "validate:html": "node scripts/validate-html.js",
+    "linkcheck": "node scripts/linkcheck.js",
+    "check:overflow": "node scripts/check-overflow.js",
+    "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:overflow"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.1.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "playwright-chromium": "^1.61.1"
+  }
+}

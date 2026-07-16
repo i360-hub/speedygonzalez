@@ -1,0 +1,75 @@
+---
+import type { Review } from '../data/reviews';
+
+export interface Props {
+  review: Review;
+  /** Full text instead of the homepage's clamped preview. */
+  full?: boolean;
+}
+
+const { review, full = false } = Astro.props;
+---
+
+<article class="card review">
+  <p class="stars">
+    <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span class="visually-hidden">{review.rating} out of 5 stars</span>
+  </p>
+  <blockquote data-full={full}>
+    <p>{review.text}</p>
+  </blockquote>
+  <footer>
+    <p class="name">{review.name}</p>
+    <p class="meta">
+      {review.location ? `${review.location} · ` : ''}via {review.source}
+    </p>
+  </footer>
+</article>
+
+<style>
+  .review {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stars {
+    margin-bottom: var(--space-xs);
+    font-size: var(--step-0);
+  }
+
+  blockquote {
+    margin: 0 0 var(--space-md);
+    flex: 1;
+  }
+
+  blockquote p {
+    margin: 0;
+    color: var(--charcoal-700);
+    font-size: var(--step--1);
+  }
+
+  /* Homepage previews clamp; the reviews wall shows everything. */
+  blockquote[data-full='false'] p {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-sm);
+  }
+
+  .name {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: var(--step--1);
+    margin: 0;
+  }
+</style>

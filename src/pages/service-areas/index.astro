@@ -1,0 +1,140 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Faq from '../../components/Faq.astro';
+import { faqSchema } from '../../data/schema';
+import { business, telHref, areaServed } from '../../data/business';
+
+const areas = (await getCollection('areas')).sort((a, b) => a.data.order - b.data.order);
+
+/** Smaller towns we cover that don't have a page of their own yet. */
+const alsoServed = areaServed.filter(
+  (city) => !areas.some((area) => area.data.city === city)
+);
+
+const faqs = [
+  {
+    q: 'What areas does Speedy Gonzalez Roofing serve?',
+    a: 'We roof across central Arkansas from our Hot Springs shop. That covers Hot Springs, Hot Springs Village, Benton, Bryant, Malvern, Arkadelphia, Mount Ida, and the towns around them. We also serve the Pine Bluff area with a local number.',
+  },
+  {
+    q: 'Do you charge extra to drive out to my town?',
+    a: 'No. The estimate is free wherever you are in our service area. If you are near the edge of the map, call us and ask. We will tell you straight whether we cover you.',
+  },
+  {
+    q: 'My town is not on your list. Can you still help?',
+    a: 'Probably. The towns listed here are where we work most, not a hard border. Call 501-359-5550 and tell us where you are. If we cannot get to you, we will say so.',
+  },
+];
+---
+
+<Base
+  title="Roofing Service Areas | Speedy Gonzalez Roofing AR"
+  description="We roof Hot Springs, Hot Springs Village, Benton, Bryant, Malvern, Arkadelphia, Mount Ida and Pine Bluff. Free estimates. Call 501-359-5550."
+  path="/service-areas"
+  preloadImage="/images/metal-roof-home"
+  breadcrumbs={[{ href: '/service-areas', label: 'Service Areas' }]}
+  schema={[faqSchema(faqs)]}
+>
+  <Hero
+    eyebrow="Central Arkansas"
+    h1="Where We Roof in Arkansas"
+    summary="Our shop is at 209 Albert Pike in Hot Springs. We roof across Garland County and the towns around it, from the Village and Lake Hamilton out to Benton, Malvern, Mount Ida, and the Pine Bluff area."
+    image="/images/metal-roof-home"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Which towns do you cover?</h2>
+      <p class="lede intro">
+        These are the places we work most. Each page covers what roofs are like in that town
+        and how we handle them.
+      </p>
+
+      <div class="grid grid-3">
+        {
+          areas.map((area) => (
+            <article class="card">
+              <h3>
+                <a href={`/service-areas/${area.id}`}>{area.data.city}</a>
+              </h3>
+              <p>{area.data.localIntro}</p>
+              <p class="more">
+                <a href={`/service-areas/${area.id}`}>Roofing in {area.data.city} &rarr;</a>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Do you go anywhere else?</h2>
+      <p class="lede">
+        Yes. We also roof in these towns and the country around them. Call us and ask —
+        we will tell you straight whether we cover you.
+      </p>
+      <ul class="also">
+        {alsoServed.map((city) => <li>{city}</li>)}
+      </ul>
+      <p>
+        <a href={telHref(business.phones.primary)}>Call {business.phones.primary}</a> or
+        <a href="/contact">ask for a free estimate</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <Faq faqs={faqs} heading="Service area questions" />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .card h3 a {
+    text-decoration: none;
+    color: var(--charcoal-900);
+  }
+
+  .card h3 a:hover {
+    color: var(--red-700);
+  }
+
+  .card p {
+    font-size: var(--step--1);
+  }
+
+  .more {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  .also {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+  }
+
+  .also li {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.35rem 1rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+    max-width: none;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+import { business, telHref } from '../data/business';
+---
+
+<div class="callbar">
+  <a href={telHref(business.phones.primary)} class="call">
+    <span aria-hidden="true">&#9742;</span> Call {business.phones.primary}
+  </a>
+  <a href="/contact" class="quote">Free Estimate</a>
+</div>
+
+<style>
+  .callbar {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .callbar {
+      position: fixed;
+      inset: auto 0 0;
+      z-index: 60;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      height: var(--callbar-h);
+      border-top: 1px solid var(--charcoal-700);
+      /* Keep the bar clear of the iPhone home indicator. */
+      padding-bottom: env(safe-area-inset-bottom, 0);
+      background: var(--charcoal-900);
+    }
+
+    .callbar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: var(--step-0);
+    }
+
+    .call {
+      background: var(--red-600);
+      color: var(--white);
+    }
+
+    .quote {
+      background: var(--charcoal-900);
+      color: var(--white);
+    }
+  }
+</style>

@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Faq from '../../components/Faq.astro';
+import { faqSchema } from '../../data/schema';
+
+const services = (await getCollection('services')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const faqs = [
+  {
+    q: 'What roofing services do you offer in Hot Springs?',
+    a: 'We install shingle, metal, and TPO flat roofs. We also do roof repair, leak repair, storm and hail damage repair, gutters, and siding. If it keeps water out of your house, we work on it.',
+  },
+  {
+    q: 'Do you work on commercial buildings?',
+    a: 'Yes. Flat and low-slope commercial roofs are a big part of what we do. TPO is the most common choice for shops and offices around Hot Springs. Call us and we will come look at it.',
+  },
+  {
+    q: 'Which roof should I pick for my Arkansas home?',
+    a: 'Most Hot Springs homeowners pick shingles for the lower upfront cost, or metal for the longer life and better hail performance. Shingles last 15 to 25 years here. Metal lasts 40 to 70. We help you weigh both at your free inspection.',
+  },
+  {
+    q: 'Do you charge for an estimate?',
+    a: 'No. Inspections and estimates are free. We get on your roof, take photos, show you what we find, and hand you a written price. There is no charge and no obligation.',
+  },
+];
+---
+
+<Base
+  title="Roofing Services in Hot Springs, AR | Speedy Gonzalez"
+  description="Shingle, metal, and flat roofing plus repairs, storm damage, gutters and siding in Hot Springs, AR. Free inspections. Call 501-359-5550."
+  path="/services"
+  preloadImage="/images/roof-repair"
+  breadcrumbs={[{ href: '/services', label: 'Services' }]}
+  schema={[faqSchema(faqs)]}
+>
+  <Hero
+    eyebrow="Hot Springs, Arkansas"
+    h1="Roofing Services in Hot Springs, Arkansas"
+    summary="We install and repair every kind of roof a Hot Springs home or business needs. Shingle, metal, and flat roofs, plus repairs, storm damage, gutters, and siding. Every job starts with a free inspection."
+    image="/images/roof-repair"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What do you need done?</h2>
+      <p class="lede intro">
+        Pick the job closest to your problem. Not sure which one? Call 501-359-5550 and just
+        describe what your roof is doing.
+      </p>
+
+      <div class="grid grid-2">
+        {
+          services.map((service) => (
+            <article class="card">
+              <h3>
+                <a href={`/services/${service.id}`}>{service.data.title}</a>
+              </h3>
+              <p>{service.data.summary}</p>
+              {service.data.priceRange && <p class="price">{service.data.priceRange}</p>}
+              <p class="more">
+                <a href={`/services/${service.id}`}>
+                  Learn about {service.data.title.toLowerCase()} &rarr;
+                </a>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <Faq faqs={faqs} heading="Questions about our services" />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .card h3 a {
+    text-decoration: none;
+    color: var(--charcoal-900);
+  }
+
+  .card h3 a:hover {
+    color: var(--red-700);
+  }
+
+  .price {
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--charcoal-500);
+  }
+
+  .more {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: var(--step--1);
+  }
+</style>

@@ -1,0 +1,81 @@
+---
+export interface Props {
+  faqs: { q: string; a: string }[];
+  heading?: string;
+}
+
+const { faqs, heading = 'Frequently asked questions' } = Astro.props;
+---
+
+<section class="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">{heading}</h2>
+  <div class="list">
+    {
+      faqs.map((faq) => (
+        <details>
+          <summary>
+            <h3>{faq.q}</h3>
+          </summary>
+          <p>{faq.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .list {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    max-width: var(--measure);
+  }
+
+  details + details {
+    border-top: 1px solid var(--border);
+  }
+
+  summary {
+    cursor: pointer;
+    padding: var(--space-md);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    background: var(--white);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '+';
+    font-size: var(--step-2);
+    line-height: 1;
+    color: var(--red-600);
+    font-weight: 700;
+    flex: none;
+  }
+
+  details[open] summary::after {
+    content: '\2212';
+  }
+
+  summary h3 {
+    margin: 0;
+    font-size: var(--step-0);
+    font-weight: 700;
+  }
+
+  summary:hover {
+    background: var(--bg-alt);
+  }
+
+  details p {
+    margin: 0;
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--charcoal-700);
+  }
+</style>

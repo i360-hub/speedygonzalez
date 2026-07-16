@@ -1,0 +1,157 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Prose from '../../components/Prose.astro';
+import Faq from '../../components/Faq.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { articleSchema, faqSchema } from '../../data/schema';
+import { srcset, fallback } from '../../data/images';
+
+/** Post body is capped at 760px. */
+const POST_SIZES = '(min-width: 800px) 760px, 100vw';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const path = `/blog/${entry.id}`;
+const { Content } = await render(entry);
+
+const fmt = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const breadcrumbs = [
+  { href: '/blog', label: 'Blog' },
+  { href: path, label: d.title },
+];
+
+const schema = [
+  articleSchema({
+    title: d.title,
+    description: d.description,
+    path,
+    image: fallback(d.heroImage),
+    published: d.pubDate,
+    modified: d.updatedDate,
+    author: d.author,
+  }),
+  ...(d.faqs?.length ? [faqSchema(d.faqs)] : []),
+];
+---
+
+<Base
+  title={d.metaTitle}
+  description={d.description}
+  path={path}
+  ogImage={d.heroImage}
+  preloadImage={d.heroImage}
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+  publishedTime={d.pubDate.toISOString()}
+  modifiedTime={(d.updatedDate ?? d.pubDate).toISOString()}
+>
+  <article class="wrap post">
+    <header>
+      <p class="eyebrow">{d.tags[0]}</p>
+      <h1>{d.title}</h1>
+      <p class="lede">{d.description}</p>
+      <p class="meta">
+        By {d.author} &middot;
+        <time datetime={d.pubDate.toISOString()}>{fmt(d.pubDate)}</time>
+        {
+          d.updatedDate && (
+            <>
+              {' '}&middot; Updated{' '}
+              <time datetime={d.updatedDate.toISOString()}>{fmt(d.updatedDate)}</time>
+            </>
+          )
+        }
+      </p>
+    </header>
+
+    <picture>
+      <source type="image/avif" srcset={srcset(d.heroImage, 'avif')} sizes={POST_SIZES} />
+      <source type="image/webp" srcset={srcset(d.heroImage, 'webp')} sizes={POST_SIZES} />
+      <img
+        class="hero"
+        src={fallback(d.heroImage)}
+        srcset={srcset(d.heroImage, 'jpg')}
+        sizes={POST_SIZES}
+        alt=""
+        width="1600"
+        height="900"
+        fetchpriority="high"
+      />
+    </picture>
+
+    <Prose>
+      <Content />
+    </Prose>
+
+    {d.faqs?.length ? <Faq faqs={d.faqs} /> : null}
+
+    <footer class="tags">
+      <h2>Tags</h2>
+      <ul>
+        {d.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+      <p><a href="/blog">&larr; Back to all roofing articles</a></p>
+    </footer>
+  </article>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .post {
+    width: min(100% - 2.5rem, 760px);
+    padding-block: var(--space-xl);
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: var(--step--1);
+  }
+
+  .hero {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .tags {
+    margin-top: var(--space-xl);
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-md);
+  }
+
+  .tags h2 {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--charcoal-500);
+    margin-top: 0;
+  }
+
+  .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .tags li {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.2rem 0.7rem;
+    font-size: var(--step--1);
+    max-width: none;
+  }
+</style>

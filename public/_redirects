@@ -1,0 +1,66 @@
+# Legacy URL map — Speedy Gonzalez Roofing (build spec §10)
+#
+# Source of truth: the 84 URLs crawled from the live Duda site
+# (.firecrawl/speedy-map.json). Every one of them resolves to a 200 or a 301
+# here — scripts/linkcheck.js asserts that against this file and fails the build
+# if a legacy URL is dropped or points at a page that no longer exists.
+#
+# Cloudflare Pages matches top to bottom, first match wins, so the
+# /service-areas/* catch-all MUST stay last in its group.
+#
+# Host + protocol canonicalization (http->https, non-www->www) is handled by a
+# Cloudflare Redirect Rule, not here — _redirects can't match on hostname.
+
+# --- Old service pages -> new /services/* silo ---------------------------------
+/shingle-roofs                    /services/shingle-roofing       301
+/metal-roofs                      /services/metal-roofing         301
+/tpo-roofs                        /services/tpo-flat-roofing      301
+/roof-repairs                     /services/roof-repair           301
+/leak-repair                      /services/roof-leak-repair      301
+/hail-damage-repair               /services/hail-damage-repair    301
+/storm-damage-repair              /services/storm-damage-repair   301
+/roof-storm-damage-repair         /services/storm-damage-repair   301
+/gutter-services                  /services/gutters               301
+/siding-services                  /services/siding                301
+
+# --- Renamed / dead pages ------------------------------------------------------
+/areas-we-service                 /service-areas                  301
+/find-us-online                   /contact                        301
+/sms-terms-and-conditions         /sms-terms                      301
+
+# --- Old root-level blog posts -> /blog/* --------------------------------------
+# Posts with a direct successor:
+/how-to-find-a-leak-in-a-metal-roof-hot-springs                        /blog/find-leak-metal-roof              301
+/metal-roofing-hot-springs-ar-what-to-know                             /blog/metal-vs-shingles-arkansas        301
+/arkansas-hail-season-2025-what-hot-springs-homeowners-must-know-final /blog/arkansas-hail-season              301
+/roof-replacement-cost-hot-springs-ar                                  /blog/roof-replacement-cost-arkansas    301
+/signs-you-need-a-new-roof-hot-springs-homeowners-guide                /blog/signs-you-need-a-new-roof         301
+
+# Posts with no direct successor -> closest-intent service/area page.
+# (Rewriting these four as posts later is a ranking opportunity — see
+# REVIEW-BEFORE-LAUNCH.md. Until then they keep their equity on-topic.)
+/tpo-roofing-hot-springs-ar-flat-roof-guide                            /services/tpo-flat-roofing              301
+/storm-damage-roof-repair-hot-springs-ar                               /services/storm-damage-repair           301
+/gutters-arkansas-hot-springs-why-they-matter                          /services/gutters                       301
+/roof-maintenance-guide-hot-springs-homeowners                         /services/roof-repair                   301
+/hot-springs-village-poa-roof-approval-guide                           /service-areas/hot-springs-village       301
+
+# Old "ultimate guide" pages targeting the core money terms -> home, which is
+# what actually ranks for them.
+/roofing-contractors-hot-springs-your-ultimate-guide                   /                                       301
+/trusted-roofers-in-hot-springs-for-quality-roofing-solutions          /                                       301
+
+# --- Service areas: underscore slugs -> hyphenated pages -----------------------
+/service-areas/hot_springs_village /service-areas/hot-springs-village 301
+/service-areas/pine_bluff          /service-areas/pine-bluff         301
+/service-areas/mount_ida           /service-areas/mount-ida          301
+
+# --- Service areas: towns that never earned a real page -----------------------
+# Spec §2: a city page ships only with genuinely local content. These 44 towns
+# were thin doorway pages on the old site, so their equity consolidates into the
+# hub rather than propping up empty pages. Promote individual towns to real
+# pages later as local content justifies it.
+/service-areas/*                   /service-areas                    301
+
+# --- Param-URL duplicates ------------------------------------------------------
+/?keywordutm_source=google         /                                 301
