@@ -173,7 +173,23 @@ export const businessSchema = (withRating = false) => {
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
     openingHours: business.hoursSchema,
     priceRange: '$$',
-    sameAs: [business.social.facebook, business.social.instagram],
+    // State licenses as machine-readable identifiers (not just body text).
+    identifier: [
+      {
+        '@type': 'PropertyValue',
+        name: 'Arkansas Roofing License',
+        value: business.licenses.roofing,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Arkansas Home Improvement License',
+        value: business.licenses.homeImprovement,
+      },
+    ],
+    // sameAs disambiguates the entity in Google's Knowledge Graph. The BBB
+    // profile is filed under "Speedy Gonzalez Construction, Inc." — the same
+    // real business (see legalNote) — so it belongs here alongside the socials.
+    sameAs: [business.social.facebook, business.social.instagram, bbb.profileUrl],
   };
 
   if (withRating && rating.verified) {
