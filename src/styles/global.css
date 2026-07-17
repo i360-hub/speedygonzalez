@@ -257,6 +257,47 @@ a:hover {
   margin-bottom: 0;
 }
 
+/* Whole-card click target. Put `is-link` on a .card and `card-link` on its ONE
+   navigational link (the heading). The link's ::after stretches over the whole
+   card, so the entire card is clickable but there is still exactly one link for
+   assistive tech. Do NOT use on cards with more than one destination. */
+.card.is-link {
+  position: relative;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card.is-link:hover {
+  border-color: var(--red-600);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgb(20 23 26 / 0.1);
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* The "→ Learn more" affordance is text, not a second link — the card link
+   already covers it. It nudges right on hover to read as clickable. */
+.card-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: var(--space-sm);
+  font-weight: 700;
+  font-size: var(--step--1);
+  color: var(--red-700);
+}
+
+.card.is-link:hover .card-cue {
+  gap: 0.5rem;
+}
+
 /* Tables — AEO-friendly scannable facts */
 .table-wrap {
   overflow-x: auto;

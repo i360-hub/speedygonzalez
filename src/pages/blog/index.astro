@@ -74,8 +74,8 @@ const CARD_SIZES = '(min-width: 900px) 360px, 100vw';
       <div class="grid grid-3">
         {
           rest.map((post) => (
-            <article class="card post">
-              <a href={`/blog/${post.id}`} class="thumb">
+            <article class="card post is-link">
+              <div class="thumb">
                 <picture>
                   <source
                     type="image/avif"
@@ -92,10 +92,10 @@ const CARD_SIZES = '(min-width: 900px) 360px, 100vw';
                     loading="lazy"
                   />
                 </picture>
-              </a>
+              </div>
               <p class="eyebrow">{post.data.tags[0]}</p>
               <h3>
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                <a class="card-link" href={`/blog/${post.id}`}>{post.data.title}</a>
               </h3>
               <p>{post.data.description}</p>
               <p class="meta">

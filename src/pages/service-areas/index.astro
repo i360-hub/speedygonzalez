@@ -56,14 +56,12 @@ const faqs = [
       <div class="grid grid-3">
         {
           areas.map((area) => (
-            <article class="card">
+            <article class="card is-link">
               <h3>
-                <a href={`/service-areas/${area.id}`}>{area.data.city}</a>
+                <a class="card-link" href={`/service-areas/${area.id}`}>{area.data.city}</a>
               </h3>
               <p>{area.data.localIntro}</p>
-              <p class="more">
-                <a href={`/service-areas/${area.id}`}>Roofing in {area.data.city} &rarr;</a>
-              </p>
+              <span class="card-cue">Roofing in {area.data.city} &rarr;</span>
             </article>
           ))
         }

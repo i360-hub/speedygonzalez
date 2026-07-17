@@ -56,17 +56,12 @@ const faqs = [
       <div class="grid grid-2">
         {
           services.map((service) => (
-            <article class="card">
+            <article class="card is-link">
               <h3>
-                <a href={`/services/${service.id}`}>{service.data.title}</a>
+                <a class="card-link" href={`/services/${service.id}`}>{service.data.title}</a>
               </h3>
               <p>{service.data.summary}</p>
-              {service.data.priceRange && <p class="price">{service.data.priceRange}</p>}
-              <p class="more">
-                <a href={`/services/${service.id}`}>
-                  Learn about {service.data.title.toLowerCase()} &rarr;
-                </a>
-              </p>
+              <span class="card-cue">Learn about {service.data.title.toLowerCase()} &rarr;</span>
             </article>
           ))
         }
