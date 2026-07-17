@@ -45,14 +45,22 @@ export const business = {
 
 /**
  * Rating shown on-page and in AggregateRating schema.
- * `verified` gates the schema block: publishing AggregateRating without real,
- * on-page reviews is a rich-results violation (spec §6). Flip to true only
- * after confirming the live count against Google Business Profile.
+ *
+ * Verified 2026-07-16 against the live Google Business Profile panel:
+ * 4.9 stars, 152 Google reviews. (The build spec said 157 — it was stale.)
+ *
+ * `verified` gates the schema block. Publishing AggregateRating without real,
+ * on-page reviews is a rich-results violation (spec §6), so it only ships on
+ * pages that actually render reviews — see `withRating` in businessSchema().
+ *
+ * The count drifts as reviews come in. A stale number here is not a violation
+ * (Google reconciles against GBP), but re-check it at launch and when it moves
+ * materially.
  */
 export const rating = {
   value: 4.9,
-  count: 157,
-  verified: false,
+  count: 152,
+  verified: true,
 } as const;
 
 export const areaServed = [
@@ -71,8 +79,15 @@ export const areaServed = [
 
 export const telHref = (phone: string) => `tel:+1${phone.replace(/\D/g, '')}`;
 
-/** Site-wide RoofingContractor node. Everything else @id-references it. */
-export const businessSchema = () => {
+/**
+ * Site-wide RoofingContractor node. Everything else @id-references it.
+ *
+ * @param withRating - emit AggregateRating. Only pass true on pages that render
+ * real review text (home and /reviews). Google requires the rating to be visible
+ * on the page carrying the markup; bolting it onto every page is the classic way
+ * to lose the rich result site-wide. validate-schema.js enforces this.
+ */
+export const businessSchema = (withRating = false) => {
   const node: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'RoofingContractor',
@@ -97,11 +112,13 @@ export const businessSchema = () => {
     sameAs: [business.social.facebook, business.social.instagram],
   };
 
-  if (rating.verified) {
+  if (withRating && rating.verified) {
     node.aggregateRating = {
       '@type': 'AggregateRating',
       ratingValue: String(rating.value),
       reviewCount: String(rating.count),
+      bestRating: '5',
+      worstRating: '1',
     };
   }
 

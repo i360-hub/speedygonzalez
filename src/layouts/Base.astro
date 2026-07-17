@@ -19,12 +19,18 @@ export interface Props {
   modifiedTime?: string;
   /** Deep pages pass a trail; it renders crumbs AND emits BreadcrumbList. */
   breadcrumbs?: { href: string; label: string }[];
+  /**
+   * Emit AggregateRating in the business node. Only set this on pages that
+   * render real review text — Google requires the rating to be visible on the
+   * page carrying the markup. validate-schema.js fails the build otherwise.
+   */
+  showRating?: boolean;
 }
 
-const { breadcrumbs, schema = [], ...head } = Astro.props;
+const { breadcrumbs, schema = [], showRating = false, ...head } = Astro.props;
 
 const allSchema = [
-  businessSchema(),
+  businessSchema(showRating),
   ...(breadcrumbs?.length ? [breadcrumbSchema(breadcrumbs)] : []),
   ...schema,
 ];

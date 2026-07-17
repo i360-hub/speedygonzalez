@@ -11,6 +11,7 @@ import { rating, business } from '../data/business';
   description="Read what Hot Springs homeowners say about Speedy Gonzalez Roofing. Rated 4.9 stars for fast, fair, professional roofing work."
   path="/reviews"
   breadcrumbs={[{ href: '/reviews', label: 'Reviews' }]}
+  showRating
 >
   <section class="section head">
     <div class="wrap">
@@ -18,8 +19,8 @@ import { rating, business } from '../data/business';
       <h1>What Hot Springs Homeowners Say</h1>
       <p class="lede">
         <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        Rated {rating.value} stars by local homeowners. These are real reviews from real jobs
-        around Garland County.
+        Rated {rating.value} stars across {rating.count} Google reviews. These are real reviews
+        from real jobs around Garland County.
       </p>
     </div>
   </section>

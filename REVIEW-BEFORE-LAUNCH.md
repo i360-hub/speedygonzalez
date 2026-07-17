@@ -22,18 +22,22 @@ If the embed ever goes blank, check `public/_headers` first — the CSP must kee
 `api.leadconnectorhq.com` in `frame-src`/`connect-src` and `link.msgsndr.com` in
 `script-src`.
 
-### 1.2 The 4.9 / 157 review count is unverified
+### ~~1.2 The 4.9 / 157 review count is unverified~~ — RESOLVED 2026-07-16
 
-`src/data/business.ts` has `rating.verified = false`, which **suppresses the
-AggregateRating JSON-LD on purpose**. Publishing a rating that doesn't match
-reality is a rich-results violation and can cost the rich snippet entirely.
+Verified against the live Google Business Profile panel: **4.9 stars, 152 Google
+reviews**. The build spec's 157 was stale. `src/data/business.ts` now carries
+4.9 / 152 with `verified: true`, so the AggregateRating JSON-LD ships.
 
-Check the live Google Business Profile, set `rating.value`/`rating.count` to the
-real numbers, then flip `verified: true`. The schema gate already enforces that
-reviews render on-page wherever AggregateRating appears.
+It ships on **`/` and `/reviews` only** — the two pages that render real review
+text. Google requires the rating to be visible on the page carrying the markup,
+and `validate-schema.js` fails the build if AggregateRating appears anywhere
+without on-page reviews. To add it to another page, render real reviews there and
+pass `showRating` to the layout.
 
-The `4.9` figure shown in body copy is *not* gated by that flag — correct it in
-`business.ts` and it updates everywhere.
+The count drifts as reviews come in. A stale count is not a violation (Google
+reconciles against GBP), but re-check `rating.count` at launch and whenever it
+moves materially — it's stated in body copy on both pages, from the same
+constant.
 
 ### 1.3 NAP + hours against Google Business Profile
 
