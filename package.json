@@ -16,7 +16,8 @@
     "check:claims": "node scripts/check-claims.js",
     "check:nap": "node scripts/check-nap.js",
     "check:reviews": "node scripts/check-reviews.js",
-    "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:nap && npm run check:reviews && npm run check:overflow"
+    "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:nap && npm run check:reviews && npm run check:overflow && npm run check:spacing",
+    "check:spacing": "node scripts/check-spacing.js"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
