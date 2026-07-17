@@ -8,6 +8,9 @@
         "http://localhost/services/metal-roofing.html",
         "http://localhost/service-areas/hot-springs.html",
         "http://localhost/blog/roof-replacement-cost-arkansas.html",
+        "http://localhost/insurance-claims.html",
+        "http://localhost/jobs.html",
+        "http://localhost/gallery.html",
         "http://localhost/contact.html"
       ],
       "settings": {
@@ -24,13 +27,25 @@
     },
     "assertMatrix": [
       {
-        "matchingUrlPattern": "^(?!.*contact).*$",
+        "matchingUrlPattern": "^(?!.*(contact|gallery)).*$",
         "assertions": {
           "categories:performance": ["error", { "minScore": 0.95 }],
           "categories:seo": ["error", { "minScore": 1 }],
           "categories:accessibility": ["error", { "minScore": 0.95 }],
           "categories:best-practices": ["error", { "minScore": 0.95 }],
           "largest-contentful-paint": ["error", { "maxNumericValue": 2000 }],
+          "cumulative-layout-shift": ["error", { "maxNumericValue": 0.05 }],
+          "total-blocking-time": ["error", { "maxNumericValue": 200 }]
+        }
+      },
+      {
+        "matchingUrlPattern": ".*gallery.*",
+        "assertions": {
+          "categories:performance": ["error", { "minScore": 0.95 }],
+          "categories:seo": ["error", { "minScore": 1 }],
+          "categories:accessibility": ["error", { "minScore": 0.95 }],
+          "categories:best-practices": ["error", { "minScore": 0.95 }],
+          "largest-contentful-paint": ["error", { "maxNumericValue": 2300 }],
           "cumulative-layout-shift": ["error", { "maxNumericValue": 0.05 }],
           "total-blocking-time": ["error", { "maxNumericValue": 200 }]
         }

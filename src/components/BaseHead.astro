@@ -12,6 +12,9 @@ export interface Props {
   ogImage?: string;
   /** Extension-less base path of the LCP hero, if the page has one. */
   preloadImage?: string;
+  /** Preload an arbitrary responsive AVIF as the LCP image (non-hero pages, e.g.
+   *  the gallery's before/after slider, whose paths don't fit the hero pattern). */
+  preloadImageset?: { srcset: string; sizes: string };
   noindex?: boolean;
   /** JSON-LD nodes rendered into <head>. */
   schema?: Record<string, unknown>[];
@@ -25,6 +28,7 @@ const {
   path,
   ogImage = '/og.jpg',
   preloadImage,
+  preloadImageset,
   noindex = false,
   schema = [],
   publishedTime,
@@ -69,6 +73,18 @@ if (description.length > 155) {
       type="image/avif"
       imagesrcset={srcset(preloadImage, 'avif')}
       imagesizes={HERO_SIZES}
+      fetchpriority="high"
+    />
+  )
+}
+{
+  preloadImageset && (
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      imagesrcset={preloadImageset.srcset}
+      imagesizes={preloadImageset.sizes}
       fetchpriority="high"
     />
   )

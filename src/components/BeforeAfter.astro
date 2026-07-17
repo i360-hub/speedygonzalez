@@ -18,9 +18,12 @@ import { pairById } from '../data/beforeAfter';
 export interface Props {
   id: string;
   heading?: string;
+  /** Set when the slider is above the fold (e.g. /gallery) so its visible image
+   *  is the LCP and must load eagerly, not lazily. */
+  eager?: boolean;
 }
 
-const { id, heading } = Astro.props;
+const { id, heading, eager = false } = Astro.props;
 const pair = pairById(id);
 if (!pair) throw new Error(`BeforeAfter: no pair "${id}" in before-after.json`);
 
@@ -51,7 +54,8 @@ const SIZES = '(min-width: 800px) 760px, 100vw';
         alt={pair.afterAlt}
         width="1000"
         height="750"
-        loading="lazy"
+        loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={eager ? 'high' : undefined}
       />
     </picture>
 

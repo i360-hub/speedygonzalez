@@ -49,12 +49,27 @@ const groups = [
 ];
 
 const byName = (name: string) => photos.find((p) => p.name === name)!;
+
+/**
+ * LCP: the first grid thumbnail (a normal in-flow <img>), preloaded and eager.
+ * The before/after slider was tried as the above-the-fold LCP but its absolutely
+ * positioned, clip-path'd image had a ~2s paint delay under throttling (a widget
+ * paint cost, not a network one), so the slider now sits below the grid and a
+ * plain grid image is the LCP.
+ */
+const GRID_SIZES = '(min-width: 900px) 30vw, 100vw';
+const firstImage = groups[0].items[0].name;
+const preloadImageset = {
+  srcset: `/images/inline/${firstImage}-500.avif 500w, /images/inline/${firstImage}.avif 800w`,
+  sizes: GRID_SIZES,
+};
 ---
 
 <Base
   title="Roofing Photo Gallery | Speedy Gonzalez Hot Springs"
   description="Real roofing, metal roofs, storm repairs, and siding jobs by Speedy Gonzalez Roofing in Hot Springs, Arkansas. See our actual work — no stock photos."
   path="/gallery"
+  preloadImageset={preloadImageset}
   breadcrumbs={[{ href: '/gallery', label: 'Gallery' }]}
 >
   <section class="section head">
@@ -68,34 +83,29 @@ const byName = (name: string) => photos.find((p) => p.name === name)!;
     </div>
   </section>
 
-  <section class="wrap ba-wrap">
-    <BeforeAfter
-      id="hot-springs-exterior-remodel"
-      heading="Before and after: a Hot Springs exterior remodel"
-    />
-  </section>
-
   {
-    groups.map((group) => (
+    groups.map((group, gi) => (
       <section class="section group">
         <div class="wrap">
           <h2>{group.heading}</h2>
           <div class="grid">
-            {group.items.map((item) => {
+            {group.items.map((item, ii) => {
               const photo = byName(item.name);
+              const isLcp = gi === 0 && ii === 0;
               return (
                 <figure>
                   <picture>
-                    <source type="image/avif" srcset={inlineSet(item.name, 'avif')} sizes="(min-width: 900px) 30vw, 100vw" />
-                    <source type="image/webp" srcset={inlineSet(item.name, 'webp')} sizes="(min-width: 900px) 30vw, 100vw" />
+                    <source type="image/avif" srcset={inlineSet(item.name, 'avif')} sizes={GRID_SIZES} />
+                    <source type="image/webp" srcset={inlineSet(item.name, 'webp')} sizes={GRID_SIZES} />
                     <img
                       src={inlineSrc(item.name, 'jpg')}
                       srcset={inlineSet(item.name, 'jpg')}
-                      sizes="(min-width: 900px) 30vw, 100vw"
+                      sizes={GRID_SIZES}
                       alt={photo.alt}
                       width="800"
                       height="600"
-                      loading="lazy"
+                      loading={isLcp ? 'eager' : 'lazy'}
+                      fetchpriority={isLcp ? 'high' : undefined}
                       decoding="async"
                     />
                   </picture>
@@ -108,6 +118,15 @@ const byName = (name: string) => photos.find((p) => p.name === name)!;
       </section>
     ))
   }
+
+  <section class="section section-alt">
+    <div class="wrap ba-wrap">
+      <BeforeAfter
+        id="hot-springs-exterior-remodel"
+        heading="Before and after: a Hot Springs exterior remodel"
+      />
+    </div>
+  </section>
 
   <CtaBand />
 </Base>
