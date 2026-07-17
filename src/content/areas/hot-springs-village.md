@@ -30,7 +30,7 @@ faqs:
   - q: Do you work for people who are away part of the year?
     a: Yes. Many Village homeowners travel or spend part of the year elsewhere. We photograph everything we find and everything we do, so you can see the roof without standing on it. We can report by phone or email while you are away.
   - q: How far is Hot Springs Village from your shop?
-    a: The Village is close. Our office is at 209 Albert Pike in Hot Springs, and the drive to the gates takes about 30 minutes. That means real crews, not a company driving in from Little Rock or out of state.
+    a: The Village is close. Our office is at 207 Albert Pike Road in Hot Springs, and the drive to the gates takes about 30 minutes. That means real crews, not a company driving in from Little Rock or out of state.
 heroImage: /images/metal-roof-home
 order: 2
 ---
@@ -78,4 +78,4 @@ Read about [hail damage repair](/services/hail-damage-repair) and [storm damage 
 
 Our own crews. We are licensed in Arkansas under RR0540931024 and 0378510824. We have 20 trained people and over 500 projects done.
 
-We also roof in [Hot Springs](/service-areas/hot-springs), [Benton](/service-areas/benton), and [Mount Ida](/service-areas/mount-ida). [Contact us](/contact) or call 501-359-5550. We answer seven days a week, 7:00 AM to 8:00 PM.
+We also roof in [Hot Springs](/service-areas/hot-springs), [Benton](/service-areas/benton), and [Mount Ida](/service-areas/mount-ida). [Contact us](/contact) or call 501-359-5550. We answer 24 hours a day, seven days a week.

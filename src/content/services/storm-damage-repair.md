@@ -21,7 +21,7 @@ faqs:
   - q: How soon do I need to file a claim?
     a: Sooner is better. Most policies have a time limit for storm claims, and damage gets harder to prove as weeks pass. Call your insurer, then call us. Our free inspection gives you photos and a written report you can hand straight to your adjuster.
   - q: Can you tarp my roof tonight?
-    a: Often yes. We answer the phone seven days a week, 7:00 AM to 8:00 PM. A tarp is not a repair, but it keeps water out of your house until we can do the real work. Call 501-359-5550 and tell us water is coming in.
+    a: Often yes. We answer the phone 24 hours a day, seven days a week. A tarp is not a repair, but it keeps water out of your house until we can do the real work. Call 501-359-5550 and tell us water is coming in.
   - q: My roof looks fine from the ground. Should I still get it checked?
     a: Yes. Wind and hail damage often does not show from the ground. Lifted shingles, cracked seals, and bruised spots are only visible up close. That hidden damage leaks months later. Our inspection is free, so there is no reason to guess.
   - q: Do you work with my insurance company?
@@ -77,7 +77,7 @@ For a smaller job, see [roof repair](/services/roof-repair) or [roof leak repair
 
 ## Who is doing the work on my roof?
 
-Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 209 Albert Pike in Hot Springs. We have roofed here for over 20 years with 20 trained people on staff.
+Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 207 Albert Pike Road in Hot Springs. We have roofed here for over 20 years with 20 trained people on staff.
 
 After a big storm, out-of-state crews show up chasing work and leave when the season ends. We are here year-round.
 

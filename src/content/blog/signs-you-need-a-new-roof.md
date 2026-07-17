@@ -81,6 +81,6 @@ Compare [shingle roofing](/services/shingle-roofing) and [metal roofing](/servic
 
 Get a free inspection. We climb up, photograph what is there, and show you the pictures. Then you decide with your own roof in front of you instead of a guess. If it has good years left, we tell you that and we leave.
 
-We are at 209 Albert Pike in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, 20 trained people, and a 4.9 rating. We serve [Hot Springs](/service-areas/hot-springs) and all of Garland County. Sometimes a [roof repair](/services/roof-repair) is the whole answer.
+We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, 20 trained people, and a 4.9 rating. We serve [Hot Springs](/service-areas/hot-springs) and all of Garland County. Sometimes a [roof repair](/services/roof-repair) is the whole answer.
 
-Seeing any of these signs? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer seven days a week, 7:00 AM to 8:00 PM. Financing is available.
+Seeing any of these signs? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. Financing is available.

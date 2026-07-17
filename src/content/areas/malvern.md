@@ -22,7 +22,7 @@ servicesOffered:
   - siding
 faqs:
   - q: How far is Malvern from your Hot Springs shop?
-    a: Malvern is close. Our office is at 209 Albert Pike in Hot Springs, and Malvern sits southeast on the way to I-30. Crews get there in about 30 minutes. Hot Spring County is regular territory for us, not a long-distance job we take once a year.
+    a: Malvern is close. Our office is at 207 Albert Pike Road in Hot Springs, and Malvern sits southeast on the way to I-30. Crews get there in about 30 minutes. Hot Spring County is regular territory for us, not a long-distance job we take once a year.
   - q: My house is brick. Does that change the roof work?
     a: Not the roof itself, but it changes the edges. Malvern has a lot of brick, and brick meets your roof at chimneys, walls, and dormers. Those joints need proper flashing cut and sealed into the brick. Bad flashing on brick is a leak we find often.
   - q: Do you install metal roofs in Malvern?
@@ -82,4 +82,4 @@ Yes. Arkansas Roofing License RR0540931024 and Home Improvement License 03785108
 
 Up the road in [Hot Springs](/service-areas/hot-springs), northeast in [Benton](/service-areas/benton), and south in [Arkadelphia](/service-areas/arkadelphia).
 
-[Contact us](/contact) or call 501-359-5550. Office line is 501-701-8766. We answer seven days a week, 7:00 AM to 8:00 PM.
+[Contact us](/contact) or call 501-359-5550. Office line is 501-701-8766. We answer 24 hours a day, seven days a week.

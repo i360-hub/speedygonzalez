@@ -81,6 +81,6 @@ We work throughout [Hot Springs](/service-areas/hot-springs) and Garland County.
 
 ## Who should look at your roof?
 
-Our own crews. We are at 209 Albert Pike in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, and 20 trained people on staff. We have handled hundreds of storm claims across Garland County.
+Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, and 20 trained people on staff. We have handled hundreds of storm claims across Garland County.
 
-Storm season coming or already through? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer seven days a week, 7:00 AM to 8:00 PM.
+Storm season coming or already through? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week.

@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'How long have you been roofing in Hot Springs?',
-    a: 'Over 20 years. Our shop is at 209 Albert Pike in Hot Springs, and we have finished more than 500 projects across Garland County and central Arkansas.',
+    a: 'Over 20 years. Our shop is at 207 Albert Pike Road in Hot Springs, and we have finished more than 500 projects across Garland County and central Arkansas.',
   },
   {
     q: 'Do you use subcontractors?',
@@ -41,7 +41,7 @@ const faqs = [
   <Hero
     eyebrow="About us"
     h1="Roofers From Hot Springs, For Hot Springs"
-    summary="Speedy Gonzalez Roofing has spent more than 20 years on Arkansas roofs. We are licensed, we run our own crews, and our shop is right here at 209 Albert Pike."
+    summary="Speedy Gonzalez Roofing has spent more than 20 years on Arkansas roofs. We are licensed, we run our own crews, and our shop is right here at 207 Albert Pike Road."
     image="/images/shingle-roofing"
   />
 
@@ -49,9 +49,9 @@ const faqs = [
     <div class="wrap prose-block">
       <h2>Who is Speedy Gonzalez Roofing?</h2>
       <p>
-        We are a licensed roofing contractor in Hot Springs, Arkansas. Our shop sits at 209
-        Albert Pike. We hold Arkansas roofing license {business.licenses.roofing} and home
-        improvement license {business.licenses.homeImprovement}.
+        We are a licensed roofing contractor in Hot Springs, Arkansas. Our shop sits at{' '}
+        {business.address.street}. We hold Arkansas roofing license {business.licenses.roofing}{' '}
+        and home improvement license {business.licenses.homeImprovement}.
       </p>
       <p>
         We have been doing this for over 20 years. In that time we have finished more than 500

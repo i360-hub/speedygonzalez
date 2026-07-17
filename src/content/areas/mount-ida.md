@@ -21,7 +21,7 @@ servicesOffered:
   - siding
 faqs:
   - q: Will you actually drive out to Mount Ida?
-    a: Yes. Mount Ida is west of Hot Springs on Highway 270, about an hour from our shop at 209 Albert Pike. A lot of roofers will not make that drive for a rural job. We will, and the inspection and estimate are still free.
+    a: Yes. Mount Ida is west of Hot Springs on Highway 270, about an hour from our shop at 207 Albert Pike Road. A lot of roofers will not make that drive for a rural job. We will, and the inspection and estimate are still free.
   - q: Do you charge extra for rural Montgomery County jobs?
     a: No. Inspections and estimates are free out here, same as in town. The drive is our problem, not yours. What we do ask is that you tell us about the driveway when you call, so we bring the right truck and equipment the first time.
   - q: Is a metal roof a good idea near Lake Ouachita?
@@ -36,7 +36,7 @@ order: 8
 
 ## Will you drive out to Mount Ida?
 
-Yes. Mount Ida sits west of Hot Springs on Highway 270, about an hour from our shop at 209 Albert Pike. Plenty of roofers will not make that drive. We will.
+Yes. Mount Ida sits west of Hot Springs on Highway 270, about an hour from our shop at 207 Albert Pike Road. Plenty of roofers will not make that drive. We will.
 
 Montgomery County is rural, and that is exactly why people here get ignored. Your inspection and estimate are free anyway.
 
@@ -87,4 +87,4 @@ Yes. Arkansas Roofing License RR0540931024 and Home Improvement License 03785108
 
 We also work in [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), and [Malvern](/service-areas/malvern).
 
-[Contact us](/contact) or call 501-359-5550. We answer seven days a week, 7:00 AM to 8:00 PM.
+[Contact us](/contact) or call 501-359-5550. We answer 24 hours a day, seven days a week.

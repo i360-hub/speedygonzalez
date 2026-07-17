@@ -80,8 +80,8 @@ Learn more about [roof leak repair](/services/roof-leak-repair) and [metal roofi
 
 ## Who fixes it?
 
-Our own crews. We are at 209 Albert Pike in Hot Springs, licensed in Arkansas under RR0540931024. We have been roofing Garland County for over 20 years with 20 trained people on staff.
+Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. We have been roofing Garland County for over 20 years with 20 trained people on staff.
 
 We do not sell your job to a stranger.
 
-Got a drip you cannot track down? [Contact us](/contact) or call 501-359-5550 for a free inspection. We answer seven days a week, 7:00 AM to 8:00 PM.
+Got a drip you cannot track down? [Contact us](/contact) or call 501-359-5550 for a free inspection. We answer 24 hours a day, seven days a week.

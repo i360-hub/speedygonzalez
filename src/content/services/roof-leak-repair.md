@@ -78,8 +78,8 @@ If the roof still has life in it, we do the repair and you keep your money. See 
 
 ## How fast can you get here?
 
-Often the same day or the next. We answer seven days a week, 7:00 AM to 8:00 PM, at 501-359-5550. Tell us if water is coming in right now and we will move you up the list.
+Often the same day or the next. We answer around the clock, any day, at 501-359-5550. Tell us if water is coming in right now and we will move you up the list.
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 
-We are licensed in Arkansas, license number RR0540931024, and based at 209 Albert Pike in Hot Springs. [Contact us](/contact) or call. Financing is available on bigger jobs through our [financing](/financing) page.
+We are licensed in Arkansas, license number RR0540931024, and based at 207 Albert Pike Road in Hot Springs. [Contact us](/contact) or call. Financing is available on bigger jobs through our [financing](/financing) page.

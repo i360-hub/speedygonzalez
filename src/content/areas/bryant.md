@@ -20,7 +20,7 @@ servicesOffered:
   - siding
 faqs:
   - q: How fast can you get to Bryant?
-    a: Quickly. Bryant is a straight shot up I-30 from our Hot Springs shop, and it takes our crews about 35 minutes. We answer the phone seven days a week from 7:00 AM to 8:00 PM. If water is coming into your house, tell us and we move you up the list.
+    a: Quickly. Bryant is a straight shot up I-30 from our Hot Springs shop, and it takes our crews about 35 minutes. We answer the phone 24 hours a day, seven days a week. If water is coming into your house, tell us and we move you up the list.
   - q: My Bryant house is new. Can it already need a roof?
     a: Yes, and it happens here a lot. Bryant grew fast, and many homes went up with basic builder shingles. Those shingles are the cheapest part of a new house. One hard hailstorm can finish them well before the warranty year on the paperwork.
   - q: How do I know if my Bryant roof has hail damage?
@@ -35,9 +35,9 @@ order: 4
 
 ## How fast can you get to Bryant?
 
-Fast. Bryant is a straight run up I-30 from our shop at 209 Albert Pike in Hot Springs. Our crews get there in about 35 minutes.
+Fast. Bryant is a straight run up I-30 from our shop at 207 Albert Pike Road in Hot Springs. Our crews get there in about 35 minutes.
 
-We answer the phone every day of the week, 7:00 AM to 8:00 PM. Active leaks go to the front of the line.
+We answer the phone 24 hours a day, every day of the week. Active leaks go to the front of the line.
 
 ## Why do so many Bryant roofs need work already?
 

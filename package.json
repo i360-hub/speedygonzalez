@@ -14,7 +14,8 @@
     "linkcheck": "node scripts/linkcheck.js",
     "check:overflow": "node scripts/check-overflow.js",
     "check:claims": "node scripts/check-claims.js",
-    "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:overflow"
+    "check:nap": "node scripts/check-nap.js",
+    "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:nap && npm run check:overflow"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

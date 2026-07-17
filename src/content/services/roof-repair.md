@@ -17,7 +17,7 @@ faqs:
   - q: How much does roof repair cost in Hot Springs?
     a: It depends on what is wrong and how far it spread. A few missing shingles or one bad flashing is a small job. Rotten decking or a large storm-torn section costs more, because we rebuild what is under the shingles. We will not guess over the phone. We inspect the roof for free and hand you a written price.
   - q: How fast can you get to my roof?
-    a: Often the same day or the next day. We answer the phone seven days a week, 7:00 AM to 8:00 PM, at 501-359-5550. If water is coming into your house right now, tell us. Active leaks go to the front of the line.
+    a: Often the same day or the next day. We answer the phone around the clock, any day, at 501-359-5550. If water is coming into your house right now, tell us. Active leaks go to the front of the line.
   - q: Should I repair my roof or replace it?
     a: Repair when the damage is in one area and your roof still has years left. Replace when shingles are curling all over, granules fill your gutters, or the roof is past 20 years old. Our free inspection tells you which one you are looking at.
   - q: Will a repair void my roof warranty?
@@ -78,7 +78,7 @@ We have handled hundreds of claims across Garland County.
 
 ## How fast can you get out here?
 
-Often the same day or the next. We answer seven days a week, 7:00 AM to 8:00 PM. If water is running into your house, say so when you call and we will move you up.
+Often the same day or the next. We answer 24 hours a day, seven days a week. If water is running into your house, say so when you call and we will move you up.
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 

@@ -81,7 +81,7 @@ If you have an active leak, our [roof leak repair](/services/roof-leak-repair) c
 
 Yes. TPO is the go-to for shops, offices, and small commercial buildings across Garland County. We can often work around your business hours.
 
-We are licensed in Arkansas, license number RR0540931024, and we are based at 209 Albert Pike in Hot Springs. Our own crews do the work. We do not hand your job to a subcontractor.
+We are licensed in Arkansas, license number RR0540931024, and we are based at 207 Albert Pike Road in Hot Springs. Our own crews do the work. We do not hand your job to a subcontractor.
 
 ## Where do you install flat roofs?
 

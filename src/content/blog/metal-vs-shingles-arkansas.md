@@ -87,8 +87,8 @@ Read more about [shingle roofing](/services/shingle-roofing) and [metal roofing]
 
 ## Who will do the work?
 
-Our own crews. We are at 209 Albert Pike in Hot Springs, licensed in Arkansas under RR0540931024. We have roofed here over 20 years, finished more than 500 projects, and keep 20 trained people on staff.
+Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. We have roofed here over 20 years, finished more than 500 projects, and keep 20 trained people on staff.
 
 We do not hand your job to a subcontractor you have never met.
 
-Ready to compare both roofs on your own house? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer seven days a week, 7:00 AM to 8:00 PM. Financing is available, and we help with insurance claims.
+Ready to compare both roofs on your own house? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. Financing is available, and we help with insurance claims.

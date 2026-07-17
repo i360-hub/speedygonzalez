@@ -85,4 +85,4 @@ We are rated 4.9. Inspections and estimates are free, and financing is available
 
 North in [Malvern](/service-areas/malvern), on up to [Hot Springs](/service-areas/hot-springs), and east in [Pine Bluff](/service-areas/pine-bluff).
 
-[Contact us](/contact) or call 501-359-5550. We answer seven days a week, 7:00 AM to 8:00 PM.
+[Contact us](/contact) or call 501-359-5550. We answer 24 hours a day, seven days a week.

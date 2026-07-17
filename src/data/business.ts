@@ -9,12 +9,34 @@ export const SITE_URL = 'https://www.speedygonzalezroofing.com';
 export const business = {
   name: 'Speedy Gonzalez Roofing',
   legalNote: 'Also associated with Speedy Gonzalez Construction, Inc.',
+  /**
+   * Byte-identical to the Google Business Profile record (location 15761),
+   * verified 2026-07-16: address_lines ["207 Albert Pike Road"], Hot Springs,
+   * AR 71913. NAP consistency with GBP is the whole point — do not "tidy" this
+   * string. Google's own record is the spelling that counts.
+   *
+   * The build spec said "209 Albert Pike"; that came from the old Duda footer
+   * and is stale. The business owns 207 AND 209, side by side: 207 opened first
+   * as the office while 209 was rehabbed into a showroom, and the GBP was moved
+   * to 207 years ago (away from a residence). The truck wrap and the building
+   * signage both read 207 Albert Pike Rd, so 207 is what customers see and what
+   * Google knows. 209 is the showroom — see `showroom` below.
+   */
   address: {
-    street: '209 Albert Pike',
+    street: '207 Albert Pike Road',
     city: 'Hot Springs',
     state: 'AR',
     zip: '71913',
     country: 'US',
+  },
+  /**
+   * The showroom next door. Deliberately NOT part of the NAP and never emitted
+   * in schema — a second address in structured data splits the local entity.
+   * Mention it in prose only if the client wants it surfaced.
+   */
+  showroom: {
+    street: '209 Albert Pike Road',
+    note: 'Showroom next door to the office',
   },
   phones: {
     primary: '501-359-5550',
@@ -22,8 +44,17 @@ export const business = {
     pineBluff: '870-335-2611',
   },
   email: 'speedygonzalezz19@gmail.com',
-  hours: 'Mon–Sun 7:00 AM – 8:00 PM',
-  hoursSchema: 'Mo-Su 07:00-20:00',
+  /**
+   * Open 24 hours, 7 days — confirmed by the owner 2026-07-16 and matching the
+   * GBP record (all days 00:00-24). The build spec said 7:00 AM – 8:00 PM; that
+   * was stale, and the old Duda site's "Contact 24/7" was the truer signal.
+   *
+   * `hoursSchema` uses the schema.org 00:00-23:59 convention for all-day, which
+   * is how Google reads "open 24 hours" in openingHours.
+   */
+  hours: 'Open 24 hours, 7 days a week',
+  hoursShort: 'Open 24/7',
+  hoursSchema: 'Mo-Su 00:00-23:59',
   licenses: {
     roofing: 'RR0540931024',
     homeImprovement: '0378510824',
