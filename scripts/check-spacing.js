@@ -54,7 +54,11 @@ for (const p of pages()) {
       if (!inline(el)) continue;
       const txt = (el.textContent || '').trim();
       if (!txt) continue;
-      // Text node immediately before this inline element, no whitespace between.
+      // Text node immediately before/after this inline element, no whitespace
+      // between (the JSX line-break collapse: `the\n<a>BBB</a>` -> "theBBB").
+      // Only text-node siblings: element-to-element adjacency (e.g.
+      // <strong>Office:</strong><a>) needs geometry to tell a real join from a
+      // flex/grid gap, so it is covered by the source grep in the build, not here.
       const prev = el.previousSibling;
       if (prev && prev.nodeType === 3 && wordEnd.test(prev.textContent) && wordStart.test(txt)) {
         out.push((prev.textContent.slice(-20) + '»' + txt.slice(0, 20)).replace(/\s+/g, ' '));

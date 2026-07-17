@@ -51,8 +51,10 @@ export const business = {
    * `hoursSchema` uses the schema.org 00:00-23:59 convention for all-day, which
    * is how Google reads "open 24 hours" in openingHours.
    */
-  hours: 'Open 24 hours, 7 days a week',
-  hoursShort: 'Open 24/7',
+  // No leading "Open" — every consumer prefixes "Open "/"open " already, so this
+  // is just the hours themselves (otherwise the footer reads "Open Open 24…").
+  hours: '24 hours a day, 7 days a week',
+  hoursShort: '24/7',
   hoursSchema: 'Mo-Su 00:00-23:59',
   licenses: {
     roofing: 'RR0540931024',
