@@ -11,7 +11,7 @@ export const business = {
   legalNote: 'Also associated with Speedy Gonzalez Construction, Inc.',
   /**
    * Byte-identical to the Google Business Profile record (location 15761),
-   * verified 2026-07-16: address_lines ["207 Albert Pike Road"], Hot Springs,
+   * verified 2026-07-16: address_lines ["207 Albert Pike Rd"], Hot Springs,
    * AR 71913. NAP consistency with GBP is the whole point — do not "tidy" this
    * string. Google's own record is the spelling that counts.
    *
@@ -23,7 +23,7 @@ export const business = {
    * Google knows. 209 is the showroom — see `showroom` below.
    */
   address: {
-    street: '207 Albert Pike Road',
+    street: '207 Albert Pike Rd',
     city: 'Hot Springs',
     state: 'AR',
     zip: '71913',
@@ -35,7 +35,7 @@ export const business = {
    * Mention it in prose only if the client wants it surfaced.
    */
   showroom: {
-    street: '209 Albert Pike Road',
+    street: '209 Albert Pike Rd',
     note: 'Showroom next door to the office',
   },
   phones: {

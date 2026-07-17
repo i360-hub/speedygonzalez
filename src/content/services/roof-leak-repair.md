@@ -82,4 +82,4 @@ Often the same day or the next. We answer around the clock, any day, at 501-359-
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 
-We are licensed in Arkansas, license number RR0540931024, and based at 207 Albert Pike Road in Hot Springs. [Contact us](/contact) or call.
+We are licensed in Arkansas, license number RR0540931024, and based at 207 Albert Pike Rd in Hot Springs. [Contact us](/contact) or call.

@@ -86,6 +86,6 @@ If both are due, yes. One crew, one setup, one schedule, and it usually costs le
 
 While we are there we can handle your [gutters](/services/gutters) too. If your roof is due, see [shingle roofing](/services/shingle-roofing) or [metal roofing](/services/metal-roofing).
 
-We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). We hold Arkansas Home Improvement License 0378510824 and are based at 207 Albert Pike Road.
+We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). We hold Arkansas Home Improvement License 0378510824 and are based at 207 Albert Pike Rd.
 
 [Contact us](/contact) or call 501-359-5550, seven days a week.

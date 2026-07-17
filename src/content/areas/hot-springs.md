@@ -3,7 +3,7 @@ city: Hot Springs
 metaTitle: Roofers in Hot Springs, AR | Speedy Gonzalez Roofing
 metaDescription: Roofing contractors in Hot Springs, AR. Roof repair, replacement, and storm damage help. Free inspections and estimates. Call 501-359-5550.
 h1: Roofing Contractors in Hot Springs, Arkansas
-localIntro: Hot Springs is our home base. Our shop sits at 207 Albert Pike Road, minutes from downtown, Lake Hamilton, and the national park. We have roofed Garland County homes for over 20 years.
+localIntro: Hot Springs is our home base. Our shop sits at 207 Albert Pike Rd, minutes from downtown, Lake Hamilton, and the national park. We have roofed Garland County homes for over 20 years.
 landmarks:
   - Hot Springs National Park
   - Bathhouse Row
@@ -23,7 +23,7 @@ servicesOffered:
   - siding
 faqs:
   - q: Are you a local Hot Springs roofing company?
-    a: Yes. Our office is at 207 Albert Pike Road in Hot Springs, and we have worked here for over 20 years. We are not a storm chaser passing through town. Our own crews do the work, and you can drive to our shop and talk to us in person.
+    a: Yes. Our office is at 207 Albert Pike Rd in Hot Springs, and we have worked here for over 20 years. We are not a storm chaser passing through town. Our own crews do the work, and you can drive to our shop and talk to us in person.
   - q: How much does a new roof cost in Hot Springs?
     a: Most Hot Springs homes fall in a wide range, because roofs here vary so much. A simple ranch near Oaklawn costs far less than a steep three-story home above Lake Hamilton. We inspect your roof for free, then hand you an exact price in writing.
   - q: Why do roofs in Hot Springs need repair so often?
@@ -38,7 +38,7 @@ order: 1
 
 ## Do you serve all of Hot Springs?
 
-Yes. Hot Springs is our home. Our shop sits at 207 Albert Pike Road, right in the middle of town. We roof homes from downtown out to Lake Hamilton, Lake Ouachita, and everywhere between.
+Yes. Hot Springs is our home. Our shop sits at 207 Albert Pike Rd, right in the middle of town. We roof homes from downtown out to Lake Hamilton, Lake Ouachita, and everywhere between.
 
 Being local matters here. We know which streets are steep. We know which lots need a smaller truck. You are not waiting on a crew from another state.
 

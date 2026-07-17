@@ -35,8 +35,8 @@ const fullText = (html) =>
 /** Strings that were once true (or were never true) and must not reappear. */
 const STALE = [
   {
-    re: /\b209 Albert Pike\b(?!\s*Road[^.]{0,40}showroom)/gi,
-    why: 'stale office address — GBP says 207 Albert Pike Road. 209 is the showroom next door and is not part of the NAP.',
+    re: /\b209 Albert Pike\b(?!\s*R(?:oa)?d[^.]{0,40}showroom)/gi,
+    why: 'stale office address — GBP says 207 Albert Pike Rd. 209 is the showroom next door and is not part of the NAP.',
   },
   { re: /\b7:00 ?AM to 8:00 ?PM\b/gi, why: 'stale hours — the business is open 24 hours (confirmed by owner + GBP).' },
   { re: /\b7 ?AM ?[–—-] ?8 ?PM\b/gi, why: 'stale hours — the business is open 24 hours.' },

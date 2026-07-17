@@ -80,7 +80,7 @@ Learn more about [roof leak repair](/services/roof-leak-repair) and [metal roofi
 
 ## Who fixes it?
 
-Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. We have been roofing Garland County for over 20 years with 20 trained people on staff.
+Our own crews. We are at 207 Albert Pike Rd in Hot Springs, licensed in Arkansas under RR0540931024. We have been roofing Garland County for over 20 years with 20 trained people on staff.
 
 We do not sell your job to a stranger.
 

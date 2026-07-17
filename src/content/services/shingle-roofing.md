@@ -85,6 +85,6 @@ We never pressure you to file a claim you do not need.
 
 We cover [Hot Springs](/service-areas/hot-springs) and the towns around it. That includes [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 
-We are based at 207 Albert Pike Road in Hot Springs. We are a licensed Arkansas roofing contractor, license number RR0540931024, with over 20 years of work here and 20 trained people on staff.
+We are based at 207 Albert Pike Rd in Hot Springs. We are a licensed Arkansas roofing contractor, license number RR0540931024, with over 20 years of work here and 20 trained people on staff.
 
 Ready to start? [Contact us](/contact) or call 501-359-5550. We answer 24 hours a day, seven days a week.

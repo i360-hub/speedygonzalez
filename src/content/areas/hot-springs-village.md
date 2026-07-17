@@ -30,7 +30,7 @@ faqs:
   - q: Do you work for people who are away part of the year?
     a: Yes. Many Village homeowners travel or spend part of the year elsewhere. We photograph everything we find and everything we do, so you can see the roof without standing on it. We can report by phone or email while you are away.
   - q: How far is Hot Springs Village from your shop?
-    a: The Village is close. Our office is at 207 Albert Pike Road in Hot Springs, and the drive to the gates takes about 30 minutes. That means real crews, not a company driving in from Little Rock or out of state.
+    a: The Village is close. Our office is at 207 Albert Pike Rd in Hot Springs, and the drive to the gates takes about 30 minutes. That means real crews, not a company driving in from Little Rock or out of state.
 heroImage: /images/metal-roof-home
 order: 2
 ---

@@ -22,7 +22,7 @@ servicesOffered:
   - siding
 faqs:
   - q: How far is Malvern from your Hot Springs shop?
-    a: Malvern is close. Our office is at 207 Albert Pike Road in Hot Springs, and Malvern sits southeast on the way to I-30. Crews get there in about 30 minutes. Hot Spring County is regular territory for us, not a long-distance job we take once a year.
+    a: Malvern is close. Our office is at 207 Albert Pike Rd in Hot Springs, and Malvern sits southeast on the way to I-30. Crews get there in about 30 minutes. Hot Spring County is regular territory for us, not a long-distance job we take once a year.
   - q: My house is brick. Does that change the roof work?
     a: Not the roof itself, but it changes the edges. Malvern has a lot of brick, and brick meets your roof at chimneys, walls, and dormers. Those joints need proper flashing cut and sealed into the brick. Bad flashing on brick is a leak we find often.
   - q: Do you install metal roofs in Malvern?

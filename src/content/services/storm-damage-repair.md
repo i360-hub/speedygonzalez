@@ -27,7 +27,7 @@ faqs:
   - q: Do you work with my insurance company?
     a: Yes. We document the damage with photos, write it up, and meet your adjuster on site so nothing gets missed. We have handled hundreds of storm claims across Garland County. You still choose your contractor. Your insurer does not choose for you.
   - q: How do I avoid roofing scams after a storm?
-    a: After a big storm, out-of-state crews flood Hot Springs, knock on doors, take deposits, and leave. Protect yourself. Hire a licensed Arkansas roofer with a local address, never pay in full up front, and get everything in writing. We are here at 207 Albert Pike Road year round, not just after a storm.
+    a: After a big storm, out-of-state crews flood Hot Springs, knock on doors, take deposits, and leave. Protect yourself. Hire a licensed Arkansas roofer with a local address, never pay in full up front, and get everything in writing. We are here at 207 Albert Pike Rd year round, not just after a storm.
 ---
 
 ## Why does storm damage need a fast look?
@@ -79,7 +79,7 @@ For a smaller job, see [roof repair](/services/roof-repair) or [roof leak repair
 
 ## Who is doing the work on my roof?
 
-Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 207 Albert Pike Road in Hot Springs. We have roofed here for over 20 years with 20 trained people on staff.
+Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 207 Albert Pike Rd in Hot Springs. We have roofed here for over 20 years with 20 trained people on staff.
 
 After a big storm, out-of-state crews show up chasing work and leave when the season ends. We are here year-round.
 

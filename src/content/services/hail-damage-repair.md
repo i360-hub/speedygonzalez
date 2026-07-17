@@ -77,7 +77,7 @@ For shingle options, see [shingle roofing](/services/shingle-roofing). If wind c
 
 ## Who do you send to my house?
 
-Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, at 207 Albert Pike Road in Hot Springs. Over 20 years here, 20 trained people on staff.
+Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, at 207 Albert Pike Rd in Hot Springs. Over 20 years here, 20 trained people on staff.
 
 After a big hail storm, out-of-state crews flood the area and vanish when the season ends. We are still here, at the same address, when you need us again.
 

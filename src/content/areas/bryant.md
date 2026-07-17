@@ -35,7 +35,7 @@ order: 4
 
 ## How fast can you get to Bryant?
 
-Fast. Bryant is a straight run up I-30 from our shop at 207 Albert Pike Road in Hot Springs. Our crews get there in about 35 minutes.
+Fast. Bryant is a straight run up I-30 from our shop at 207 Albert Pike Rd in Hot Springs. Our crews get there in about 35 minutes.
 
 We answer the phone 24 hours a day, every day of the week. Active leaks go to the front of the line.
 

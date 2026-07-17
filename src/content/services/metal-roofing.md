@@ -80,6 +80,6 @@ Weather matters. We do not install metal in the rain. If a storm rolls through m
 
 ## Who installs your metal roof?
 
-Our own crews do. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 207 Albert Pike Road in Hot Springs. We have been roofing here for over 20 years and have 20 trained people on staff.
+Our own crews do. We are a licensed Arkansas roofing contractor, license number RR0540931024, based at 207 Albert Pike Rd in Hot Springs. We have been roofing here for over 20 years and have 20 trained people on staff.
 
 We do not sell your job to a subcontractor you have never met. The crew on your roof works for us.

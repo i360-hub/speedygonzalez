@@ -87,7 +87,7 @@ Read more about [shingle roofing](/services/shingle-roofing) and [metal roofing]
 
 ## Who will do the work?
 
-Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. We have roofed here over 20 years, finished more than 500 projects, and keep 20 trained people on staff.
+Our own crews. We are at 207 Albert Pike Rd in Hot Springs, licensed in Arkansas under RR0540931024. We have roofed here over 20 years, finished more than 500 projects, and keep 20 trained people on staff.
 
 We do not hand your job to a subcontractor you have never met.
 

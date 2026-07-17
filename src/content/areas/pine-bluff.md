@@ -39,7 +39,7 @@ order: 7
 
 Call 870-335-2611. That is the Pine Bluff number. Pine Bluff is a separate service territory from our Hot Springs home base, so the local line gets you help faster.
 
-Our main office at 207 Albert Pike Road in Hot Springs is about an hour and a half west of you. That is why Pine Bluff has its own line.
+Our main office at 207 Albert Pike Rd in Hot Springs is about an hour and a half west of you. That is why Pine Bluff has its own line.
 
 ## Do you do free roof and hail inspections here?
 

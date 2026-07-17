@@ -22,7 +22,7 @@ servicesOffered:
   - siding
 faqs:
   - q: Do you really cover Benton, or just Hot Springs?
-    a: We really cover Benton. Our shop is at 207 Albert Pike Road in Hot Springs, and Benton is a straight shot up I-30. Saline County is a regular part of our week, not a favor we do once in a while. Crews run there all season.
+    a: We really cover Benton. Our shop is at 207 Albert Pike Rd in Hot Springs, and Benton is a straight shot up I-30. Saline County is a regular part of our week, not a favor we do once in a while. Crews run there all season.
   - q: My Benton house is only 15 years old. Why does it need a roof?
     a: Age is not the only thing that kills a roof in Benton. Hail is. Many newer subdivisions here went up with builder-grade shingles, and one bad hailstorm can end a roof at 12 or 15 years. The shingles look fine from the street and still leak.
   - q: Will my insurance pay for hail damage in Saline County?
@@ -37,7 +37,7 @@ order: 3
 
 ## How far is Benton from your shop?
 
-Not far. Our office is at 207 Albert Pike Road in Hot Springs, and Benton is a straight run northeast on I-30. It takes our crews about 30 minutes.
+Not far. Our office is at 207 Albert Pike Rd in Hot Springs, and Benton is a straight run northeast on I-30. It takes our crews about 30 minutes.
 
 That interstate is why Benton works for us. No back roads, no guessing. We are a regular part of Saline County, not a company that shows up after a storm and leaves.
 
