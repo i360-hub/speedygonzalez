@@ -1,0 +1,15 @@
+{
+  "_comment": "Before/after pairs for the BeforeAfter slider (supplement §3.3). HARD RULE: both images in a pair MUST be the SAME property, personally verified, and described as the ACTUAL work done. The slider visually implies 'this house before -> this house after', so a mismatched pair, or a mislabeled job, would be a lie the component tells for you. The one pair below is a confirmed same-home job (the 321 house in Hot Springs): 315032150 is that home mid-remodel with our crew on ladders; 315007268 is the same home finished. Per the owner (2026-07-16) this was an EXTERIOR REMODEL — siding, paint, porch, and a new metal porch roof — NOT a roof-only job, so it is labeled as a remodel. Add more pairs only for genuine same-home before/after shots, labeled as the real work.",
+  "pairs": [
+    {
+      "id": "hot-springs-exterior-remodel",
+      "beforeSrc": "315032150_825543828752895_7214751172069961744_n.jpg",
+      "afterSrc": "315007268_825543838752894_1363591010502945079_n.jpg",
+      "beforeLabel": "Before",
+      "afterLabel": "After",
+      "beforeAlt": "A weathered white two-story Hot Springs home mid-remodel, with a worn porch roof and a Speedy Gonzalez crew on ladders",
+      "afterAlt": "The same Hot Springs home after an exterior remodel, with fresh white siding, a new gray metal porch roof, white columns, and a yellow front door",
+      "caption": "Same Hot Springs home, before and after a full exterior remodel — siding, trim, porch, and a new metal porch roof."
+    }
+  ]
+}

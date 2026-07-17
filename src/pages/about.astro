@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Faq from '../components/Faq.astro';
 import { faqSchema } from '../data/schema';
+import InlinePhoto from '../components/InlinePhoto.astro';
 import { business, bbb, rating } from '../data/business';
 
 const faqs = [
@@ -57,6 +58,11 @@ const faqs = [
         We have been doing this for over 20 years. In that time we have finished more than 500
         projects. Most of them are within 30 miles of where we are standing right now.
       </p>
+
+      <InlinePhoto
+        name="hot-springs-shop"
+        caption="Our shop on Albert Pike Road in Hot Springs — a real address you can drive to."
+      />
 
       <h2>What makes you different from the storm chasers?</h2>
       <p>

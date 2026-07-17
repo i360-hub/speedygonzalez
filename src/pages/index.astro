@@ -6,6 +6,7 @@ import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import SpeedyStandard from '../components/SpeedyStandard.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
 import { business, telHref, rating } from '../data/business';
 import { faqSchema } from '../data/schema';
 import { reviewsByPage } from '../data/reviews';
@@ -137,6 +138,20 @@ const faqs = [
           <p>We walk the roof, clean the yard, and run a magnet for nails.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ba-section">
+      <div>
+        <p class="eyebrow">Our work</p>
+        <h2>A Hot Springs exterior remodel, before and after</h2>
+        <p class="lede">
+          Same home. We handle more than roofs — this one got fresh siding, trim, a rebuilt
+          porch, and a new metal porch roof. Drag the slider to compare.
+        </p>
+      </div>
+      <BeforeAfter id="hot-springs-exterior-remodel" />
     </div>
   </section>
 
@@ -327,5 +342,19 @@ const faqs = [
 
   .call-now p {
     margin-bottom: 0;
+  }
+
+  .ba-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    .ba-section {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
   }
 </style>

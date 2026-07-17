@@ -1,0 +1,155 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import { photos, inlineSrc, inlineSet } from '../data/photos';
+
+/**
+ * Real-work gallery (supplement §3.4). Every photo is a verified Speedy Gonzalez
+ * job or asset, grouped by the kind of work. No stock. The old /gallery 404'd
+ * and was redirected to home; that redirect is removed now that this page exists.
+ */
+/**
+ * Short, human captions for sighted visitors. The long descriptive text stays in
+ * each photo's `alt` (from the manifest) for screen readers — a caption should
+ * not read like alt text.
+ */
+const groups = [
+  {
+    heading: 'Metal roofing',
+    items: [
+      { name: 'metal-roof-lakefront', cap: 'Standing seam metal roof, lakefront home' },
+      { name: 'finished-metal-porch', cap: 'New metal porch roof' },
+      { name: 'metal-building-carport', cap: 'Steel building with carport' },
+      { name: 'cedar-post-carport', cap: 'Cedar-post porch on a metal building' },
+    ],
+  },
+  {
+    heading: 'Roof replacement & repair',
+    items: [
+      { name: 'roof-rebuild-crew', cap: 'Framing a new roof structure' },
+      { name: 'reroof-in-progress-tyvek', cap: 'A full re-roof in progress' },
+      { name: 'aged-shingle-inspection', cap: 'Worn shingles at inspection' },
+    ],
+  },
+  {
+    heading: 'Storm & hail damage',
+    items: [
+      { name: 'storm-damaged-roof', cap: 'Storm-torn shingles and bare decking' },
+      { name: 'storm-damaged-wood-shakes', cap: 'Hail-battered wood shakes' },
+    ],
+  },
+  {
+    heading: 'On the road & at the shop',
+    items: [
+      { name: 'wrapped-work-truck', cap: 'One of our wrapped work trucks' },
+      { name: 'hot-springs-shop', cap: 'Our Hot Springs shop' },
+    ],
+  },
+];
+
+const byName = (name: string) => photos.find((p) => p.name === name)!;
+---
+
+<Base
+  title="Roofing Photo Gallery | Speedy Gonzalez Hot Springs"
+  description="Real roofing, metal roofs, storm repairs, and siding jobs by Speedy Gonzalez Roofing in Hot Springs, Arkansas. See our actual work — no stock photos."
+  path="/gallery"
+  breadcrumbs={[{ href: '/gallery', label: 'Gallery' }]}
+>
+  <section class="section head">
+    <div class="wrap">
+      <p class="eyebrow">Our work</p>
+      <h1>Real Roofs We Have Done</h1>
+      <p class="lede">
+        Every photo here is a real Speedy Gonzalez job in and around Hot Springs. No stock
+        photos, no other company's work — just ours.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap ba-wrap">
+    <BeforeAfter
+      id="hot-springs-exterior-remodel"
+      heading="Before and after: a Hot Springs exterior remodel"
+    />
+  </section>
+
+  {
+    groups.map((group) => (
+      <section class="section group">
+        <div class="wrap">
+          <h2>{group.heading}</h2>
+          <div class="grid">
+            {group.items.map((item) => {
+              const photo = byName(item.name);
+              return (
+                <figure>
+                  <picture>
+                    <source type="image/avif" srcset={inlineSet(item.name, 'avif')} sizes="(min-width: 900px) 30vw, 100vw" />
+                    <source type="image/webp" srcset={inlineSet(item.name, 'webp')} sizes="(min-width: 900px) 30vw, 100vw" />
+                    <img
+                      src={inlineSrc(item.name, 'jpg')}
+                      srcset={inlineSet(item.name, 'jpg')}
+                      sizes="(min-width: 900px) 30vw, 100vw"
+                      alt={photo.alt}
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                  <figcaption>{item.cap}</figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <CtaBand />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: var(--space-md);
+  }
+
+  .ba-wrap {
+    margin-bottom: var(--space-lg);
+  }
+
+  .group {
+    padding-block: var(--space-lg);
+  }
+
+  .group h2 {
+    margin-top: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-md);
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+  }
+
+  figcaption {
+    margin-top: var(--space-xs);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+</style>

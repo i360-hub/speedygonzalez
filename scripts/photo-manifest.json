@@ -1,0 +1,60 @@
+{
+  "_comment": "Inline photo manifest (supplement §3). Every entry is a REAL Speedy Gonzalez job or asset photo, personally verified before its alt text was written — no photo is described that has not been looked at, and no stock is included. Sources: the client's Google Business Profile media library (pulled 2026-07-16) and the job-photo library. build-images.mjs reads this and emits AVIF/WebP/JPEG at 800w and 500w into public/images/inline/. Alt text describes only what is visible in the frame.",
+  "photos": [
+    {
+      "src": "gbp-media/metal-roof-lakefront.jpg",
+      "name": "metal-roof-lakefront",
+      "alt": "Dark standing seam metal roof on a large two-story lakefront home in the Hot Springs area, installed by Speedy Gonzalez Roofing"
+    },
+    {
+      "src": "gbp-media/roof-rebuild-crew.jpg",
+      "name": "roof-rebuild-crew",
+      "alt": "A Speedy Gonzalez Roofing crew framing new roof rafters over an older low-slope roof on a Hot Springs home"
+    },
+    {
+      "src": "gbp-media/finished-metal-porch-white-house.jpg",
+      "name": "finished-metal-porch",
+      "alt": "White two-story Hot Springs home with a new gray metal porch roof and a Speedy Gonzalez Roofing yard banner out front"
+    },
+    {
+      "src": "gbp-media/aged-shingle-inspection.jpg",
+      "name": "aged-shingle-inspection",
+      "alt": "Close-up of worn, weathered three-tab asphalt shingles with mismatched patches during a Hot Springs roof inspection"
+    },
+    {
+      "src": "gbp-media/metal-building-carport.jpg",
+      "name": "metal-building-carport",
+      "alt": "Gray steel building with white trim and open carport wings, built by Speedy Gonzalez in a wooded Garland County lot"
+    },
+    {
+      "src": "gbp-media/cedar-post-carport.jpg",
+      "name": "cedar-post-carport",
+      "alt": "Custom porch roof on a gray metal building held up by natural cedar-log posts, built by Speedy Gonzalez"
+    },
+    {
+      "src": "gbp-media/wrapped-work-truck.jpg",
+      "name": "wrapped-work-truck",
+      "alt": "Speedy Gonzalez Roofing wrapped work truck reading Hail, Wind or Storm Damage with the 207 Albert Pike Road, Hot Springs address"
+    },
+    {
+      "src": "gbp-media/hot-springs-shop.jpg",
+      "name": "hot-springs-shop",
+      "alt": "The Speedy Gonzalez Roofing shop on Albert Pike Road in Hot Springs, Arkansas, with the company sign on the wall"
+    },
+    {
+      "src": "286385864_787873899288418_3665387937227585004_n.jpg",
+      "name": "reroof-in-progress-tyvek",
+      "alt": "Large Hot Springs home mid-reroof, wrapped in house wrap with a roofer working near the ridge"
+    },
+    {
+      "src": "91856680_225167662225714_5327004394850353152_n.jpg",
+      "name": "storm-damaged-roof",
+      "alt": "Central Arkansas home with shingles torn off and decking exposed after a severe storm"
+    },
+    {
+      "src": "hail damage/354075334_995396945100915_8230297471038908778_n.jpg",
+      "name": "storm-damaged-wood-shakes",
+      "alt": "Cracked and lifted wood shake roof covered in fresh green leaf debris after a severe Arkansas storm"
+    }
+  ]
+}

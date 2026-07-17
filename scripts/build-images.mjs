@@ -66,4 +66,62 @@ await sharp(`${SRC}/Speedy-Gonzales-Logo.png`)
   .png()
   .toFile('./public/apple-touch-icon.png');
 
+// --- Inline photos (supplement §3) ------------------------------------------
+// Mid-page and gallery photos from scripts/photo-manifest.json, emitted at 800w
+// and 500w so they never rival the hero for bytes. Landscape framing (4:3) keeps
+// them honest — no aggressive crop that hides context.
+import { readFileSync } from 'node:fs';
+
+const manifest = JSON.parse(readFileSync('./scripts/photo-manifest.json', 'utf8'));
+const INLINE_OUT = './public/images/inline';
+mkdirSync(INLINE_OUT, { recursive: true });
+
+const INLINE_WIDTHS = [800, 500];
+
+for (const photo of manifest.photos) {
+  for (const w of INLINE_WIDTHS) {
+    const suffix = w === 800 ? '' : `-${w}`;
+    const base = sharp(`${SRC}/${photo.src}`).resize(w, Math.round((w / 4) * 3), {
+      fit: 'cover',
+      position: 'entropy',
+    });
+    await base.clone().avif({ quality: 50, effort: 5 }).toFile(`${INLINE_OUT}/${photo.name}${suffix}.avif`);
+    await base.clone().webp({ quality: 72, effort: 5 }).toFile(`${INLINE_OUT}/${photo.name}${suffix}.webp`);
+    await base
+      .clone()
+      .jpeg({ quality: 74, mozjpeg: true, progressive: true })
+      .toFile(`${INLINE_OUT}/${photo.name}${suffix}.jpg`);
+  }
+  console.log('inline', photo.name);
+}
+
+// --- Before/after pairs (supplement §3.3) -----------------------------------
+// Both images in a pair are cropped to the SAME box (position 'centre', same
+// dims) so the reveal slider lines up. Emitted into public/images/beforeafter/.
+const ba = JSON.parse(readFileSync('./src/data/before-after.json', 'utf8'));
+const BA_OUT = './public/images/beforeafter';
+mkdirSync(BA_OUT, { recursive: true });
+
+const baImage = async (src, outName) => {
+  for (const w of [1000, 640]) {
+    const suffix = w === 1000 ? '' : `-${w}`;
+    const base = sharp(`${SRC}/${src}`).resize(w, Math.round((w / 4) * 3), {
+      fit: 'cover',
+      position: 'centre',
+    });
+    await base.clone().avif({ quality: 52, effort: 5 }).toFile(`${BA_OUT}/${outName}${suffix}.avif`);
+    await base.clone().webp({ quality: 74, effort: 5 }).toFile(`${BA_OUT}/${outName}${suffix}.webp`);
+    await base
+      .clone()
+      .jpeg({ quality: 76, mozjpeg: true, progressive: true })
+      .toFile(`${BA_OUT}/${outName}${suffix}.jpg`);
+  }
+};
+
+for (const pair of ba.pairs) {
+  await baImage(pair.beforeSrc, `${pair.id}-before`);
+  await baImage(pair.afterSrc, `${pair.id}-after`);
+  console.log('before/after', pair.id);
+}
+
 console.log('done');

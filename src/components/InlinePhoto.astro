@@ -1,0 +1,58 @@
+---
+/**
+ * One inline photo by manifest name (supplement §3.2). Alt text comes from the
+ * manifest — the single place it is verified against the actual image — so it
+ * can never drift from what the picture shows.
+ */
+import { photoByName, inlineSrc, inlineSet } from '../data/photos';
+
+export interface Props {
+  name: string;
+  /** Caption shown under the photo. Optional. */
+  caption?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { name, caption, sizes = '(min-width: 800px) 720px, 100vw', loading = 'lazy' } = Astro.props;
+const photo = photoByName(name);
+if (!photo) throw new Error(`InlinePhoto: "${name}" not in photo-manifest.json`);
+---
+
+<figure class="inline-photo">
+  <picture>
+    <source type="image/avif" srcset={inlineSet(name, 'avif')} sizes={sizes} />
+    <source type="image/webp" srcset={inlineSet(name, 'webp')} sizes={sizes} />
+    <img
+      src={inlineSrc(name, 'jpg')}
+      srcset={inlineSet(name, 'jpg')}
+      sizes={sizes}
+      alt={photo.alt}
+      width="800"
+      height="600"
+      loading={loading}
+      decoding="async"
+    />
+  </picture>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .inline-photo {
+    margin: var(--space-lg) 0;
+  }
+
+  .inline-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+  }
+
+  figcaption {
+    margin-top: var(--space-xs);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+</style>

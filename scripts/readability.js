@@ -13,10 +13,21 @@ const MAX_GRADE = 8; // hard ceiling per spec §11
 const MIN_EASE = 60; // spec §8
 const TARGET_MIN_GRADE = 6; // spec §8 target band floor — advisory only
 
+/**
+ * Visual-index pages whose "text" is image labels and short captions, not the
+ * body copy the grade ceiling is meant to govern (spec §8). Verbless caption
+ * fragments ("Standing seam metal roof, lakefront home") score as high-grade
+ * under Flesch-Kincaid even though there is nothing to read. Exempting them is
+ * the same call the <120-word rule already makes for /404 — just made explicit.
+ * Do NOT add article pages here to dodge a real readability failure.
+ */
+const NOT_BODY_COPY = new Set(['/gallery']);
+
 let failed = 0;
 const rows = [];
 
 for (const page of pages()) {
+  if (NOT_BODY_COPY.has(page.url)) continue;
   const text = textOf(page.html);
   const r = readability(text);
   if (!r || r.words < 120) continue; // nav-only pages like /404 aren't body copy

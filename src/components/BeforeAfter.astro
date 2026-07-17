@@ -1,0 +1,225 @@
+---
+/**
+ * Before/after reveal slider (supplement §3.3).
+ *
+ * ── HONESTY: same home only. ──────────────────────────────────────────────────
+ * Both images come from ONE pair in src/data/before-after.json, and every pair
+ * there is a verified same-property job. The slider reads as "this house before
+ * → this house after", so a mismatched pair would make the component lie. Never
+ * pass a pair that isn't the same home.
+ *
+ * Tiny vanilla JS (no framework), hydrated with client:visible. Keyboard
+ * accessible: the range input IS the control, so arrow keys work and screen
+ * readers announce it. Labels stay visible so nobody mistakes a mid-job "before"
+ * for a pristine one.
+ */
+import { pairById } from '../data/beforeAfter';
+
+export interface Props {
+  id: string;
+  heading?: string;
+}
+
+const { id, heading } = Astro.props;
+const pair = pairById(id);
+if (!pair) throw new Error(`BeforeAfter: no pair "${id}" in before-after.json`);
+
+const src = (name: string, ext: string, w?: number) =>
+  `/images/beforeafter/${name}${w ? `-${w}` : ''}.${ext}`;
+const set = (name: string, ext: string) => `${src(name, ext, 640)} 640w, ${src(name, ext)} 1000w`;
+
+const beforeName = `${pair.id}-before`;
+const afterName = `${pair.id}-after`;
+const SIZES = '(min-width: 800px) 760px, 100vw';
+---
+
+<figure class="ba" data-ba>
+  {heading && <figcaption class="ba-heading">{heading}</figcaption>}
+
+  <!-- --pos inline so the first paint is centered before JS runs (progressive
+       enhancement: with JS off, the CSS default and this agree at 50%). -->
+  <div class="ba-stage" style="--pos: 50%">
+    <!-- After sits underneath; before is clipped on top and revealed by the slider. -->
+    <picture>
+      <source type="image/avif" srcset={set(afterName, 'avif')} sizes={SIZES} />
+      <source type="image/webp" srcset={set(afterName, 'webp')} sizes={SIZES} />
+      <img
+        class="ba-img ba-after"
+        src={src(afterName, 'jpg')}
+        srcset={set(afterName, 'jpg')}
+        sizes={SIZES}
+        alt={pair.afterAlt}
+        width="1000"
+        height="750"
+        loading="lazy"
+      />
+    </picture>
+
+    <div class="ba-clip" data-ba-clip>
+      <picture>
+        <source type="image/avif" srcset={set(beforeName, 'avif')} sizes={SIZES} />
+        <source type="image/webp" srcset={set(beforeName, 'webp')} sizes={SIZES} />
+        <img
+          class="ba-img ba-before"
+          src={src(beforeName, 'jpg')}
+          srcset={set(beforeName, 'jpg')}
+          sizes={SIZES}
+          alt={pair.beforeAlt}
+          width="1000"
+          height="750"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+
+    <span class="ba-tag ba-tag-before">{pair.beforeLabel}</span>
+    <span class="ba-tag ba-tag-after">{pair.afterLabel}</span>
+
+    <div class="ba-handle" data-ba-handle aria-hidden="true"><span></span></div>
+
+    <label class="visually-hidden" for={`ba-${pair.id}`}>
+      Reveal slider: drag to compare before and after
+    </label>
+    <input
+      class="ba-range"
+      id={`ba-${pair.id}`}
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      autocomplete="off"
+      data-ba-range
+    />
+  </div>
+
+  <figcaption class="ba-caption">{pair.caption}</figcaption>
+</figure>
+
+<style>
+  .ba {
+    margin: 0;
+    max-width: 760px;
+  }
+
+  .ba-heading {
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .ba-stage {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    /* Under-the-thumb color while images load. */
+    background: var(--charcoal-100);
+  }
+
+  .ba-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* The before layer is clipped from the right; slider sets --pos (0–100%). */
+  .ba-clip {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+  }
+
+  .ba-tag {
+    position: absolute;
+    top: var(--space-sm);
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--white);
+    background: rgb(20 23 26 / 0.72);
+    pointer-events: none;
+  }
+
+  .ba-tag-before {
+    left: var(--space-sm);
+  }
+  .ba-tag-after {
+    right: var(--space-sm);
+  }
+
+  .ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--pos, 50%);
+    width: 2px;
+    background: var(--white);
+    transform: translateX(-1px);
+    pointer-events: none;
+    box-shadow: 0 0 0 1px rgb(20 23 26 / 0.25);
+  }
+
+  .ba-handle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  .ba-handle span::before {
+    content: '\2039\203A';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--charcoal-900);
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  /* The range input is the real control: full-bleed, transparent, on top. */
+  .ba-range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+  }
+
+  .ba-range:focus-visible + .ba-caption,
+  .ba-stage:has(.ba-range:focus-visible) {
+    outline: 3px solid var(--orange-500);
+    outline-offset: 2px;
+  }
+
+  .ba-caption {
+    margin-top: var(--space-sm);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+</style>
+
+<script>
+  for (const ba of document.querySelectorAll<HTMLElement>('[data-ba]')) {
+    const range = ba.querySelector<HTMLInputElement>('[data-ba-range]');
+    const stage = ba.querySelector<HTMLElement>('.ba-stage');
+    if (!range || !stage) continue;
+    const set = () => stage.style.setProperty('--pos', `${range.value}%`);
+    range.addEventListener('input', set);
+    set();
+  }
+</script>

@@ -7,8 +7,53 @@ import Faq from '../../components/Faq.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import SpeedyStandard from '../../components/SpeedyStandard.astro';
+import InlinePhoto from '../../components/InlinePhoto.astro';
 import { faqSchema, serviceSchema } from '../../data/schema';
 import { slugToCity } from '../../data/areas';
+
+/**
+ * A real, verified inline photo per service (supplement §3.2), keyed by slug.
+ * Only slugs with a genuinely relevant photo get one — no forcing a photo where
+ * it does not fit. { name = manifest photo, caption }.
+ */
+const servicePhoto: Record<string, { name: string; caption: string }> = {
+  'metal-roofing': {
+    name: 'metal-roof-lakefront',
+    caption: 'A standing seam metal roof we installed on a Hot Springs lakefront home.',
+  },
+  'shingle-roofing': {
+    name: 'reroof-in-progress-tyvek',
+    caption: 'A full shingle re-roof in progress on a Hot Springs home.',
+  },
+  'roof-repair': {
+    name: 'roof-rebuild-crew',
+    caption: 'Our crew rebuilding a roof structure on a Hot Springs home.',
+  },
+  'roof-leak-repair': {
+    name: 'aged-shingle-inspection',
+    caption: 'Worn, aging shingles like these are a common source of leaks.',
+  },
+  'storm-damage-repair': {
+    name: 'storm-damaged-roof',
+    caption: 'Storm-torn shingles and exposed decking on a central Arkansas home.',
+  },
+  'hail-damage-repair': {
+    name: 'storm-damaged-wood-shakes',
+    caption: 'A wood shake roof battered by an Arkansas hail storm.',
+  },
+  'tpo-flat-roofing': {
+    name: 'metal-building-carport',
+    caption: 'A steel building and carport we built in Garland County.',
+  },
+  gutters: {
+    name: 'finished-metal-porch',
+    caption: 'A finished Hot Springs home after exterior work by our crew.',
+  },
+  siding: {
+    name: 'cedar-post-carport',
+    caption: 'Custom exterior work: a cedar-post porch on a metal building.',
+  },
+};
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -53,6 +98,15 @@ const schema = [
       <Prose>
         <Content />
       </Prose>
+
+      {
+        servicePhoto[entry.id] && (
+          <InlinePhoto
+            name={servicePhoto[entry.id].name}
+            caption={servicePhoto[entry.id].caption}
+          />
+        )
+      }
 
       <Faq faqs={d.faqs} />
     </article>
