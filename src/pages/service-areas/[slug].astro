@@ -5,6 +5,7 @@ import Hero from '../../components/Hero.astro';
 import Prose from '../../components/Prose.astro';
 import Faq from '../../components/Faq.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import ReviewStrip from '../../components/ReviewStrip.astro';
 import { faqSchema, localAreaSchema } from '../../data/schema';
 import { slugToService } from '../../data/areas';
 import { business, telHref } from '../../data/business';
@@ -109,6 +110,8 @@ const localPhone =
       </div>
     </aside>
   </div>
+
+  <ReviewStrip slug={entry.id} heading={`What ${d.city} customers said`} alt />
 
   <CtaBand heading={`Need a roofer in ${d.city}?`} />
 </Base>

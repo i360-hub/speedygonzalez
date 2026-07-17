@@ -2,8 +2,8 @@
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
 import ReviewCard from '../components/ReviewCard.astro';
-import { reviews } from '../data/reviews';
-import { rating, business } from '../data/business';
+import { allReviews, criticalReviews } from '../data/reviews';
+import { rating, business, bbb } from '../data/business';
 ---
 
 <Base
@@ -27,7 +27,55 @@ import { rating, business } from '../data/business';
 
   <section class="wrap">
     <div class="grid grid-2 wall">
-      {reviews.map((review) => <ReviewCard review={review} full />)}
+      {allReviews.map((review) => <ReviewCard review={review} full />)}
+    </div>
+  </section>
+
+  <!--
+    Honesty block (supplement §7). Every word here is checked against all 152
+    reviews pulled from GBP on 2026-07-16. Four reviews are below 5 stars and
+    critical; all four are about scheduling and follow-up before any work began.
+    A fifth sub-5-star review (4 stars) praises the work and is not a complaint.
+    If the review mix changes, re-verify this copy or delete it. Do not soften
+    the quotes and do not drop one to make the set look better.
+  -->
+  <section class="section section-alt">
+    <div class="wrap narrow">
+      <p class="eyebrow">The imperfect ones</p>
+      <h2>What do your bad reviews say?</h2>
+      <p class="lede">
+        We have four. Every one is about a missed appointment or a call we did not return —
+        before any work started. Not one is about a finished roof.
+      </p>
+      <p>
+        We are not going to hide them or explain them away. Here they are, in full.
+      </p>
+
+      <ol class="critical">
+        {
+          criticalReviews.map((review) => (
+            <li>
+              <p class="crit-head">
+                <span class="crit-stars" aria-hidden="true">
+                  {'★'.repeat(review.rating)}
+                  <span class="dim">{'★'.repeat(5 - review.rating)}</span>
+                </span>
+                <span class="visually-hidden">{review.rating} out of 5 stars</span>
+                <strong>{review.name}</strong>
+              </p>
+              <blockquote>
+                <p>{review.text}</p>
+              </blockquote>
+            </li>
+          ))
+        }
+      </ol>
+
+      <p>
+        Missed estimate appointments are the one thing our reviews keep catching us on, and it
+        is fair. We would rather you read that and call us anyway than find it later and wonder
+        what else we left out.
+      </p>
     </div>
   </section>
 
@@ -37,6 +85,12 @@ import { rating, business } from '../data/business';
       <p>
         You can find us on Google and Facebook. Search "Speedy Gonzalez Roofing Hot Springs"
         and you will see the whole list, good and bad, without us picking which ones show up.
+        We reply to every single one.
+      </p>
+      <p>
+        You can also check our record with the
+        <a href={bbb.profileUrl} rel="nofollow noopener" target="_blank">BBB A+ rating</a> on
+        file for Speedy Gonzalez Construction, Inc.
       </p>
       <p>
         <a href={business.social.facebook} rel="noopener">Speedy Gonzalez Roofing on Facebook</a>
@@ -71,5 +125,49 @@ import { rating, business } from '../data/business';
 
   .narrow {
     max-width: var(--measure);
+  }
+
+  .critical {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-lg) 0;
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .critical li {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--charcoal-300);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    max-width: none;
+  }
+
+  .crit-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--space-xs);
+    font-size: var(--step--1);
+  }
+
+  .crit-stars {
+    color: var(--star);
+    letter-spacing: 0.08em;
+  }
+
+  .dim {
+    color: var(--charcoal-300);
+  }
+
+  .critical blockquote {
+    margin: 0;
+  }
+
+  .critical blockquote p {
+    margin: 0;
+    color: var(--charcoal-700);
+    font-size: var(--step--1);
   }
 </style>

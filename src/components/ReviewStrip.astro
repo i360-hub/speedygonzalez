@@ -1,0 +1,52 @@
+---
+/**
+ * Three topic-matched reviews for a page (supplement §2.2).
+ * Pulls by page slug from reviewsByPage. Renders nothing if the slug has no
+ * reviews, so adding a service page without reviews degrades quietly.
+ *
+ * No Review JSON-LD here on purpose — self-serving review markup no longer earns
+ * stars and risks the rich result (§2.3).
+ */
+import ReviewCard from './ReviewCard.astro';
+import { reviewsByPage } from '../data/reviews';
+import { rating } from '../data/business';
+
+export interface Props {
+  slug: string;
+  heading?: string;
+  alt?: boolean;
+}
+
+const { slug, heading = 'What customers said about this work', alt = false } = Astro.props;
+const reviews = reviewsByPage[slug] ?? [];
+---
+
+{
+  reviews.length > 0 && (
+    <section class={`section ${alt ? 'section-alt' : ''}`} aria-labelledby={`rv-${slug}`}>
+      <div class="wrap">
+        <p class="eyebrow">Reviews</p>
+        <h2 id={`rv-${slug}`}>{heading}</h2>
+        <p class="lede intro">
+          <span class="stars" aria-hidden="true">
+            &#9733;&#9733;&#9733;&#9733;&#9733;
+          </span>
+          {rating.value} stars across {rating.count} Google reviews.{' '}
+          <a href="/reviews">Read them all</a>, including the imperfect ones.
+        </p>
+
+        <div class="grid grid-3">
+          {reviews.map((review) => (
+            <ReviewCard review={review} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+</style>

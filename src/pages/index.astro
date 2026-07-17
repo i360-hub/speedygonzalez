@@ -7,7 +7,9 @@ import CtaBand from '../components/CtaBand.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import { business, telHref, rating } from '../data/business';
 import { faqSchema } from '../data/schema';
-import { reviews } from '../data/reviews';
+import { reviewsByPage } from '../data/reviews';
+
+const homeReviews = reviewsByPage.home;
 
 const services = (await getCollection('services')).sort(
   (a, b) => a.data.order - b.data.order
@@ -147,7 +149,7 @@ const faqs = [
       </p>
 
       <div class="grid grid-3">
-        {reviews.slice(0, 3).map((review) => <ReviewCard review={review} />)}
+        {homeReviews.map((review) => <ReviewCard review={review} />)}
       </div>
 
       <p><a href="/reviews">Read more local roofing reviews</a></p>
