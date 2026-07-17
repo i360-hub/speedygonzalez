@@ -26,6 +26,8 @@ faqs:
     a: Yes. Wind and hail damage often does not show from the ground. Lifted shingles, cracked seals, and bruised spots are only visible up close. That hidden damage leaks months later. Our inspection is free, so there is no reason to guess.
   - q: Do you work with my insurance company?
     a: Yes. We document the damage with photos, write it up, and meet your adjuster on site so nothing gets missed. We have handled hundreds of storm claims across Garland County. You still choose your contractor. Your insurer does not choose for you.
+  - q: How do I avoid roofing scams after a storm?
+    a: After a big storm, out-of-state crews flood Hot Springs, knock on doors, take deposits, and leave. Protect yourself. Hire a licensed Arkansas roofer with a local address, never pay in full up front, and get everything in writing. We are here at 207 Albert Pike Road year round, not just after a storm.
 ---
 
 ## Why does storm damage need a fast look?

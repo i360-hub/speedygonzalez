@@ -26,6 +26,8 @@ faqs:
     a: Yes. Most repairs we do are on roofs another company put on. We do not care who installed it. We care whether it can be fixed well. If it cannot, we will tell you that instead of taking your money.
   - q: Will insurance cover my roof repair?
     a: Insurance may cover repairs caused by hail, wind, or a fallen limb. It usually will not cover normal wear and age. We photograph the damage, document it, and meet your adjuster at your home. If your roof is fine, we say so.
+  - q: Do I need a permit for a roof repair in Hot Springs?
+    a: Usually not for a small repair, but a full replacement often does. Permit rules vary by city and county in Arkansas. If your repair grows into a bigger job, we handle the work to code. When you are not sure, ask us or check with your local building department.
 ---
 
 ## Why fix a small roof problem now?

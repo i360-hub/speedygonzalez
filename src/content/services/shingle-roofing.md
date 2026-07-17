@@ -25,7 +25,9 @@ faqs:
   - q: Will my insurance pay for a new shingle roof?
     a: Insurance often pays if hail or wind damaged your roof. It usually will not pay for a roof that simply wore out. We inspect for free, take photos of the damage, and meet your adjuster on site. If your roof is fine, we tell you so.
   - q: How do most people pay for a new roof here?
-    a: Yes. Most of our jobs go through a homeowner's insurance claim, and we handle that paperwork with you. That helps when a roof fails before you planned for it. Call 501-359-5550 and we will walk you through what your insurance is likely to cover.
+    a: Most of our jobs go through a homeowner's insurance claim, and we handle that paperwork with you. That helps when a roof fails before you planned for it. Call 501-359-5550 and we will walk you through what your insurance is likely to cover.
+  - q: Do I need a permit to replace my roof in Hot Springs?
+    a: Often yes. Hot Springs and most Arkansas cities require a permit to replace a roof, though the rules vary by city and county. As a licensed Arkansas contractor, we do the work to code. If you are not sure what your area requires, ask us and we will point you to the right building department.
 ---
 
 ## Why do most Hot Springs homes have shingle roofs?

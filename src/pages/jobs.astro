@@ -1,0 +1,248 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { articleSchema } from '../data/schema';
+import { allReviews } from '../data/reviews';
+import { inlineSrc, inlineSet, photoByName } from '../data/photos';
+
+/**
+ * Job stories (supplement §4.4). Each story is anchored to a REAL, verbatim
+ * 5-star Google review (pulled by gbpId from the single source in reviews.ts),
+ * so the quotes cannot drift and the review gate still governs them.
+ *
+ * HONESTY on photos: I do not have photos tied to these specific customers, so
+ * the photos are representative of the WORK TYPE, captioned by what they show —
+ * never "this customer's home." The page note makes that explicit. The
+ * credibility comes from the real quote, not from implying the photo is theirs.
+ *
+ * One page, not a /jobs/* collection of thin pages: four short stories rank
+ * better together than split across near-empty URLs.
+ */
+const quote = (gbpId: number) => {
+  const r = allReviews.find((x) => x.gbpId === gbpId);
+  if (!r) throw new Error(`jobs: no review ${gbpId}`);
+  return r;
+};
+
+const stories = [
+  {
+    id: 'ef2-tornado-hsv',
+    headline: 'On the job in 24 hours after an EF2 tornado',
+    where: 'Hot Springs Village',
+    body: [
+      'An EF2 tornado tore through Hot Springs Village and left a family with a torn-up roof and an open home. That is a homeowner’s worst day.',
+      'Our crew was on the job within 24 hours — covering the roof, replacing it, and working with the inspectors to bring everything back up to code. Fast, because a damaged roof does not wait for the weather.',
+    ],
+    gbpId: 2143835,
+    photo: 'storm-damaged-roof',
+    photoCap: 'Storm-torn shingles and exposed decking — the kind of damage we move fast to cover and replace.',
+  },
+  {
+    id: 'lake-house-hail-2023',
+    headline: 'A lake house, boat dock, and gutters after the June 2023 hail',
+    where: 'Lake area, Hot Springs',
+    body: [
+      'The June 2023 hail storm hammered the lake. One homeowner needed the whole property put back together — the lake house roof, the boat dock, and the gutters.',
+      'They researched roofers across Hot Springs and Little Rock before calling us, and we handled all three. One crew, one company, start to finish.',
+    ],
+    gbpId: 2143822,
+    photo: 'metal-roof-lakefront',
+    photoCap: 'A lakefront metal roof by our crew — the kind of lake-area work we take on.',
+  },
+  {
+    id: 'pre-closing-replacement',
+    headline: 'A whole new roof in time to close on a home sale',
+    where: 'Hot Springs',
+    body: [
+      'A family sold their home in May with a June closing date. Then the buyer’s inspection turned up major roof damage — the kind of surprise that can sink a sale.',
+      'They picked us for a full roof replacement. Our crew started early, worked to the deadline, and finished ahead of time with 10 days to spare before closing.',
+    ],
+    gbpId: 19151851,
+    photo: 'reroof-in-progress-tyvek',
+    photoCap: 'A full re-roof in progress on a Hot Springs home.',
+  },
+  {
+    id: '23-squares-one-day',
+    headline: '23 squares torn off and re-roofed in a single day',
+    where: 'Hot Springs',
+    body: [
+      'Some roofs really do go on in a day. This homeowner called on a Friday. The crew started the next morning at 7:15 and finished at 4:15 — a full 23-square roof, tear-off to clean-up, in one day.',
+      'Big or cut-up roofs take longer, and we always tell you which yours is up front. But when it can be a one-day job, it is.',
+    ],
+    gbpId: 16801167,
+    photo: 'roof-rebuild-crew',
+    photoCap: 'Our crew at work on a Hot Springs roof.',
+  },
+];
+
+const schema = [
+  articleSchema({
+    title: 'Recent Roofing Jobs in Hot Springs, Arkansas',
+    description:
+      'Real roofing job stories from Speedy Gonzalez Roofing in Hot Springs — tornado response, hail claims, and fast roof replacements, each with a verified Google review.',
+    path: '/jobs',
+    image: '/images/inline/storm-damaged-roof.jpg',
+    published: new Date('2026-07-16'),
+    author: 'Speedy Gonzalez Roofing',
+  }),
+];
+---
+
+<Base
+  title="Roofing Job Stories | Speedy Gonzalez Hot Springs, AR"
+  description="Real roofing jobs by Speedy Gonzalez in Hot Springs, AR — 24-hour tornado response, hail claims, and roofs done in a day. Each with a real Google review."
+  path="/jobs"
+  preloadImage="/images/storm-damage"
+  breadcrumbs={[{ href: '/jobs', label: 'Job Stories' }]}
+  schema={schema}
+>
+  <Hero
+    eyebrow="Real work"
+    h1="Roofing Jobs We Have Done in Hot Springs"
+    summary="Real jobs, real customers, real reviews. Here are a few that show how we work when it counts — after a tornado, after hail, and against a hard deadline."
+    image="/images/storm-damage"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <p class="note">
+        Every quote below is a real, word-for-word Google review from the customer named.
+        The photos show our actual work in the Hot Springs area — they are examples of the
+        kind of job, not always the same home.
+      </p>
+
+      {
+        stories.map((story, i) => {
+          const r = quote(story.gbpId);
+          const photo = photoByName(story.photo)!;
+          return (
+            <article class="story" data-flip={i % 2 === 1}>
+              <div class="story-photo">
+                <picture>
+                  <source type="image/avif" srcset={inlineSet(story.photo, 'avif')} sizes="(min-width: 800px) 45vw, 100vw" />
+                  <source type="image/webp" srcset={inlineSet(story.photo, 'webp')} sizes="(min-width: 800px) 45vw, 100vw" />
+                  <img
+                    src={inlineSrc(story.photo, 'jpg')}
+                    srcset={inlineSet(story.photo, 'jpg')}
+                    sizes="(min-width: 800px) 45vw, 100vw"
+                    alt={photo.alt}
+                    width="800"
+                    height="600"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                </picture>
+                <p class="photo-cap">{story.photoCap}</p>
+              </div>
+
+              <div class="story-body">
+                <p class="where">{story.where}</p>
+                <h2>{story.headline}</h2>
+                {story.body.map((p) => <p>{p}</p>)}
+                <blockquote>
+                  <p>{r.text}</p>
+                  <footer>
+                    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="visually-hidden">5 out of 5 stars</span>
+                    {r.name}{r.date ? `, ${r.date}` : ''} · Google
+                  </footer>
+                </blockquote>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <CtaBand heading="Want your job done like these?" />
+</Base>
+
+<style>
+  .note {
+    max-width: var(--measure);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    border-left: 3px solid var(--border);
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    padding-block: var(--space-xl);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 800px) {
+    .story {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+
+  .story[data-flip='true'] .story-photo {
+    order: 2;
+  }
+
+  @media (max-width: 800px) {
+    .story[data-flip='true'] .story-photo {
+      order: 0;
+    }
+  }
+
+  .story-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+  }
+
+  .photo-cap {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    margin: var(--space-xs) 0 0;
+  }
+
+  .where {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--red-700);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .story-body h2 {
+    margin-top: 0;
+  }
+
+  blockquote {
+    margin: var(--space-md) 0 0;
+    padding: var(--space-md);
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+  }
+
+  blockquote p {
+    margin: 0 0 var(--space-sm);
+    font-style: italic;
+    color: var(--charcoal-800);
+  }
+
+  blockquote footer {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--charcoal-700);
+    font-style: normal;
+  }
+
+  .stars {
+    color: var(--star);
+    margin-right: 0.3rem;
+  }
+</style>
