@@ -7,31 +7,22 @@ client's name, or a step that has to happen outside this repo. Work top to botto
 
 ## 1. Blockers — the site is wrong until these are done
 
-### 1.1 The lead form goes nowhere
+### 1.1 Send one real test lead
 
-`src/pages/contact.astro` posts to `https://formspree.io/f/FORM_ENDPOINT` — a
-placeholder. **Every lead submitted right now is lost.** Replace with the
-client's real endpoint, or swap in a Cloudflare Pages Function. Then submit the
-form on the preview deploy and confirm the lead actually arrives.
+The site embeds the client's **live GoHighLevel form** — the same one from the old
+site (form id `OOpsQ604HEsoYDXv6444`, "Website Contact"), so leads land in the
+existing CRM with no migration. Verified rendering and submitting locally.
 
-If you change the form host, update `form-action` in `public/_headers` (the CSP
-currently allows `formspree.io` only).
+**Still do this on the preview deploy:** submit one real test lead and confirm it
+arrives in GHL, then delete it. A CSP or DNS difference between local and
+production would break it silently, and a contact page that looks fine but drops
+leads is the worst failure mode here.
 
-### 1.2 Price ranges are estimates, not the client's numbers
+If the embed ever goes blank, check `public/_headers` first — the CSP must keep
+`api.leadconnectorhq.com` in `frame-src`/`connect-src` and `link.msgsndr.com` in
+`script-src`.
 
-These are published as fact across the site and are **not client-supplied** — I
-wrote them from general Arkansas market rates. The client must confirm or correct
-each one:
-
-| Claim | Where |
-| --- | --- |
-| Shingle roof **$8,500–$18,000** | `services/shingle-roofing.md`, home, financing, `blog/roof-replacement-cost-arkansas.md` |
-| Metal roof **$14,000–$32,000** | `services/metal-roofing.md`, home, financing, blog posts |
-| TPO, gutters, siding ranges | respective `src/content/services/*.md` |
-
-They're consistent everywhere by design — change one, grep for the others.
-
-### 1.3 The 4.9 / 157 review count is unverified
+### 1.2 The 4.9 / 157 review count is unverified
 
 `src/data/business.ts` has `rating.verified = false`, which **suppresses the
 AggregateRating JSON-LD on purpose**. Publishing a rating that doesn't match
@@ -44,7 +35,7 @@ reviews render on-page wherever AggregateRating appears.
 The `4.9` figure shown in body copy is *not* gated by that flag — correct it in
 `business.ts` and it updates everywhere.
 
-### 1.4 NAP + hours against Google Business Profile
+### 1.3 NAP + hours against Google Business Profile
 
 Spec §1 says verify before go-live; I couldn't. Confirm byte-for-byte in
 `src/data/business.ts`, especially **hours (Mon–Sun 7:00 AM – 8:00 PM)** — that's
@@ -115,7 +106,38 @@ automation.
 
 ---
 
-## 4. Decisions made — reverse if you disagree
+## 4. Pricing — removed, and how to put it back
+
+**No price appears anywhere on the site.** Earlier drafts carried market-rate
+estimates I wrote; those were never client-approved, so they're gone —
+frontmatter, prose, tables, FAQs, and meta descriptions.
+
+`scripts/check-claims.js` now **fails the build** on any dollar figure, worded
+price ("a few hundred dollars", "ten grand", "$8.5k"), or per-square-foot rate.
+It also blocks unprovable trust claims: manufacturer certifications, BBB
+references, and "beat any price" promises.
+
+The cost **pages and headings stayed** — "How much does a metal roof cost in Hot
+Springs?" is a real query and `/roof-replacement-cost-hot-springs-ar` 301s to the
+cost post. They now answer with what drives the price (size, pitch, shape,
+decking) and route to the free estimate. That's a defensible answer, and it's the
+one the client actually gives on the phone.
+
+**To publish real prices once the client approves them:**
+
+1. Add `priceRange: "$X–$Y for a typical Hot Springs home"` to the relevant
+   `src/content/services/*.md`. The field is still in the zod schema (optional)
+   and the templates still render it — service sidebar, homepage cards, services
+   hub. Nothing else to wire up.
+2. Relax the price rules in `scripts/check-claims.js`, or the build will reject
+   them. Keep the trust-claim rules.
+3. Keep numbers consistent across the service page, homepage FAQ, financing page,
+   and the two cost blog posts.
+
+Note: `priceRange: '$$'` in `business.ts`/`schema.ts` is the schema.org
+price-tier indicator for LocalBusiness markup, not an estimate. Leave it.
+
+## 5. Decisions made — reverse if you disagree
 
 **44 town pages were not rebuilt.** The old site had 51 `/service-areas/*` pages;
 8 have real local content here, and the other 44 (Alexander, Altheimer, Amity,

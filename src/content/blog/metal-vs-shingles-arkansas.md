@@ -8,7 +8,7 @@ heroImage: /images/metal-roofing
 tags: [Metal Roofing, Buying Guide]
 faqs:
   - q: Is a metal roof worth the extra money in Arkansas?
-    a: A metal roof is worth it if you plan to stay in your home long term. It costs $14,000 to $32,000, against $8,500 to $18,000 for shingles. But it lasts 40 to 70 years instead of 15 to 25. You buy one roof instead of two or three.
+    a: A metal roof is worth it if you plan to stay in your home long term. It costs more up front than shingles, but it lasts 40 to 70 years instead of 15 to 25. You buy one roof instead of two or three. If you plan to sell soon, shingles usually make more sense.
   - q: Which roof handles Arkansas hail better?
     a: Metal handles hail better than shingles. Large hail can dent a metal panel, but it rarely makes the panel leak. Shingles lose their protective granules when hail hits them, and that damage shortens the life of the roof. Dents look bad. Bare shingles let water in.
   - q: Do shingles still make sense in Hot Springs?
@@ -25,7 +25,7 @@ Here is how the two compare on a typical Hot Springs home.
 
 | What matters | Metal roof | Shingle roof |
 | --- | --- | --- |
-| Typical cost | $14,000–$32,000 | $8,500–$18,000 |
+| Upfront cost | Higher | Lower |
 | How long it lasts | 40–70 years | 15–25 years |
 | Hail | Dents, rarely leaks | Loses granules, fails |
 | Wind rating | Up to 140 mph | 60–130 mph |
@@ -34,7 +34,7 @@ Here is how the two compare on a typical Hot Springs home.
 
 ## How much does each roof cost in Hot Springs?
 
-A metal roof runs $14,000 to $32,000 here. A shingle roof runs $8,500 to $18,000. Your price depends on the size of your roof, how steep it is, and the material you pick.
+Metal costs more up front than shingles. Both prices turn on the size of your roof, how steep it is, its shape, and what we find under the old roof. We inspect for free and put an exact number in writing for either one, so you can compare them side by side.
 
 Metal costs more on day one. That is the whole reason people hesitate.
 

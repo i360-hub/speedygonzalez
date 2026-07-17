@@ -15,7 +15,7 @@ relatedAreas:
   - mount-ida
 faqs:
   - q: How much does roof repair cost in Hot Springs?
-    a: Small repairs like a few missing shingles or one bad flashing usually run a few hundred dollars. Bigger jobs with rotten decking or a large damaged section cost more. We will not guess over the phone. We inspect the roof for free and hand you a written price.
+    a: It depends on what is wrong and how far it spread. A few missing shingles or one bad flashing is a small job. Rotten decking or a large storm-torn section costs more, because we rebuild what is under the shingles. We will not guess over the phone. We inspect the roof for free and hand you a written price.
   - q: How fast can you get to my roof?
     a: Often the same day or the next day. We answer the phone seven days a week, 7:00 AM to 8:00 PM, at 501-359-5550. If water is coming into your house right now, tell us. Active leaks go to the front of the line.
   - q: Should I repair my roof or replace it?
@@ -38,7 +38,7 @@ Catching it early is the whole game.
 
 ## How much does roof repair cost in Hot Springs?
 
-Most small repairs run a few hundred dollars. Replacing a few shingles, resealing a pipe boot, or fixing one section of flashing all sit in that range. Bigger repairs with rotten decking cost more. We give you a written price after a free inspection.
+It depends on what is wrong and how far the damage spread. Replacing a few shingles, resealing a pipe boot, or fixing one section of flashing are all small jobs. The price climbs once water has rotted the decking underneath. We inspect your roof for free and give you a written price.
 
 Here is what typical repairs involve.
 
@@ -64,7 +64,7 @@ Our inspection takes about 30 minutes and costs nothing.
 
 Repair when the trouble is in one spot and the rest of the roof is sound. Replace when the wear covers the whole roof or the roof is past 20 years old. Patching a worn-out roof just moves the leak somewhere else.
 
-We will tell you which one you have. If a $400 repair buys you five more years, we do the repair.
+We will tell you which one you have. If a small repair buys you five more years, we do the repair.
 
 If your roof is done, look at [shingle roofing](/services/shingle-roofing) or [metal roofing](/services/metal-roofing). Metal lasts 40 to 70 years and handles hail better.
 

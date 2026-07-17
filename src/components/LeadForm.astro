@@ -1,0 +1,83 @@
+---
+/**
+ * The client's live GoHighLevel "Website Contact" form, carried over from the
+ * Duda site (form id OOpsQ604HEsoYDXv6444). Leads land in their existing CRM —
+ * do not swap this for a custom form without a migration plan.
+ *
+ * The iframe is lazy-loaded and form_embed.js is deferred so the embed can't
+ * block the LCP. form_embed.js posts a resize message and sets the iframe
+ * height; MIN_HEIGHT reserves space up front so that resize doesn't shift the
+ * page (CLS).
+ *
+ * public/_headers must keep api.leadconnectorhq.com in frame-src and
+ * link.msgsndr.com in script-src or the embed is blocked by CSP.
+ */
+const FORM_ID = 'OOpsQ604HEsoYDXv6444';
+const FORM_NAME = 'Website Contact';
+
+export interface Props {
+  /**
+   * Space reserved before the embed reports its real height.
+   *
+   * Measured: the form settles at ~1164px at 375px wide (its tallest common
+   * case — fields stack single-column) and shorter on desktop. Reserving more
+   * than the tallest case means form_embed.js's resize never grows the
+   * container, so the page never shifts. The cost is a little whitespace on
+   * wide screens; the alternative is CLS on the page whose only job is
+   * capturing leads. If you change the form's fields, re-measure.
+   */
+  minHeight?: number;
+}
+
+const { minHeight = 1220 } = Astro.props;
+---
+
+<div class="form-embed" style={`min-height:${minHeight}px`}>
+  <iframe
+    src={`https://api.leadconnectorhq.com/widget/form/${FORM_ID}`}
+    id={`inline-${FORM_ID}`}
+    title={FORM_NAME}
+    loading="lazy"
+    style={`width:100%;height:${minHeight}px;border:none;border-radius:8px`}
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name={FORM_NAME}
+    data-height="675"
+    data-layout-iframe-id={`inline-${FORM_ID}`}
+    data-form-id={FORM_ID}></iframe>
+
+  <noscript>
+    <p class="fallback">
+      This form needs JavaScript. Call <a href="tel:+15013595550">501-359-5550</a> and we will
+      take your details over the phone.
+    </p>
+  </noscript>
+</div>
+
+<script is:inline defer src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<style>
+  .form-embed {
+    width: 100%;
+    max-width: 40rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .form-embed iframe {
+    display: block;
+    width: 100%;
+  }
+
+  .fallback {
+    padding: var(--space-md);
+    margin: 0;
+  }
+</style>

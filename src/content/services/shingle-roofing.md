@@ -3,8 +3,7 @@ title: Shingle Roofing
 metaTitle: Shingle Roofing Hot Springs AR | Speedy Gonzalez
 metaDescription: Asphalt shingle roof installs and replacement in Hot Springs, AR. Free inspection, insurance help, financing. Licensed roofers. Call 501-359-5550.
 h1: Shingle Roofing in Hot Springs, Arkansas
-summary: We install and replace asphalt shingle roofs across Hot Springs and Garland County. A new shingle roof runs $8,500 to $18,000 for most homes and lasts 15 to 25 years in Arkansas weather.
-priceRange: $8,500–$18,000 for a typical Hot Springs home
+summary: We install and replace asphalt shingle roofs across Hot Springs and Garland County. A new shingle roof lasts 15 to 25 years in Arkansas weather and fits almost every roof shape.
 heroImage: /images/shingle-roofing
 order: 1
 relatedAreas:
@@ -16,7 +15,7 @@ relatedAreas:
   - arkadelphia
 faqs:
   - q: How much does a shingle roof cost in Hot Springs?
-    a: Most shingle roofs in Hot Springs cost $8,500 to $18,000. A small ranch with one simple roof line sits at the low end. A large home with valleys and steep pitches sits at the high end. We give you an exact price in writing after a free inspection.
+    a: Your price comes down to four things. Roof size, roof shape, the shingle grade you pick, and what we find under the old roof all move the number. Two homes on the same street can price out very differently. We inspect your roof for free and hand you an exact number in writing.
   - q: How long does a shingle roof last in Arkansas?
     a: A shingle roof lasts 15 to 25 years here. Arkansas heat, hail, and sun wear shingles faster than in cooler states. Architectural shingles last longer than the old three-tab style, which is why we install them on almost every home.
   - q: How long does it take to replace my roof?
@@ -37,17 +36,17 @@ The trade-off is lifespan. Arkansas sun and hail are hard on shingles.
 
 Here is how the main shingle types stack up.
 
-| Shingle type | How long it lasts | Typical cost |
-| --- | --- | --- |
-| Three-tab | 15–20 years | $8,500–$12,000 |
-| Architectural | 20–25 years | $11,000–$16,000 |
-| Impact-rated | 25–30 years | $14,000–$18,000 |
+| Shingle type | How long it lasts | Holds up to hail? | Best for |
+| --- | --- | --- | --- |
+| Three-tab | 15–20 years | Poorly | Rentals and simple roofs |
+| Architectural | 20–25 years | Better | Most Hot Springs homes |
+| Impact-rated | 25–30 years | Best | Homes you plan to keep |
 
 ## How much does a shingle roof cost in Hot Springs?
 
-Most shingle roofs here run $8,500 to $18,000. A simple one-story ranch sits near the bottom. A two-story home with dormers and valleys sits near the top. You get a written price before any work starts.
+It depends on four things: the size of your roof, its shape, the shingle grade you pick, and what we find under the old roof. Two houses on the same street can price out very differently. We inspect your roof for free and hand you an exact number in writing.
 
-Four things move your number:
+Here is what moves your number:
 
 - **Size.** More square feet means more material and more labor.
 - **Roof shape.** Valleys, chimneys, and skylights need flashing and hand work.
@@ -68,7 +67,7 @@ You get a walk-through before we pull out. If something looks off to you, we fix
 
 Replace it when the wear is everywhere, not in one spot. Curling shingles across the whole roof, piles of granules in your [gutters](/services/gutters), and bare patches all point to a roof at the end of its life.
 
-A single missing shingle after a windy night is different. That is a [roof repair](/services/roof-repair), and it usually costs a few hundred dollars.
+A single missing shingle after a windy night is different. That is a [roof repair](/services/roof-repair), and it costs a small fraction of a full replacement.
 
 Not sure which one you have? Our inspection is free and takes about 30 minutes.
 

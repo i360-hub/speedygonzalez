@@ -4,7 +4,6 @@ metaTitle: Siding Installation Hot Springs AR | Speedy Gonzalez
 metaDescription: Siding installation and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates, financing available. Call 501-359-5550.
 h1: Siding Installation in Hot Springs, Arkansas
 summary: We install and replace siding across Hot Springs and Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
-priceRange: $9,000–$25,000 for a typical Hot Springs home
 heroImage: /images/hot-springs-roofing-hero
 order: 9
 relatedAreas:
@@ -16,7 +15,7 @@ relatedAreas:
   - arkadelphia
 faqs:
   - q: How much does new siding cost in Hot Springs?
-    a: Most homes here run $9,000 to $25,000 for a full siding replacement. Vinyl sits at the low end and fiber cement at the high end. Your price depends on square footage, how many stories, and what we find under the old siding. We quote in writing after a free look.
+    a: Four things drive your price. Your square footage, the material you pick, how many stories, and what we find under the old siding all move the number. Trim work adds to it too. Two homes on the same street can price out very differently. We look at your house for free and quote in writing.
   - q: What kind of siding is best for Arkansas weather?
     a: Fiber cement and vinyl both do well here. Fiber cement handles heat, humidity, and hail better and lasts longer, but costs more. Vinyl is the budget pick and holds up fine on most homes. We will walk your house and tell you which fits your goals.
   - q: How long does siding last?
@@ -43,23 +42,24 @@ Fiber cement and vinyl are the two we install most. Fiber cement handles heat, h
 
 Here is the comparison.
 
-| Siding type | How long it lasts | Typical cost |
-| --- | --- | --- |
-| Vinyl | 20–40 years | $9,000–$15,000 |
-| Fiber cement | 30–50 years | $15,000–$25,000 |
-| Metal | 40+ years | $14,000–$24,000 |
+| Siding type | How long it lasts | Upkeep | Best for |
+| --- | --- | --- | --- |
+| Vinyl | 20–40 years | Rinse it off | Most homes, budget builds |
+| Fiber cement | 30–50 years | Repaint now and then | Heat, humidity, and hail |
+| Metal | 40+ years | Very little | Long stays and modern looks |
 
 We walk your house and talk through what fits your budget and how long you plan to stay.
 
 ## How much does siding cost in Hot Springs?
 
-Most full siding jobs here run $9,000 to $25,000. A small single-story home in vinyl sits at the low end. A two-story in fiber cement sits at the high end. You get a written price after a free look at your house.
+It depends on four things: your square footage, the material you pick, how many stories, and what we find under the old siding. A small single-story home in vinyl prices out very differently than a two-story in fiber cement. We look at your house for free and put the number in writing.
 
-Four things move your number:
+Here is what moves your number:
 
 - **Square footage.** More wall means more material.
 - **Material.** Fiber cement costs more than vinyl.
 - **Stories.** Two-story work is slower and needs more setup.
+- **Trim work.** Windows, corners, and gables take hand work.
 - **What is underneath.** Rotten sheathing gets replaced.
 
 We do not quote siding over the phone. We measure first.

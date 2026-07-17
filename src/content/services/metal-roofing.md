@@ -4,7 +4,6 @@ metaTitle: Metal Roofing Hot Springs AR | Speedy Gonzalez
 metaDescription: Standing seam and metal roof installs in Hot Springs, AR. Built for Arkansas hail and heat. Free estimates. Licensed roofers. Call 501-359-5550.
 h1: Metal Roofing in Hot Springs, Arkansas
 summary: We install standing seam and exposed fastener metal roofs across Hot Springs and Garland County. A metal roof lasts 40 to 70 years and stands up to Arkansas hail better than any shingle.
-priceRange: $14,000–$32,000 for a typical Hot Springs home
 heroImage: /images/metal-roofing
 order: 2
 relatedAreas:
@@ -16,7 +15,7 @@ relatedAreas:
   - mount-ida
 faqs:
   - q: How much does a metal roof cost in Hot Springs?
-    a: Most metal roofs in Hot Springs run $14,000 to $32,000. Standing seam costs more than exposed fastener panels. Your price depends on the size of your roof, how steep it is, and the panel you pick. We give you an exact number in writing after a free inspection.
+    a: It depends on the size of your roof, how steep it is, the panel you pick, and what we find under the old roof. Standing seam costs more than exposed fastener panels. Two homes on the same street can price out very differently. We inspect your roof for free and give you an exact number in writing.
   - q: How long does a metal roof last in Arkansas?
     a: A metal roof lasts 40 to 70 years here. That is two to three times longer than a standard shingle roof. Most Arkansas homeowners who go metal never buy another roof for their house.
   - q: Is a metal roof loud when it rains?
@@ -38,7 +37,7 @@ Here is how the two compare on a typical Hot Springs home.
 | What matters | Metal roof | Shingle roof |
 | --- | --- | --- |
 | How long it lasts | 40–70 years | 15–25 years |
-| Typical cost | $14,000–$32,000 | $8,500–$18,000 |
+| Upkeep | Occasional inspection | Inspect, patch, replace |
 | Hail | Dents, rarely leaks | Loses granules, fails |
 | Wind rating | Up to 140 mph | 60–130 mph |
 | Summer heat | Reflects sun | Soaks up sun |
@@ -54,9 +53,9 @@ Exposed fastener panels cost less. They work well on shops, barns, and porches. 
 
 ## How much does a metal roof cost in Hot Springs?
 
-Most metal roofs here run $14,000 to $32,000. A simple ranch with one roof line sits at the low end. A big home with valleys, dormers, and steep pitches sits at the high end.
+It depends on four things: the size of your roof, its shape, the panel you pick, and what we find underneath. A simple ranch with one roof line prices out very differently than a big home with valleys and dormers. We inspect your roof for free and give you an exact number in writing.
 
-Four things move your price:
+Here is what moves your price:
 
 - **Size.** More square feet means more panels and more labor.
 - **Panel type.** Standing seam costs more than exposed fastener.

@@ -56,6 +56,8 @@ These aren't style preferences — CI enforces them.
 | `validate-schema.js` | JSON-LD parses, required props, `@id`s resolve, no AggregateRating without on-page reviews |
 | `validate-html.js` | Single H1, title ≤ 60, description ≤ 155, canonical, `alt` + `width`/`height` on every image |
 | `linkcheck.js` | No internal 404s; **all 84 legacy URLs resolve to 200/301**; every redirect target exists |
+| `check-claims.js` | **No prices** (the client hasn't approved any) and no unprovable trust claims |
+| `check-overflow.js` | No page scrolls horizontally at 375px (real headless Chrome) |
 
 The legacy URL list is `scripts/lib/legacy-urls.js` — reconcile it against Search
 Console before launch (see REVIEW-BEFORE-LAUNCH.md §3.2).
@@ -66,7 +68,7 @@ Zero JS on content pages except a ~15-line mobile nav toggle. Self-hosted Inter
 (one 48 KB woff2, preloaded). Heroes are pre-built AVIF/WebP/JPEG at 1600w/900w
 by `scripts/build-images.mjs` and preloaded via responsive `imagesrcset`.
 
-Measured on mobile, throttled, median of 3:
+Measured on mobile, throttled, median of 3, on an idle machine:
 
 | | Perf | SEO | A11y | BP | LCP | CLS |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -74,7 +76,16 @@ Measured on mobile, throttled, median of 3:
 | Service | 100 | 100 | 100 | 100 | 1.58s | 0.000 |
 | City | 100 | 100 | 100 | 100 | 1.65s | 0.000 |
 | Blog | 100 | 100 | 100 | 100 | 1.58s | 0.000 |
-| Contact | 100 | 100 | 100 | 100 | 1.43s | 0.000 |
+| Contact | 100 | 100 | 100 | 79* | 1.28s | 0.016 |
+
+\* `/contact` embeds the client's GoHighLevel form, whose origin sets a Cloudflare
+cookie that Lighthouse counts against best-practices. Nothing on our side sets it
+and it can't be turned off. `/contact` therefore has its own pinned thresholds in
+`lighthouserc.json` — see [lighthouse-notes.md](./lighthouse-notes.md).
+
+**Measure on an idle machine.** These runs use simulated throttling, so a busy CPU
+tanks the numbers — a loaded laptop produced LCP 11s and perf 25 on the same
+build that scores 100 idle. If you see a wild regression, check `uptime` first.
 
 ## Deploy
 

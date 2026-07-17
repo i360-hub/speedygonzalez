@@ -21,7 +21,7 @@ faqs:
   - q: The stain on my ceiling is in the middle of the room. Is the hole right above it?
     a: Usually not. Water enters the roof, runs down the wood decking or along a rafter, and drips wherever it finally stops. The real entry point is often several feet away and higher up. That is why we trace the water path instead of just patching above the stain.
   - q: How much does roof leak repair cost?
-    a: Most leak repairs run a few hundred dollars once we find the source. A cracked pipe boot is cheap to replace. If water has been getting in for months, rotten decking adds to the job. We inspect for free and give you a written price before we touch anything.
+    a: It depends on where the water gets in and how long it has been getting in. A cracked pipe boot is quick to replace. If water has been running for months, rotten decking adds to the job. We inspect for free and give you a written price before we touch anything.
   - q: Can I just put a tarp on it myself?
     a: A tarp buys you time in an emergency, but it is not a fix, and getting on a wet roof is dangerous. Call us instead at 501-359-5550. We answer seven days a week and can often tarp your roof the same day.
   - q: Will my insurance pay to fix a leak?
@@ -62,9 +62,9 @@ Then we give you a written price. No surprises later.
 
 ## How much does roof leak repair cost in Hot Springs?
 
-Most leak repairs cost a few hundred dollars once we know the source. Replacing a pipe boot or resealing flashing is quick work. The price climbs if water has been getting in long enough to rot the wood decking underneath.
+It depends on where the water gets in and how long it has been getting in. Replacing a pipe boot or resealing flashing is quick work. The price climbs once water has run long enough to rot the wood decking underneath. We inspect for free and give you a written price.
 
-That is the real reason to call early. A $300 boot today beats a $3,000 decking job next year.
+That is the real reason to call early. A boot replaced today costs a fraction of the decking job it turns into next year.
 
 We do not quote leaks over the phone. Every roof is different.
 

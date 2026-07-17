@@ -4,7 +4,6 @@ metaTitle: TPO Flat Roofing Hot Springs AR | Speedy Gonzalez
 metaDescription: TPO and flat roof installs for Hot Springs, AR homes and shops. Seamless membrane, free inspection, financing available. Call 501-359-5550.
 h1: TPO and Flat Roofing in Hot Springs, Arkansas
 summary: We install TPO flat roofs on homes, shops, and commercial buildings across Hot Springs. TPO is a tough rubber-like membrane that seals your flat roof in one sheet and lasts 20 to 30 years.
-priceRange: $9,000–$22,000 for a typical Hot Springs flat roof
 heroImage: /images/roof-inspection
 order: 3
 relatedAreas:
@@ -18,7 +17,7 @@ faqs:
   - q: What is TPO roofing?
     a: TPO is a tough, rubber-like membrane made for flat and low-slope roofs. It rolls out in wide sheets that we heat-weld together, so there are almost no seams for water to find. It is white, which reflects the Arkansas sun and keeps your building cooler.
   - q: How much does a TPO flat roof cost in Hot Springs?
-    a: Most TPO roofs here run $9,000 to $22,000. Price depends on square footage, how many vents and units sit on the roof, and whether the old roof needs a full tear-off. We measure your roof and give you a written number for free.
+    a: Three things drive your price. Square footage, how many vents and units sit on the roof, and whether the old roof needs a full tear-off all move the number. Wet insulation underneath is common here, and it changes the job. We measure your roof for free and give you a written number.
   - q: How long does a TPO roof last?
     a: A TPO roof lasts 20 to 30 years when it is installed right and checked now and then. The membrane itself holds up well to Arkansas heat and rain. Most failures start at seams or flashing, which is why we heat-weld every seam.
   - q: Why does my flat roof keep leaking?
@@ -45,9 +44,9 @@ Here is how flat roof options compare.
 
 ## How much does a TPO flat roof cost in Hot Springs?
 
-Most TPO roofs here run $9,000 to $22,000. A small home addition or porch sits at the low end. A full shop or office roof with lots of vents sits at the high end. Your price comes in writing after a free measure.
+It depends on three things: the square footage, what sits on the roof, and whether the old roof comes off first. A small porch prices out very differently than a shop roof covered in vents. We measure your roof for free and put the number in writing.
 
-Three things drive the cost:
+Here is what drives the cost:
 
 - **Square footage.** Bigger roof, more membrane and labor.
 - **What is on the roof.** Vents, pipes, and HVAC units each need flashing by hand.

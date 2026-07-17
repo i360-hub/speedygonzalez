@@ -1,16 +1,16 @@
 ---
 title: What Does a New Roof Cost in Hot Springs, Arkansas?
 metaTitle: New Roof Cost in Hot Springs, AR | Speedy Gonzalez
-description: A new roof in Hot Springs runs $8,500-$18,000 for shingles and $14,000-$32,000 for metal. See what moves your price. Free estimate. Call 501-359-5550.
+description: What drives the price of a new roof in Hot Springs, AR — size, pitch, shape, and decking. Free inspection and a written number. Call 501-359-5550.
 pubDate: 2026-04-09
 author: Speedy Gonzalez Roofing
 heroImage: /images/shingle-roofing
 tags: [Costs, Roof Replacement]
 faqs:
   - q: How much does a new roof cost in Hot Springs, Arkansas?
-    a: A new shingle roof runs $8,500 to $18,000 on a typical Hot Springs home. A metal roof runs $14,000 to $32,000. Your number depends on the size of your roof, how steep it is, the material you pick, and what we find under the old roof.
+    a: Four things set your price. The size of your roof, how steep it is, the material you pick, and what we find under the old roof. Two homes on the same street can price out very differently. We inspect your roof for free and give you an exact number in writing.
   - q: Why is my quote higher than my neighbor's?
-    a: Roof size, pitch, and shape drive the difference. A steep roof with valleys, dormers, and chimneys takes hand work and flashing that a simple ranch never needs. Two homes on the same street can differ by thousands. Square footage of the house alone does not tell you much.
+    a: Roof size, pitch, and shape drive the difference. A steep roof with valleys, dormers, and chimneys takes hand work and flashing that a simple ranch never needs. Two homes on the same street can land far apart. Square footage of the house alone does not tell you much.
   - q: Will insurance pay for my new roof?
     a: Insurance may pay if a storm damaged your roof, but it will not pay for normal wear or old age. Coverage and deductibles vary by policy, and the adjuster makes the call, not us. We inspect for free, photograph the damage, and meet your adjuster on site.
   - q: Do you offer financing for a new roof?
@@ -19,22 +19,22 @@ faqs:
 
 ## How much does a new roof cost in Hot Springs?
 
-A new shingle roof costs $8,500 to $18,000 on a typical Hot Springs home. A metal roof costs $14,000 to $32,000. Your exact price turns on the size of your roof, how steep it is, the material you choose, and what we find under the old roof.
+Four things set your price. The size of your roof, how steep it is, the material you choose, and what we find under the old roof. A simple ranch with one roof line prices out very differently than a big home with valleys and dormers. We do not quote roofs over the phone.
 
-Here is the range by material.
+Your material is the first fork in the road.
 
-| Roof type | Typical Hot Springs home | How long it lasts |
+| Roof type | How long it lasts | Best for |
 | --- | --- | --- |
-| Shingle | $8,500–$18,000 | 15–25 years |
-| Metal | $14,000–$32,000 | 40–70 years |
+| Shingle | 15–25 years | Lower upfront cost, most Hot Springs homes |
+| Metal | 40–70 years | Staying put long term, hail country |
 
-A simple ranch with one roof line sits at the low end of either range. A big home with valleys, dormers, and steep pitches sits at the high end.
+Shingles cost less to put on. Metal costs more up front and lasts two to three times as long. Neither is the right answer for everyone.
 
-We do not quote roofs over the phone. You get a real number in writing after a free inspection.
+You get a real number in writing after a free inspection.
 
 ## What makes one roof cost more than another?
 
-Four things move your price: size, pitch, shape, and what sits under the old roof. Two houses on the same street can differ by thousands. Square footage of the house is a poor guide, because your roof is not the same shape as your floor plan.
+Four things move your price: size, pitch, shape, and what sits under the old roof. Two houses on the same street can land far apart. Square footage of the house is a poor guide, because your roof is not the same shape as your floor plan.
 
 Here is how each one works.
 
@@ -81,6 +81,6 @@ We tell you what you need and what can wait. Those are two different lists.
 
 Our own crews do the work, and we are at 209 Albert Pike in Hot Springs. We are licensed in Arkansas under RR0540931024, with over 20 years here, more than 500 projects, and 20 trained people on staff. Our rating is 4.9.
 
-Compare us to [shingle roofing](/services/shingle-roofing) and [metal roofing](/services/metal-roofing) pricing, or see our work across [Hot Springs](/service-areas/hot-springs).
+Compare [shingle roofing](/services/shingle-roofing) against [metal roofing](/services/metal-roofing), or see our work across [Hot Springs](/service-areas/hot-springs).
 
 Want a real number on your roof? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer seven days a week, 7:00 AM to 8:00 PM. Financing is available.

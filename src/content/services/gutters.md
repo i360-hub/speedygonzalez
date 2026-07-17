@@ -4,7 +4,6 @@ metaTitle: Gutter Installation Hot Springs AR | Speedy Gonzalez
 metaDescription: Seamless gutter installation and repair in Hot Springs, AR. Protect your roof and foundation. Free estimates, financing. Call 501-359-5550.
 h1: Gutter Installation in Hot Springs, Arkansas
 summary: We install and repair seamless gutters across Hot Springs and Garland County. Good gutters move water off your roof and away from your foundation, which stops the two most expensive problems a house can have.
-priceRange: $1,200–$3,500 for a typical Hot Springs home
 heroImage: /images/metal-roof-home
 order: 8
 relatedAreas:
@@ -16,7 +15,7 @@ relatedAreas:
   - arkadelphia
 faqs:
   - q: How much do new gutters cost in Hot Springs?
-    a: Most homes here run $1,200 to $3,500 for a full set of seamless gutters. Price depends on how many feet of gutter your home needs, how high the roof is, and whether you want gutter guards. We measure your home and give you a written price for free.
+    a: Three things drive your price. Your roof line length, the height of your roof, and whether you want gutter guards all move the number. Downspout count matters too. A small ranch prices out very differently than a two-story. We measure your home for free and give you a written price.
   - q: What are seamless gutters?
     a: Seamless gutters are formed from one long piece of metal on site, cut to fit your house. There are no joints along the run, so there is almost nothing to leak. Sectional gutters from a hardware store are joined every ten feet, and every joint is a future drip.
   - q: How often should I clean my gutters?
@@ -39,12 +38,13 @@ Gutters are the cheapest insurance on your house.
 
 ## How much do new gutters cost in Hot Springs?
 
-Most homes here run $1,200 to $3,500 for a full seamless set. A small single-story house sits at the low end. A large two-story with lots of roof line and gutter guards sits at the high end. You get a written price after a free measure.
+It depends on three things: how many feet of gutter your roof line needs, how high the roof is, and whether you want gutter guards. A small single-story house prices out very differently than a large two-story. We measure your home for free and give you a written price.
 
-Three things move the number:
+Here is what moves the number:
 
 - **Linear feet.** More roof edge means more gutter.
 - **Height.** Two-story work takes longer and needs more setup.
+- **Downspouts.** More corners and long runs need more drops.
 - **Guards.** Gutter guards add cost but cut your cleaning.
 
 We measure your house before we quote. No phone guesses.

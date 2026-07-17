@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
+import LeadForm from '../components/LeadForm.astro';
 import { business, telHref } from '../data/business';
 ---
 
@@ -24,58 +25,14 @@ import { business, telHref } from '../data/business';
   <div class="wrap layout">
     <div class="form-side">
       <h2>Send us your details</h2>
-      <p>Fill this out and we will call you back. Four fields, that is it.</p>
+      <p>
+        Fill this out and we will call you back. Tell us what your roof is doing in the
+        project details — the more you tell us, the better we can help.
+      </p>
 
-      <!--
-        Posts to Formspree. Swap FORM_ENDPOINT for the client's real endpoint
-        (or a Cloudflare Pages Function) before launch — see REVIEW-BEFORE-LAUNCH.md.
-      -->
-      <form action="https://formspree.io/f/FORM_ENDPOINT" method="POST" class="lead-form">
-        <div class="field">
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required />
-        </div>
+      <LeadForm />
 
-        <div class="field">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" required />
-        </div>
-
-        <div class="field">
-          <label for="zip">Zip code</label>
-          <input
-            type="text"
-            id="zip"
-            name="zip"
-            autocomplete="postal-code"
-            inputmode="numeric"
-            pattern="[0-9]{5}"
-            required
-          />
-        </div>
-
-        <div class="field">
-          <label for="service">What do you need?</label>
-          <select id="service" name="service" required>
-            <option value="">Choose one</option>
-            <option>Roof leak or repair</option>
-            <option>New roof / replacement</option>
-            <option>Storm or hail damage</option>
-            <option>Metal roof</option>
-            <option>Gutters</option>
-            <option>Siding</option>
-            <option>Something else</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="message">Anything else? <span class="optional">(optional)</span></label>
-          <textarea id="message" name="message" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary full">Get my free estimate</button>
-        <p class="fine">We call you back. We do not sell your info to anyone.</p>
-      </form>
+      <p class="fine">We call you back. We do not sell your info to anyone.</p>
     </div>
 
     <aside>
@@ -151,49 +108,6 @@ import { business, telHref } from '../data/business';
     margin-top: 0;
   }
 
-  .lead-form {
-    display: grid;
-    gap: var(--space-md);
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    max-width: 34rem;
-  }
-
-  .field {
-    display: grid;
-    gap: 0.35rem;
-  }
-
-  label {
-    font-weight: 700;
-    font-size: var(--step--1);
-  }
-
-  .optional {
-    font-weight: 400;
-    color: var(--text-muted);
-  }
-
-  input,
-  select,
-  textarea {
-    font: inherit;
-    font-size: var(--step-0);
-    padding: 0.7rem 0.8rem;
-    border: 1px solid var(--charcoal-300);
-    border-radius: var(--radius);
-    background: var(--white);
-    color: var(--text);
-    min-height: 48px;
-    width: 100%;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
   .full {
     width: 100%;
   }
@@ -201,7 +115,8 @@ import { business, telHref } from '../data/business';
   .fine {
     font-size: var(--step--1);
     color: var(--text-muted);
-    margin: 0;
+    margin-top: var(--space-sm);
+    max-width: 40rem;
     text-align: center;
   }
 
