@@ -24,6 +24,11 @@ const heroes = [
   ['hail damage/358645875_1015483163092293_6520329698732062486_n.jpg', 'hail-damage', 'centre'],
   ['hail damage/354075334_995396945100915_8230297471038908778_n.jpg', 'hail-inspection', 'centre'],
   ['hail damage/359430832_1015482026425740_2794852448700541750_n.jpg', 'roof-inspection', 'centre'],
+  // PUBLIC-DOMAIN stock (Wikimedia "FinishedEPDMcoveredRoof.jpg") — the ONLY
+  // non-client photo on the site. Speedy has no real TPO/flat-membrane photo;
+  // owner approved a public-domain image for this one hero. See
+  // ../public-domain-img/CREDITS.md. Replace when a real job photo exists.
+  ['public-domain-img/tpo-flat-roof.jpg', 'tpo-flat-roof', 'centre'],
 ];
 
 // Heroes sit under a heavy dark scrim, so aggressive quality still looks clean.

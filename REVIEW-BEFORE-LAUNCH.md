@@ -183,6 +183,16 @@ price-tier indicator for LocalBusiness markup, not an estimate. Leave it.
 
 ## 5. Decisions made — reverse if you disagree
 
+**One public-domain stock image** — the ONLY non-client photo on the site. The
+`/services/tpo-flat-roofing` hero. Speedy has no photo of a real TPO/flat-membrane
+job (confirmed by reviewing the whole GBP library + job photos), so the owner
+approved a public-domain image (2026-07-16). It's a finished flat EPDM membrane
+roof from Wikimedia Commons, released to the public domain (no attribution
+required) — full provenance in `public-domain-img/CREDITS.md`. The hero is a
+decorative background (`alt=""`), so it makes no claim to be Speedy's work.
+Swap it for a real Speedy TPO/flat photo whenever one exists (drop the file in
+`public-domain-img/`, rerun `node scripts/build-images.mjs`).
+
 **44 town pages were not rebuilt.** The old site had 51 `/service-areas/*` pages;
 8 have real local content here, and the other 44 (Alexander, Altheimer, Amity,
 Bauxite, Bismarck…) 301 to the `/service-areas` hub via a splat rule. Spec §2
