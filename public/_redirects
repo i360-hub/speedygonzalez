@@ -29,6 +29,10 @@
 /areas-we-service                 /service-areas                  301
 /find-us-online                   /contact                        301
 /sms-terms-and-conditions         /sms-terms                      301
+# /financing was built during this rebuild, then removed: the business offers no
+# financing (confirmed 2026-07-16). It was never a legacy URL, but it appeared on
+# a preview deploy, so point any stray bookmark at the honest answer.
+/financing                        /insurance-claims               301
 
 # --- Old root-level blog posts -> /blog/* --------------------------------------
 # Posts with a direct successor:

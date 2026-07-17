@@ -76,7 +76,7 @@ We also handle [roof repair](/services/roof-repair), [leak repair](/services/roo
 
 Yes. We hold Arkansas Roofing License RR0540931024 and Home Improvement License 0378510824. We have 20 trained people, over 20 years of work here, and a 4.9 rating.
 
-Free inspections. Free estimates. Financing available.
+Free inspections. Free estimates.
 
 ## Where else do you work near Benton?
 

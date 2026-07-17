@@ -79,7 +79,7 @@ We also do [roof repair](/services/roof-repair), [leak repair](/services/roof-le
 
 Yes. We hold Arkansas Roofing License RR0540931024 and Home Improvement License 0378510824. Over 20 years of work, 500 plus projects, and 20 trained people on staff.
 
-We are rated 4.9. Inspections and estimates are free, and financing is available.
+We are rated 4.9. Inspections and estimates are free.
 
 ## Where else do you work near Arkadelphia?
 

@@ -13,8 +13,8 @@ faqs:
     a: Roof size, pitch, and shape drive the difference. A steep roof with valleys, dormers, and chimneys takes hand work and flashing that a simple ranch never needs. Two homes on the same street can land far apart. Square footage of the house alone does not tell you much.
   - q: Will insurance pay for my new roof?
     a: Insurance may pay if a storm damaged your roof, but it will not pay for normal wear or old age. Coverage and deductibles vary by policy, and the adjuster makes the call, not us. We inspect for free, photograph the damage, and meet your adjuster on site.
-  - q: Do you offer financing for a new roof?
-    a: Yes, financing is available. A roof is rarely a purchase people plan for, and most of our customers are working around a deductible or a fixed budget. Ask us when we give you your written estimate, and we will walk you through the options that fit.
+  - q: How do most people pay for a new roof here?
+    a: Through an insurance claim, more often than not. Arkansas storms damage a lot of roofs, and most homeowner policies cover storm damage. You pay your deductible and your insurer covers the rest of a covered claim. We inspect for free and meet your adjuster on the roof.
 ---
 
 ## How much does a new roof cost in Hot Springs?
@@ -83,4 +83,4 @@ Our own crews do the work, and we are at 207 Albert Pike Road in Hot Springs. We
 
 Compare [shingle roofing](/services/shingle-roofing) against [metal roofing](/services/metal-roofing), or see our work across [Hot Springs](/service-areas/hot-springs).
 
-Want a real number on your roof? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. Financing is available.
+Want a real number on your roof? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week.

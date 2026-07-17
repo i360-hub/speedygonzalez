@@ -83,4 +83,4 @@ Get a free inspection. We climb up, photograph what is there, and show you the p
 
 We are at 207 Albert Pike Road in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, 20 trained people, and a 4.9 rating. We serve [Hot Springs](/service-areas/hot-springs) and all of Garland County. Sometimes a [roof repair](/services/roof-repair) is the whole answer.
 
-Seeing any of these signs? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. Financing is available.
+Seeing any of these signs? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week.

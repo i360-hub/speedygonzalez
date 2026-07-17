@@ -82,4 +82,4 @@ We do not sell your job to a subcontractor you have never met.
 
 Next door in [Benton](/service-areas/benton), and down I-30 in [Malvern](/service-areas/malvern) and [Hot Springs](/service-areas/hot-springs).
 
-[Contact us](/contact) or call 501-359-5550. Inspections and estimates are free, and financing is available.
+[Contact us](/contact) or call 501-359-5550. Inspections and estimates are free.

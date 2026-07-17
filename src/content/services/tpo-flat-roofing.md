@@ -1,7 +1,7 @@
 ---
 title: TPO & Flat Roofing
 metaTitle: TPO Flat Roofing Hot Springs AR | Speedy Gonzalez
-metaDescription: TPO and flat roof installs for Hot Springs, AR homes and shops. Seamless membrane, free inspection, financing available. Call 501-359-5550.
+metaDescription: TPO and flat roof installs for Hot Springs, AR homes and shops. Seamless membrane and a free inspection. Call 501-359-5550.
 h1: TPO and Flat Roofing in Hot Springs, Arkansas
 summary: We install TPO flat roofs on homes, shops, and commercial buildings across Hot Springs. TPO is a tough rubber-like membrane that seals your flat roof in one sheet and lasts 20 to 30 years.
 heroImage: /images/roof-inspection
@@ -87,6 +87,5 @@ We are licensed in Arkansas, license number RR0540931024, and we are based at 20
 
 We serve [Hot Springs](/service-areas/hot-springs) and the surrounding area, including [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), [Malvern](/service-areas/malvern), and [Pine Bluff](/service-areas/pine-bluff). Our Pine Bluff line is 870-335-2611.
 
-Financing is available if you would rather not pay all at once. See our [financing](/financing) page for details.
 
 Ready for a free flat roof inspection? [Contact us](/contact) or call 501-359-5550, seven days a week.

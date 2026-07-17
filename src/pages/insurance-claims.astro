@@ -1,0 +1,285 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ReviewStrip from '../components/ReviewStrip.astro';
+import { faqSchema } from '../data/schema';
+import { business, telHref } from '../data/business';
+
+/**
+ * Insurance-claims hub (supplement §4.1) — the top AEO target
+ * ("will insurance pay for my roof in Arkansas").
+ *
+ * This is also where the site sends "how do I pay for a roof?" now that
+ * financing has been removed (the business offers none; most jobs are claims).
+ *
+ * Every claim on this page is hedged: insurance MAY cover, the ADJUSTER decides,
+ * we do not guarantee a paid claim. Overpromising a claim outcome is both a
+ * trust problem and, in roofing, a regulatory one.
+ */
+const faqs = [
+  {
+    q: 'Will my insurance pay for a new roof in Arkansas?',
+    a: 'It may, if a storm damaged your roof. Most Arkansas homeowner policies cover sudden hail and wind damage. They do not cover normal wear or an old roof. Your deductible applies, and your adjuster makes the final call. We inspect for free and document everything so nothing gets missed.',
+  },
+  {
+    q: 'How long do I have to file a roof claim in Arkansas?',
+    a: 'Most policies set a deadline, often one to two years from the date of the storm. Damage is also easier to prove while it is fresh. Do not wait for a leak. Get a free inspection, get it documented, and file before your window closes.',
+  },
+  {
+    q: 'What does my deductible mean for a roof claim?',
+    a: 'Your deductible is the part you pay before insurance pays the rest. If your covered claim is approved, you pay the deductible and your insurer covers the balance of the covered work. Plan for the deductible as your out-of-pocket cost — that is the number to budget for.',
+  },
+  {
+    q: 'Do you meet my insurance adjuster?',
+    a: 'Yes, and we recommend it. We meet your adjuster on the roof, show them what we found, and make sure the damage is documented the same way we see it. We have done this hundreds of times across Garland County.',
+  },
+  {
+    q: 'What if my claim gets denied?',
+    a: 'A denial is not always the end. Sometimes damage was missed or a report was thin. We can reinspect and document what we find, and you can ask your insurer to take another look. We cannot promise a different answer, but we can make sure the roof was looked at properly.',
+  },
+  {
+    q: 'Can I get a stronger roof when I use my claim?',
+    a: 'Often yes. Many homeowners use a hail claim to step up to impact-resistant shingles or metal. Some Arkansas insurers offer a premium discount for impact-resistant roofs. Ask your agent whether yours does before you decide.',
+  },
+  {
+    q: 'Do you get paid by my insurance company?',
+    a: 'You pay us, not your insurer. Your insurance reimburses you for the covered work under your policy. We give you a written estimate, do the work, and document it so your claim reflects what was actually done.',
+  },
+];
+
+const steps = [
+  {
+    n: '01',
+    h: 'Free inspection',
+    p: 'We get on your roof, photograph every bit of damage, and give you a written report. No charge, no obligation.',
+  },
+  {
+    n: '02',
+    h: 'You file the claim',
+    p: 'You call your insurer with our report in hand. We tell you what we found and what to say. The claim is yours to file.',
+  },
+  {
+    n: '03',
+    h: 'We meet the adjuster',
+    p: 'Your adjuster comes out. We meet them on the roof and walk the damage together so nothing gets overlooked.',
+  },
+  {
+    n: '04',
+    h: 'We build it',
+    p: 'Once the claim is approved, our own crew does the work and documents it to match the claim.',
+  },
+];
+---
+
+<Base
+  title="Roof Insurance Claims in Hot Springs, AR | Speedy Gonzalez"
+  description="Will insurance pay for your roof in Arkansas? Free storm inspection, photo documentation, and adjuster meetings in Hot Springs. Call 501-359-5550."
+  path="/insurance-claims"
+  preloadImage="/images/storm-damage"
+  breadcrumbs={[{ href: '/insurance-claims', label: 'Insurance Claims' }]}
+  schema={[faqSchema(faqs)]}
+>
+  <Hero
+    eyebrow="Storm & hail claims"
+    h1="Roof Insurance Claims in Hot Springs, Arkansas"
+    summary="Most roofs we replace are paid through a storm or hail claim. We inspect for free, document the damage with photos, and meet your adjuster on the roof. Your insurer makes the call — we make sure nothing gets missed."
+    image="/images/storm-damage"
+  />
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>Will insurance pay for my roof in Arkansas?</h2>
+      <p>
+        It may, if a storm damaged it. Most Arkansas homeowner policies cover sudden hail and
+        wind damage to your roof. They do not cover an old roof or normal wear. Your deductible
+        applies, and your adjuster makes the final decision.
+      </p>
+      <p>
+        Arkansas takes a beating. Hail season runs March through June, and Garland County sits
+        right in the path. That is why storm claims are so common here.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>What happened to your roof</th>
+              <th>Usually covered?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Hail bruised or cracked the shingles</td><td>Often yes</td></tr>
+            <tr><td>Wind tore off or lifted shingles</td><td>Often yes</td></tr>
+            <tr><td>A tree limb hit the roof in a storm</td><td>Often yes</td></tr>
+            <tr><td>The roof is simply old and worn out</td><td>No</td></tr>
+            <tr><td>Leaks from years of missed maintenance</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fineprint">
+        Coverage depends on your policy and your adjuster, not on us. This is a general guide,
+        not a promise about your claim.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>How does a roof claim work?</h2>
+      <p class="lede intro">
+        Four steps. You file the claim and keep control of it. We handle the roof and the
+        documentation.
+      </p>
+      <ol class="steps">
+        {
+          steps.map((s) => (
+            <li>
+              <span class="num">{s.n}</span>
+              <h3>{s.h}</h3>
+              <p>{s.p}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>What does an adjuster look for?</h2>
+      <p>
+        Fresh, storm-caused damage. On a shingle roof, that means hail bruises where granules
+        were knocked loose, and shingles lifted or torn by wind. On the soft metal — vents,
+        flashing, gutter caps — they look for dents.
+      </p>
+      <p>
+        We chalk-mark each hit during our inspection and photograph it, so you and the adjuster
+        are looking at the same evidence. Hail damage is easy to miss from the ground and easy
+        to overlook without photos.
+      </p>
+      <p>
+        Read more about <a href="/services/hail-damage-repair">hail damage repair</a> and
+        <a href="/services/storm-damage-repair">storm damage repair</a>.
+      </p>
+
+      <h2>Can I upgrade my roof through the claim?</h2>
+      <p>
+        Often, yes. A lot of Hot Springs homeowners use a hail claim to move up to
+        impact-resistant shingles or a <a href="/services/metal-roofing">metal roof</a> that
+        handles the next storm better.
+      </p>
+      <p>
+        Some Arkansas insurers give a premium discount for impact-resistant roofs. Ask your
+        agent whether yours does. If it does, the stronger roof can pay for part of itself over
+        time.
+      </p>
+
+      <h2>How much will I owe out of pocket?</h2>
+      <p>
+        Your deductible, on a covered claim. That is the part you pay; your insurer covers the
+        rest of the approved work. So the deductible is the number to plan for up front.
+      </p>
+      <p>
+        What we can do is make sure the claim reflects every bit of covered damage, so you are
+        not paying for work your policy should have covered. If you need help spreading out the
+        deductible, your agent or bank is the place to ask — that part is between you and them.
+      </p>
+    </div>
+  </section>
+
+  <ReviewStrip slug="insurance-claims" heading="Homeowners we helped through a claim" alt />
+
+  <section class="section">
+    <div class="wrap">
+      <Faq faqs={faqs} heading="Arkansas roof insurance questions" />
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap claim-cta">
+      <div>
+        <h2>Storm hit your roof?</h2>
+        <p>
+          Do not wait for the deadline or the leak. Call {business.phones.primary} for a free
+          inspection and a written report you can hand your insurer.
+        </p>
+      </div>
+      <div class="btn-row">
+        <a href={telHref(business.phones.primary)} class="btn btn-primary">
+          Call {business.phones.primary}
+        </a>
+        <a href="/contact" class="btn btn-outline">Get a free inspection</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .narrow {
+    max-width: var(--measure);
+  }
+
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .fineprint {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .steps li {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    max-width: none;
+  }
+
+  .num {
+    font-weight: 800;
+    color: var(--red-600);
+    font-size: var(--step--1);
+  }
+
+  .steps h3 {
+    margin: 0.2rem 0 0.4rem;
+    font-size: var(--step-1);
+  }
+
+  .steps p {
+    font-size: var(--step--1);
+    color: var(--charcoal-700);
+    margin: 0;
+  }
+
+  .claim-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .claim-cta h2 {
+    margin-top: 0;
+  }
+
+  .claim-cta p {
+    margin-bottom: 0;
+  }
+</style>

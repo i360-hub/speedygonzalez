@@ -1,7 +1,7 @@
 ---
 title: Siding
 metaTitle: Siding Installation Hot Springs AR | Speedy Gonzalez
-metaDescription: Siding installation and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates, financing available. Call 501-359-5550.
+metaDescription: Siding installation and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates. Call 501-359-5550.
 h1: Siding Installation in Hot Springs, Arkansas
 summary: We install and replace siding across Hot Springs and Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
 heroImage: /images/hot-springs-roofing-hero
@@ -88,4 +88,4 @@ While we are there we can handle your [gutters](/services/gutters) too. If your 
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). We hold Arkansas Home Improvement License 0378510824 and are based at 207 Albert Pike Road.
 
-[Contact us](/contact) or call 501-359-5550, seven days a week. Financing is available on our [financing](/financing) page.
+[Contact us](/contact) or call 501-359-5550, seven days a week.

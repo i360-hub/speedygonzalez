@@ -1,7 +1,7 @@
 ---
 title: Shingle Roofing
 metaTitle: Shingle Roofing Hot Springs AR | Speedy Gonzalez
-metaDescription: Asphalt shingle roof installs and replacement in Hot Springs, AR. Free inspection, insurance help, financing. Licensed roofers. Call 501-359-5550.
+metaDescription: Asphalt shingle roof installs and replacement in Hot Springs, AR. Free inspection and insurance help. Licensed roofers. Call 501-359-5550.
 h1: Shingle Roofing in Hot Springs, Arkansas
 summary: We install and replace asphalt shingle roofs across Hot Springs and Garland County. A new shingle roof lasts 15 to 25 years in Arkansas weather and fits almost every roof shape.
 heroImage: /images/shingle-roofing
@@ -24,8 +24,8 @@ faqs:
     a: Repair makes sense if the damage is in one spot and your roof still has years left. Replace it if shingles are curling all over, granules fill your gutters, or the roof is past 20 years old. Our free inspection tells you which one you need.
   - q: Will my insurance pay for a new shingle roof?
     a: Insurance often pays if hail or wind damaged your roof. It usually will not pay for a roof that simply wore out. We inspect for free, take photos of the damage, and meet your adjuster on site. If your roof is fine, we tell you so.
-  - q: Do you offer financing on a new roof?
-    a: Yes. Financing is available, so you can spread the cost out instead of paying for the whole roof at once. That helps when a roof fails before you planned for it. Visit our [financing](/financing) page or call 501-359-5550 and we will walk you through the options.
+  - q: How do most people pay for a new roof here?
+    a: Yes. Most of our jobs go through a homeowner's insurance claim, and we handle that paperwork with you. That helps when a roof fails before you planned for it. Call 501-359-5550 and we will walk you through what your insurance is likely to cover.
 ---
 
 ## Why do most Hot Springs homes have shingle roofs?

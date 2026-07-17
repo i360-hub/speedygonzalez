@@ -77,7 +77,7 @@ We never pressure you to file. See [hail damage repair](/services/hail-damage-re
 
 Yes. We hold Arkansas Roofing License RR0540931024 and Home Improvement License 0378510824. We have 20 trained people on staff and over 500 projects behind us.
 
-We are rated 4.9 by our customers. Financing is available if you need it.
+We are rated 4.9 by our customers.
 
 ## Where else do you work near Hot Springs?
 

@@ -42,6 +42,18 @@ const RULES = [
    * outcome) — those inform the customer rather than promise them something.
    */
   { name: 'guarantee/warranty promise', re: /\bguarantee(?:d|s)?\b|\bwarrant(?:y|ies|ed)\b/gi },
+  /**
+   * NO FINANCING. Confirmed 2026-07-16: the business offers none. The spec's
+   * proof_points said "financing available" and that claim shipped across 24
+   * files — a homeowner would have called expecting a payment plan that does
+   * not exist. Most jobs are insurance claims; that is the honest answer.
+   *
+   * If they sign a third-party lender, delete this rule and name the lender.
+   */
+  {
+    name: 'financing claim',
+    re: /\bfinanc(?:e|es|ed|ing)\b|\bpayment plan(?:s)?\b|\bmonthly payments?\b|\bpay over time\b|\bspread the cost\b/gi,
+  },
 ];
 
 /**

@@ -42,7 +42,7 @@ But look at the 50 year math. One metal roof covers that stretch. Shingles need 
 
 Money is not the only thing that matters. Some people just want a roof they never think about again.
 
-Financing changes the picture for a lot of people. A metal roof you can pay for over time may beat a shingle roof you pay for twice. Ask us about it when we hand you the estimate.
+If a storm damaged your old roof, your insurance may cover the replacement. That changes the math more than anything else. Ask us about it when we hand you the estimate.
 
 ## Which roof holds up better in Arkansas hail?
 
@@ -91,4 +91,4 @@ Our own crews. We are at 207 Albert Pike Road in Hot Springs, licensed in Arkans
 
 We do not hand your job to a subcontractor you have never met.
 
-Ready to compare both roofs on your own house? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. Financing is available, and we help with insurance claims.
+Ready to compare both roofs on your own house? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week. We also help with insurance claims.

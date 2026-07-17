@@ -81,4 +81,4 @@ Our own crews. We are a licensed Arkansas roofing contractor, license number RR0
 
 After a big storm, out-of-state crews show up chasing work and leave when the season ends. We are here year-round.
 
-We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). [Contact us](/contact) or call 501-359-5550. Financing is available on our [financing](/financing) page.
+We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). [Contact us](/contact) or call 501-359-5550.

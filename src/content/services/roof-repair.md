@@ -82,4 +82,4 @@ Often the same day or the next. We answer 24 hours a day, seven days a week. If 
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 
-Call 501-359-5550 or [contact us](/contact). Financing is available on larger jobs. See our [financing](/financing) page.
+Call 501-359-5550 or [contact us](/contact).

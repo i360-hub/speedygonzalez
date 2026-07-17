@@ -60,13 +60,26 @@ export const business = {
     homeImprovement: '0378510824',
   },
   experience: '20+ years',
+  /**
+   * NO FINANCING. Confirmed 2026-07-16: the business does not offer financing of
+   * any kind. The build spec's proof_points listed "financing available" and it
+   * was wrong — the claim shipped across 24 files before this was caught. A
+   * homeowner reading it would call expecting a payment plan that does not
+   * exist.
+   *
+   * Most jobs are insurance claims; that is the real answer to "how do I pay for
+   * this", and it lives on /insurance-claims.
+   *
+   * check-claims.js fails the build on financing language. If they later sign up
+   * a third-party lender, relax that rule and add the proof point back — with
+   * the lender named.
+   */
   proofPoints: [
     '500+ projects completed',
     '20 trained professionals',
     'BBB A+ Rated',
     'Free inspections and estimates',
     'Insurance claim support',
-    'Financing available',
   ],
   social: {
     facebook: 'https://facebook.com/SpeedyGonzalezRoofing',

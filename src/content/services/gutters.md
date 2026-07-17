@@ -1,7 +1,7 @@
 ---
 title: Gutters
 metaTitle: Gutter Installation Hot Springs AR | Speedy Gonzalez
-metaDescription: Seamless gutter installation and repair in Hot Springs, AR. Protect your roof and foundation. Free estimates, financing. Call 501-359-5550.
+metaDescription: Seamless gutter installation and repair in Hot Springs, AR. Protect your roof and foundation. Free estimates. Call 501-359-5550.
 h1: Gutter Installation in Hot Springs, Arkansas
 summary: We install and repair seamless gutters across Hot Springs and Garland County. Good gutters move water off your roof and away from your foundation, which stops the two most expensive problems a house can have.
 heroImage: /images/metal-roof-home
@@ -84,4 +84,4 @@ Yes, if the roof is due. The crew is already on site, the drip edge is open, and
 
 If you are replacing your roof, see [shingle roofing](/services/shingle-roofing) or [metal roofing](/services/metal-roofing). While we are up there we also handle [siding](/services/siding).
 
-We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). [Contact us](/contact) or call 501-359-5550. Financing details are on our [financing](/financing) page.
+We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). [Contact us](/contact) or call 501-359-5550.
