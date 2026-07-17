@@ -56,7 +56,9 @@ These aren't style preferences — CI enforces them.
 | `validate-schema.js` | JSON-LD parses, required props, `@id`s resolve, no AggregateRating without on-page reviews |
 | `validate-html.js` | Single H1, title ≤ 60, description ≤ 155, canonical, `alt` + `width`/`height` on every image |
 | `linkcheck.js` | No internal 404s; **all 84 legacy URLs resolve to 200/301**; every redirect target exists |
-| `check-claims.js` | **No prices** (the client hasn't approved any) and no unprovable trust claims |
+| `check-claims.js` | **No prices** (unapproved), no financing (offered none), no guarantee/warranty language, no unprovable certification/BBB claims |
+| `check-nap.js` | Address + hours byte-match GBP on every page; no stale NAP, no non-canonical Albert Pike number |
+| `check-reviews.js` | Every published review is **5-star** and traceable to a real GBP review id |
 | `check-overflow.js` | No page scrolls horizontally at 375px (real headless Chrome) |
 
 The legacy URL list is `scripts/lib/legacy-urls.js` — reconcile it against Search

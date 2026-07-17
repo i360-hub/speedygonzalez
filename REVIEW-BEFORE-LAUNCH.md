@@ -5,6 +5,46 @@ client's name, or a step that has to happen outside this repo. Work top to botto
 
 ---
 
+## 0. Phase-2 supplement — facts confirmed by the owner (2026-07-16)
+
+These corrected the build spec and are already applied and gated. Recorded here
+so they don't get "fixed" back to the wrong values:
+
+- **Address is 207 Albert Pike Road**, not 209. 209 is the showroom next door.
+  GBP, the truck wrap, and the building sign all say 207. `check-nap.js` enforces
+  it on every page. (209 is kept out of the NAP and schema.)
+- **Open 24 hours, 7 days** — matches GBP. The spec's 7 AM–8 PM was stale.
+- **4.9 / 152 Google reviews** — verified in the GBP panel.
+- **BBB A+ Rated, NOT accredited.** May say "BBB A+ Rated"; may never claim
+  accreditation or show the torch/seal. `check-claims.js` enforces both.
+- **No financing.** The business offers none. All financing copy and the
+  `/financing` page were removed; `check-claims.js` fails the build on financing
+  language. Most jobs are insurance claims — that's what `/insurance-claims`
+  covers. If a third-party lender is ever added, name it and relax that rule.
+- **No manufacturer shingle certifications.** None claimed anywhere (gated).
+- **5-star reviews only**, owner instruction. No sub-5-star review appears in any
+  form. The spec's §7 "honesty block" (showing the critical reviews) was built,
+  then removed at the owner's direction. `check-reviews.js` enforces 5-star-only.
+- **No guarantee language.** The spec's "Spotless cleanup — guaranteed" is gone;
+  the Speedy Standard reports what reviews say instead. Gated.
+- **Phone: site leads with 501-359-5550** (the real line). GBP's primary is the
+  tracking number (701-8766); that split is fine and left as-is per the owner.
+
+**Do NOT edit the Google Business Profile.** Owner instruction — the GBP is read
+only. (Two GBP-side items the owner may want to fix themselves, unrelated to this
+repo: the GBP timezone is set to US/Pacific, and the GBP description says "19
+years" vs the site's 20+.)
+
+### Still verify before launch
+- **The before/after slider is a real same-home exterior remodel** (the 321
+  house). If you ever swap the pair, both images must be the same property —
+  `before-after.json` documents the rule. The current live Duda before/after
+  pairs two *different* houses; don't copy that.
+- **`/jobs` photos are representative, not the specific customer's home** — the
+  page says so up front. The quotes are the real customers' verbatim reviews.
+
+---
+
 ## 1. Blockers — the site is wrong until these are done
 
 ### 1.1 Send one real test lead
