@@ -1,9 +1,10 @@
 # Legacy URL map — Speedy Gonzalez Roofing (build spec §10)
 #
 # Source of truth: the 84 URLs crawled from the live Duda site
-# (.firecrawl/speedy-map.json). Every one of them resolves to a 200 or a 301
-# here — scripts/linkcheck.js asserts that against this file and fails the build
-# if a legacy URL is dropped or points at a page that no longer exists.
+# (.firecrawl/speedy-map.json), plus 21 more reconciled from Google Search
+# Console (2026-07 — see the GSC section below). Every one resolves to a 200 or
+# a 301 here — scripts/linkcheck.js asserts that against this file and fails the
+# build if a legacy URL is dropped or points at a page that no longer exists.
 #
 # Cloudflare Pages matches top to bottom, first match wins — AND it evaluates
 # this file before serving static assets. A rule whose path matches a real page
@@ -57,6 +58,7 @@
 /trusted-roofers-in-hot-springs-for-quality-roofing-solutions          /                                       301
 
 # --- Service areas: underscore slugs -> hyphenated pages -----------------------
+/service-areas/hot_springs         /service-areas/hot-springs        301
 /service-areas/hot_springs_village /service-areas/hot-springs-village 301
 /service-areas/pine_bluff          /service-areas/pine-bluff         301
 /service-areas/mount_ida           /service-areas/mount-ida          301
@@ -123,6 +125,52 @@
 /service-areas/tucker              /service-areas                    301
 /service-areas/wabbaseka           /service-areas                    301
 /service-areas/white_hall          /service-areas                    301
+
+# --- Google Search Console reconciliation --------------------------------------
+# URLs Google still tracks that a live crawl of the Duda site never surfaced —
+# pulled from the GSC "Not found (404)" and "Crawled - currently not indexed"
+# exports (2026-07). None were in the 84-URL crawl; each 404s today. Mapped to
+# the closest-intent live page to keep whatever residual equity remains on-topic.
+#
+# Dead long-form content pages (blog/doorway pages Duda has since deleted):
+/replace-your-roof                                                             /services/shingle-roofing          301
+/services/roof-replacement                                                     /services/shingle-roofing          301
+/metal-roofing-vs-shingles-in-hot-springs-which-is-right-for-you               /blog/metal-vs-shingles-arkansas   301
+/benton-family-neighborhoods-protecting-your-most-important-investment         /service-areas/benton              301
+/benton-commercial-and-residential-comprehensive-roofing-solutions             /service-areas/benton              301
+/malvern-area-storm-recovery-community-support-and-professional-roofing        /service-areas/malvern             301
+/malvern-commercial-roofing-supporting-local-business-growth                   /service-areas/malvern             301
+/hot-springs-village-maintenance-keeping-your-roof-in-peak-condition           /service-areas/hot-springs-village 301
+/hot-springs-village-retirement-community-senior-focused-roofing-services      /service-areas/hot-springs-village 301
+/hot-springs-downtown-business-district-commercial-roofing-excellence          /service-areas/hot-springs         301
+/hot-springs-summer-2025-how-local-events-and-weather-impact-your-roofing-needs /blog                             301
+/arkansas-roofing-excellence-why-local-expertise-matters-for-your-home         /about                             301
+/four-city-service-excellence-local-expertise-across-hot-springs-region        /service-areas                     301
+# Old Atom feed -> current RSS.
+/feed/atom                                                                     /rss.xml                           301
+
+# --- Trailing-slash variants of redirect sources -------------------------------
+# Cloudflare Pages auto-308s `/about/` -> `/about` ONLY when a real file backs the
+# no-slash URL. A redirect *source* has no file, so `/metal-roofs/` (which Duda
+# served, and GSC has indexed) would 404 while `/metal-roofs` 301s fine. Enumerate
+# the slash variants of every legacy redirect source. `/x` and `/x/` are distinct
+# paths to Cloudflare, so both rules are required.
+/shingle-roofs/                    /services/shingle-roofing         301
+/metal-roofs/                      /services/metal-roofing           301
+/tpo-roofs/                        /services/tpo-flat-roofing        301
+/roof-repairs/                     /services/roof-repair             301
+/leak-repair/                      /services/roof-leak-repair        301
+/hail-damage-repair/               /services/hail-damage-repair      301
+/storm-damage-repair/              /services/storm-damage-repair     301
+/roof-storm-damage-repair/         /services/storm-damage-repair     301
+/gutter-services/                  /services/gutters                 301
+/siding-services/                  /services/siding                  301
+/areas-we-service/                 /service-areas                    301
+/find-us-online/                   /contact                          301
+/sms-terms-and-conditions/         /sms-terms                        301
+/service-areas/hot_springs_village/ /service-areas/hot-springs-village 301
+/service-areas/pine_bluff/         /service-areas/pine-bluff         301
+/service-areas/mount_ida/          /service-areas/mount-ida          301
 
 # --- Param-URL duplicates ------------------------------------------------------
 # NOT handled here. Cloudflare _redirects cannot match on query strings: a rule

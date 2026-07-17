@@ -121,15 +121,33 @@ used anywhere on the site. Don't add it.
 for `http→https` and `non-www→www` or only one host will be canonical. Without
 this, `speedygonzalezroofing.com` and `www.` both resolve and split equity.
 
-### 3.2 Reconcile the legacy URL list against Search Console
+### 3.2 Reconcile the legacy URL list against Search Console — DONE (2026-07)
 
-`scripts/lib/legacy-urls.js` holds the **84 URLs crawled from the live site**
-(via `.firecrawl/speedy-map.json`), and the link gate proves all 84 resolve.
+`scripts/lib/legacy-urls.js` held the **84 URLs crawled from the live site**
+(via `.firecrawl/speedy-map.json`). A crawl only sees what's linked, so this was
+reconciled against the GSC **"Not found (404)"** and **"Crawled - currently not
+indexed"** exports. That surfaced **21 URLs the crawl never saw** — now mapped
+and gate-proven (105 legacy URLs, zero orphan 404s, verified live):
 
-But a crawl only sees what's linked. **GSC knows about URLs that aren't.** Export
-Coverage/Pages from Search Console, diff against that file, add anything missing,
-re-run `npm run gates`. Do this *before* launch — the spec's zero-404 requirement
-is only as complete as this list.
+- Dead long-form content pages (Benton/Malvern/HSV/downtown/summer-2025 doorway
+  posts) → closest-intent service or `/service-areas/*` page.
+- `/replace-your-roof` and a stray `/services/roof-replacement` (no such page on
+  the new site) → `/services/shingle-roofing`.
+- `/metal-roofing-vs-shingles-...` → `/blog/metal-vs-shingles-arkansas`.
+- `/service-areas/hot_springs` (underscore) → the real hyphenated city page.
+- Old `/feed/atom` → `/rss.xml`.
+- **Trailing-slash variants** of every redirect source (`/metal-roofs/`,
+  `/siding-services/`, …). Cloudflare auto-308s `/about/`→`/about` only when a
+  file backs the URL; a redirect source has none, so the slash variant 404'd
+  until enumerated. `linkcheck.js` now dedups on the literal path so `/x` and
+  `/x/` can coexist as the two distinct rules Cloudflare requires.
+
+If GSC surfaces more later, add them to `legacy-urls.js` + `public/_redirects`
+and re-run `npm run gates`.
+
+Closest-intent targets for the four ambiguous long slugs (arkansas-roofing-
+excellence→`/about`, four-city→`/service-areas`, downtown→`/service-areas/hot-springs`,
+summer-2025→`/blog`) are judgment calls — trivial to re-point if the owner prefers.
 
 ### 3.3 At launch
 

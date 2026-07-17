@@ -10,8 +10,13 @@ import { pages, ok, fail } from './lib/pages.js';
 import { LEGACY_URLS } from './lib/legacy-urls.js';
 
 const built = new Set(pages().map((p) => p.url));
-// Astro's `format: 'file'` writes /about.html, served at /about.
-const resolves = (url) => built.has(url) || existsSync(`dist${url}.html`) || existsSync(`dist${url}/index.html`);
+// Astro's `format: 'file'` writes /about.html, served at /about. A URL that
+// carries a file extension (e.g. /rss.xml) is served as that literal file.
+const resolves = (url) =>
+  built.has(url) ||
+  existsSync(`dist${url}.html`) ||
+  existsSync(`dist${url}/index.html`) ||
+  (/\.[a-z0-9]+$/i.test(url) && existsSync(`dist${url}`));
 
 let failed = 0;
 
@@ -44,7 +49,8 @@ const rules = rulesText
     return { from, to, code: Number(code) };
   });
 
-const seenFrom = new Map();
+const seenFrom = new Map(); // fromPath (slash-stripped) -> to, for chain detection
+const seenLiteral = new Set(); // literal `from`, for true-duplicate detection
 
 for (const rule of rules) {
   if (![301, 302, 308].includes(rule.code)) {
@@ -102,11 +108,15 @@ for (const rule of rules) {
     failed++;
   }
 
-  if (seenFrom.has(fromPath)) {
-    fail(`duplicate redirect for "${fromPath}" — first match wins, the later one is dead`);
+  // Cloudflare matches the literal path, so `/x` and `/x/` are distinct rules
+  // (both needed — trailing-slash sources don't get the auto-308 that real
+  // pages do). Dedup on the literal `from`, not the slash-stripped path.
+  if (seenLiteral.has(rule.from)) {
+    fail(`duplicate redirect for "${rule.from}" — first match wins, the later one is dead`);
     failed++;
   }
-  seenFrom.set(fromPath, rule.to);
+  seenLiteral.add(rule.from);
+  if (!seenFrom.has(fromPath)) seenFrom.set(fromPath, rule.to);
 }
 
 // Multi-hop chains: every 301 should land on a 200 in one hop.

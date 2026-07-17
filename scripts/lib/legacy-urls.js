@@ -3,8 +3,11 @@
  * .firecrawl/speedy-map.json. Spec §10: every one of these must resolve to a
  * 200 or a 301 — zero surviving 404s.
  *
- * Before launch, reconcile this list against Google Search Console
- * (Coverage/Pages) — GSC knows about URLs a crawl of the live nav can't see.
+ * Reconciled against Google Search Console 2026-07 (the "Not found (404)" and
+ * "Crawled - currently not indexed" exports). GSC surfaced 21 URLs the live-nav
+ * crawl never saw — dead content pages, an /services/roof-replacement path we
+ * don't have, a /service-areas/hot_springs underscore, and trailing-slash
+ * variants Duda served. They're in the GSC block at the end of this list.
  */
 export const LEGACY_URLS = [
   '/',
@@ -91,4 +94,29 @@ export const LEGACY_URLS = [
   '/tpo-roofing-hot-springs-ar-flat-roof-guide',
   '/tpo-roofs',
   '/trusted-roofers-in-hot-springs-for-quality-roofing-solutions',
+
+  // --- GSC reconciliation (2026-07) — URLs the crawl missed but Google tracks ---
+  '/replace-your-roof',
+  '/services/roof-replacement',
+  '/metal-roofing-vs-shingles-in-hot-springs-which-is-right-for-you',
+  '/benton-family-neighborhoods-protecting-your-most-important-investment',
+  '/benton-commercial-and-residential-comprehensive-roofing-solutions',
+  '/malvern-area-storm-recovery-community-support-and-professional-roofing',
+  '/malvern-commercial-roofing-supporting-local-business-growth',
+  '/hot-springs-village-maintenance-keeping-your-roof-in-peak-condition',
+  '/hot-springs-village-retirement-community-senior-focused-roofing-services',
+  '/hot-springs-downtown-business-district-commercial-roofing-excellence',
+  '/hot-springs-summer-2025-how-local-events-and-weather-impact-your-roofing-needs',
+  '/arkansas-roofing-excellence-why-local-expertise-matters-for-your-home',
+  '/four-city-service-excellence-local-expertise-across-hot-springs-region',
+  '/feed/atom',
+  '/service-areas/hot_springs',
+  // Trailing-slash variants GSC has indexed (Duda served them; they 404 without
+  // an explicit rule because the no-slash source is itself a redirect).
+  '/shingle-roofs/',
+  '/metal-roofs/',
+  '/roof-repairs/',
+  '/storm-damage-repair/',
+  '/siding-services/',
+  '/service-areas/hot_springs_village/',
 ];
