@@ -85,7 +85,7 @@ We are licensed in Arkansas, license number RR0540931024, and we are based at 20
 
 ## Where do you install flat roofs?
 
-We serve [Hot Springs](/service-areas/hot-springs) and the surrounding area, including [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), [Malvern](/service-areas/malvern), and [Pine Bluff](/service-areas/pine-bluff). Our Pine Bluff line is 870-335-2611.
+We serve [Hot Springs](/service-areas/hot-springs) and the surrounding area, including [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), [Malvern](/service-areas/malvern), and [Pine Bluff](/service-areas/pine-bluff). Call 501-359-5550 for a free estimate.
 
 
 Ready for a free flat roof inspection? [Contact us](/contact) or call 501-359-5550, seven days a week.

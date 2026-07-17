@@ -12,7 +12,7 @@
  *   - 20+ years, 500+ roofs
  * Do not add a claim to this bar that isn't backed in business.ts.
  */
-import { business, rating, bbb, telHref } from '../data/business';
+import { business, rating, bbb } from '../data/business';
 ---
 
 <div class="trust-bar">
@@ -30,11 +30,6 @@ import { business, rating, bbb, telHref } from '../data/business';
       <li>20+ Years &middot; 500+ Roofs</li>
       <li><a href="/contact">Free Inspections</a></li>
     </ul>
-
-    <p class="pine-bluff">
-      Pine Bluff:
-      <a href={telHref(business.phones.pineBluff)}>{business.phones.pineBluff}</a>
-    </p>
   </div>
 </div>
 
@@ -49,7 +44,7 @@ import { business, rating, bbb, telHref } from '../data/business';
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0.3rem var(--space-md);
     padding-block: 0.5rem;
   }
@@ -99,34 +94,15 @@ import { business, rating, bbb, telHref } from '../data/business';
     color: var(--white);
   }
 
-  .pine-bluff {
-    margin: 0;
-    max-width: none;
-    white-space: nowrap;
-  }
-
-  .pine-bluff a {
-    font-weight: 700;
-  }
-
   /* The full strip wraps into a pile on phones. Keep the two claims that
-     actually convert (rating, BBB) and the Pine Bluff number; drop the rest —
-     they all appear again in the footer. */
+     actually convert (rating, BBB); drop the rest — they all appear again in
+     the footer. */
   @media (max-width: 860px) {
     .claims li:nth-child(n + 3) {
       display: none;
     }
     .claims li + li::before {
       margin-right: 0.5rem;
-    }
-    .inner {
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .pine-bluff {
-      display: none;
     }
   }
 </style>

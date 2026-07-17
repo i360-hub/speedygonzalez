@@ -1,9 +1,9 @@
 ---
 city: Pine Bluff
 metaTitle: Roofing & Hail Inspections in Pine Bluff, AR | Speedy
-metaDescription: Roof and hail inspections in Pine Bluff, AR. Jefferson County has its own local number. Free inspections and estimates. Call 870-335-2611.
+metaDescription: Roofers in Pine Bluff, AR. Roof and hail inspections, storm claims, and replacements for Jefferson County homes. Free estimates. Call 501-359-5550.
 h1: Roofing Contractors in Pine Bluff, Arkansas
-localIntro: Pine Bluff is its own service territory with its own local number, 870-335-2611. Jefferson County has older housing stock, and roof and hail inspections here are free.
+localIntro: Pine Bluff is part of our central Arkansas service area. Jefferson County has older housing stock, and roof and hail inspections here are free.
 landmarks:
   - Downtown Pine Bluff
   - University of Arkansas at Pine Bluff
@@ -21,25 +21,25 @@ servicesOffered:
   - gutters
   - siding
 faqs:
-  - q: What number do I call for roofing in Pine Bluff?
-    a: Call 870-335-2611. That is our Pine Bluff number. Pine Bluff is a separate service territory from Hot Springs, so use the local line and you will get there faster. Our main Hot Springs office is about an hour and a half west of you.
+  - q: Do you serve Pine Bluff?
+    a: Yes. We roof Pine Bluff and Jefferson County from our Hot Springs shop, about an hour and a half west. Call 501-359-5550 for a free inspection. Distance does not change the price of your estimate, and it does not change the quality of the work.
   - q: Do you offer free roof inspections in Pine Bluff?
     a: Yes. Roof and hail inspections in the Pine Bluff area are free, and so are estimates. We photograph what we find and walk you through it. If your roof is fine, we tell you it is fine. You owe us nothing either way.
   - q: My Pine Bluff house is old. Is it worth reroofing?
     a: Usually yes, and it is often cheaper than people expect. Pine Bluff has a lot of older housing stock, and an old house can still have good bones under a bad roof. The roof is what protects everything else. Let us inspect it before you decide.
   - q: Does hail hit Jefferson County?
-    a: Yes. Jefferson County sits in the same part of Arkansas that gets spring hail and severe wind. Hail damage rarely shows from the ground, which is why free inspections matter. Call 870-335-2611 after a storm and we will get up there and look.
+    a: Yes. Jefferson County sits in the same part of Arkansas that gets spring hail and severe wind. Hail damage rarely shows from the ground, which is why free inspections matter. Call 501-359-5550 after a storm and we will get up there and look.
   - q: Will you help with my insurance claim in Pine Bluff?
     a: Yes. We photograph the damage, document it, and meet your adjuster on the roof. We have handled hundreds of storm claims. We never pressure anyone into filing a claim on a healthy roof, and we do not guess at what your policy covers.
 heroImage: /images/storm-damage
 order: 7
 ---
 
-## What number should I call in Pine Bluff?
+## Do you serve Pine Bluff?
 
-Call 870-335-2611. That is the Pine Bluff number. Pine Bluff is a separate service territory from our Hot Springs home base, so the local line gets you help faster.
+Yes. We roof Pine Bluff and the rest of Jefferson County from our Hot Springs shop, about an hour and a half west. Call 501-359-5550 and we will set up a free inspection.
 
-Our main office at 207 Albert Pike Rd in Hot Springs is about an hour and a half west of you. That is why Pine Bluff has its own line.
+The drive does not change your price. The estimate is free wherever you are, and so is the inspection.
 
 ## Do you do free roof and hail inspections here?
 
@@ -49,8 +49,8 @@ We get on the roof, take photos, and show you what is really there. If your roof
 
 | What you need | Cost | How to start |
 | --- | --- | --- |
-| Roof inspection | Free | Call 870-335-2611 |
-| Hail inspection | Free | Call 870-335-2611 |
+| Roof inspection | Free | Call 501-359-5550 |
+| Hail inspection | Free | Call 501-359-5550 |
 | Written estimate | Free | After the inspection |
 | Insurance claim help | Included | We meet your adjuster |
 
@@ -76,9 +76,8 @@ We handle [roof repair](/services/roof-repair), [leak repair](/services/roof-lea
 
 Yes. Arkansas Roofing License RR0540931024 and Home Improvement License 0378510824. Over 20 years in business, 500 plus projects, 20 trained people, and a 4.9 rating.
 
-
 ## Where else do you work?
 
 West of here in [Arkadelphia](/service-areas/arkadelphia), [Malvern](/service-areas/malvern), and [Hot Springs](/service-areas/hot-springs).
 
-For Pine Bluff, call 870-335-2611 or [contact us](/contact). We answer 24 hours a day, seven days a week.
+For Pine Bluff, call 501-359-5550 or [contact us](/contact). We answer 24 hours a day, seven days a week.

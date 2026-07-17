@@ -41,7 +41,6 @@ export const business = {
   phones: {
     primary: '501-359-5550',
     office: '501-701-8766',
-    pineBluff: '870-335-2611',
   },
   email: 'speedygonzalezz19@gmail.com',
   /**

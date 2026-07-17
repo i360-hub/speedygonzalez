@@ -35,9 +35,7 @@ const schema = [
   faqSchema(d.faqs),
 ];
 
-/** Pine Bluff has its own local number (spec §1). */
-const localPhone =
-  entry.id === 'pine-bluff' ? business.phones.pineBluff : business.phones.primary;
+const localPhone = business.phones.primary;
 ---
 
 <Base
