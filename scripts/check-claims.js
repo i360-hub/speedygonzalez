@@ -19,20 +19,46 @@ const RULES = [
   { name: 'per-unit price', re: /\bper\s+(?:square\s+foot|square|linear\s+foot)\b\s*[:,-]?\s*\$?[0-9]/gi },
   // Unprovable trust claims (spec: no invented certifications/ratings).
   { name: 'certification claim', re: /\b(?:certainteed|gaf\b|owens\s+corning|select\s+shinglemaster|master\s+elite|preferred\s+contractor)\b/gi },
-  { name: 'BBB claim', re: /\bBBB\b|better\s+business\s+bureau/gi },
+  /**
+   * BBB: verified 2026-07-16 as A+ rated but NOT accredited.
+   * "BBB A+ Rated" / "BBB A+ rating" are allowed and stripped before this runs.
+   * Everything else mentioning BBB still fails — accreditation the business does
+   * not hold is a real misrepresentation, not a wording nitpick.
+   */
+  { name: 'BBB accreditation claim', re: /\bBBB\s+(?:accredited|member|accreditation)\b|accredited\s+by\s+the\s+BBB|better\s+business\s+bureau\s+accredited/gi },
+  { name: 'unapproved BBB mention', re: /\bBBB\b|better\s+business\s+bureau/gi },
   { name: 'price-beat promise', re: /\b(?:beat\s+any\s+(?:price|quote)|lowest\s+price\s+guaranteed|cheapest\s+in\s+town)\b/gi },
 ];
+
+/**
+ * Exact BBB strings cleared for publication. Removed from the text before the
+ * BBB rules run, so any *other* BBB phrasing still trips the gate.
+ * The torch/seal image is blocked separately below.
+ */
+const ALLOWED_BBB = [/\bBBB A\+ Rated\b/g, /\bBBB A\+ rating\b/g];
 
 let failed = 0;
 
 for (const page of pages()) {
-  const text = textOf(page.html);
+  let text = textOf(page.html);
+
+  // Clear the approved BBB strings first; any other BBB phrasing still fails.
+  for (const allowed of ALLOWED_BBB) text = text.replace(allowed, '');
+
   for (const rule of RULES) {
     const hits = [...new Set(text.match(rule.re) ?? [])];
     for (const hit of hits) {
       fail(`${page.url} — ${rule.name}: "${hit.trim()}"`);
       failed++;
     }
+  }
+
+  // The BBB torch/seal is licensed to accredited businesses only. This one
+  // checks raw HTML, not text — an <img> never appears in the text pass.
+  const seal = page.html.match(/<img[^>]+(?:src|alt)="[^"]*(?:bbb|torch|better-business)[^"]*"[^>]*>/gi);
+  for (const hit of seal ?? []) {
+    fail(`${page.url} — BBB seal/torch image (licensed to accredited businesses only): ${hit.slice(0, 80)}`);
+    failed++;
   }
 }
 

@@ -32,6 +32,7 @@ export const business = {
   proofPoints: [
     '500+ projects completed',
     '20 trained professionals',
+    'BBB A+ Rated',
     'Free inspections and estimates',
     'Insurance claim support',
     'Financing available',
@@ -41,6 +42,24 @@ export const business = {
     instagram: 'https://www.instagram.com/speedygonzalezroofing/',
   },
   primaryMarket: 'Hot Springs, AR',
+} as const;
+
+/**
+ * BBB standing. Verified on bbb.org 2026-07-16 against the profile for
+ * "Speedy Gonzalez Construction, Inc." (Hot Springs AR, file opened 5/16/2024).
+ *
+ * A+ RATED, NOT ACCREDITED — the distinction is load-bearing. We may say
+ * "BBB A+ Rated". We may NOT say "BBB Accredited", "BBB member", or display the
+ * BBB torch/seal: the seal is licensed to accredited businesses only, and
+ * claiming accreditation the business does not hold is the kind of thing that
+ * gets a profile flagged. check-claims.js enforces this.
+ */
+export const bbb = {
+  rating: 'A+',
+  accredited: false,
+  profileUrl:
+    'https://www.bbb.org/us/ar/hot-springs/profile/home-improvement/speedy-gonzalez-construction-inc-0935-90406229',
+  verified: '2026-07-16',
 } as const;
 
 /**

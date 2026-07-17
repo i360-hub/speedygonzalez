@@ -1,5 +1,6 @@
 ---
 import { business, telHref } from '../data/business';
+import TrustBar from './TrustBar.astro';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
@@ -15,15 +16,7 @@ const nav = [
 ];
 ---
 
-<div class="topbar">
-  <div class="wrap topbar-inner">
-    <p>Free roof inspections &amp; estimates &middot; Licensed AR {business.licenses.roofing}</p>
-    <p class="topbar-phone">
-      Pine Bluff:
-      <a href={telHref(business.phones.pineBluff)}>{business.phones.pineBluff}</a>
-    </p>
-  </div>
-</div>
+<TrustBar />
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -62,39 +55,6 @@ const nav = [
 </header>
 
 <style>
-  .topbar {
-    background: var(--charcoal-900);
-    color: var(--charcoal-100);
-    font-size: var(--step--1);
-  }
-
-  .topbar-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-md);
-    padding-block: 0.45rem;
-  }
-
-  .topbar p {
-    margin: 0;
-    max-width: none;
-  }
-
-  .topbar a {
-    color: var(--white);
-    font-weight: 700;
-  }
-
-  @media (max-width: 700px) {
-    .topbar-phone {
-      display: none;
-    }
-    .topbar-inner {
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
   .site-header {
     position: sticky;
     top: 0;

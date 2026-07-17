@@ -4,12 +4,16 @@ import Hero from '../components/Hero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Faq from '../components/Faq.astro';
 import { faqSchema } from '../data/schema';
-import { business } from '../data/business';
+import { business, bbb, rating } from '../data/business';
 
 const faqs = [
   {
     q: 'Is Speedy Gonzalez Roofing licensed in Arkansas?',
     a: 'Yes. We hold Arkansas roofing license RR0540931024 and Arkansas home improvement license 0378510824. We carry insurance too. Ask to see proof before any work starts and we will show you.',
+  },
+  {
+    q: 'Do you have a BBB A+ rating?',
+    a: 'Yes. Speedy Gonzalez Construction, Inc. holds a BBB A+ rating, which is the highest grade on their scale. Our file has been open since May 2024. You do not have to take our word for it — the profile is public and you can look it up yourself.',
   },
   {
     q: 'How long have you been roofing in Hot Springs?',
@@ -79,10 +83,33 @@ const faqs = [
           <p class="stat-label">Trained professionals</p>
         </div>
         <div>
-          <p class="stat">4.9&#9733;</p>
-          <p class="stat-label">Rating from local homeowners</p>
+          <p class="stat">{rating.value}&#9733;</p>
+          <p class="stat-label">{rating.count} Google reviews</p>
+        </div>
+        <div>
+          <p class="stat">A+</p>
+          <p class="stat-label">
+            <a href={bbb.profileUrl} rel="nofollow noopener" target="_blank">BBB A+ Rated</a>
+          </p>
         </div>
       </div>
+
+      <h2>How do I check you out before I call?</h2>
+      <p>Please do. Everything we claim is public and you can verify all of it yourself.</p>
+      <ul>
+        <li>
+          <strong>Arkansas roofing license {business.licenses.roofing}</strong> and home
+          improvement license {business.licenses.homeImprovement}
+        </li>
+        <li>
+          <strong>BBB A+ Rated</strong> — filed as Speedy Gonzalez Construction, Inc. since May
+          2024 (<a href={bbb.profileUrl} rel="nofollow noopener" target="_blank">see the profile</a>)
+        </li>
+        <li>
+          <strong>{rating.value} stars across {rating.count} Google reviews</strong> —
+          <a href="/reviews">read them here</a>, including the imperfect ones
+        </li>
+      </ul>
 
       <h2>Who actually works on my roof?</h2>
       <p>
