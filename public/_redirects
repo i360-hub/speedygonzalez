@@ -5,8 +5,10 @@
 # here — scripts/linkcheck.js asserts that against this file and fails the build
 # if a legacy URL is dropped or points at a page that no longer exists.
 #
-# Cloudflare Pages matches top to bottom, first match wins, so the
-# /service-areas/* catch-all MUST stay last in its group.
+# Cloudflare Pages matches top to bottom, first match wins — AND it evaluates
+# this file before serving static assets. A rule whose path matches a real page
+# therefore takes that page off the site. There are no splats here for exactly
+# that reason; see the service-areas section.
 #
 # Host + protocol canonicalization (http->https, non-www->www) is handled by a
 # Cloudflare Redirect Rule, not here — _redirects can't match on hostname.
@@ -55,12 +57,79 @@
 /service-areas/pine_bluff          /service-areas/pine-bluff         301
 /service-areas/mount_ida           /service-areas/mount-ida          301
 
+# NOTE: /service-areas/{arkadelphia,benton,bryant,malvern} are deliberately absent.
+# Those legacy slugs are already the new URLs, so they must serve 200. A rule for
+# them would 301 a live page.
+
 # --- Service areas: towns that never earned a real page -----------------------
-# Spec §2: a city page ships only with genuinely local content. These 44 towns
+# Spec §2: a city page ships only with genuinely local content. These 45 towns
 # were thin doorway pages on the old site, so their equity consolidates into the
-# hub rather than propping up empty pages. Promote individual towns to real
-# pages later as local content justifies it.
-/service-areas/*                   /service-areas                    301
+# hub rather than propping up empty pages.
+#
+# Enumerated deliberately — do NOT collapse these into `/service-areas/* -> ...`.
+# On Cloudflare Pages, _redirects is evaluated BEFORE static assets, so a splat
+# here swallows the eight real city pages and 301s every one of them to the hub.
+# That shipped once and was caught on the preview deploy. linkcheck.js now fails
+# the build if a rule shadows a real page.
+#
+# To promote a town to a real page: add src/content/areas/<slug>.md and delete
+# its line below. The link gate fails if you forget the second step.
+/service-areas/alexander           /service-areas                    301
+/service-areas/altheimer           /service-areas                    301
+/service-areas/amity               /service-areas                    301
+/service-areas/bauxite             /service-areas                    301
+/service-areas/bismarck            /service-areas                    301
+/service-areas/bonnerdale          /service-areas                    301
+/service-areas/caddo_valley        /service-areas                    301
+/service-areas/carthage            /service-areas                    301
+/service-areas/donaldson           /service-areas                    301
+/service-areas/fountain_lake       /service-areas                    301
+/service-areas/friendship          /service-areas                    301
+/service-areas/glenwood            /service-areas                    301
+/service-areas/gurdon              /service-areas                    301
+/service-areas/hensley             /service-areas                    301
+/service-areas/jessieville         /service-areas                    301
+/service-areas/kirby               /service-areas                    301
+/service-areas/lake_hamilton       /service-areas                    301
+/service-areas/langley             /service-areas                    301
+/service-areas/leola               /service-areas                    301
+/service-areas/littlerock          /service-areas                    301
+/service-areas/lonsdale            /service-areas                    301
+/service-areas/mabelvale           /service-areas                    301
+/service-areas/midway              /service-areas                    301
+/service-areas/mountain_pine       /service-areas                    301
+/service-areas/murfreesboro        /service-areas                    301
+/service-areas/nashville           /service-areas                    301
+/service-areas/newhope             /service-areas                    301
+/service-areas/norman              /service-areas                    301
+/service-areas/pearcy              /service-areas                    301
+/service-areas/perla               /service-areas                    301
+/service-areas/poyen               /service-areas                    301
+/service-areas/prattsville         /service-areas                    301
+/service-areas/redfield            /service-areas                    301
+/service-areas/rockport            /service-areas                    301
+/service-areas/rockwell            /service-areas                    301
+/service-areas/royal               /service-areas                    301
+/service-areas/sheridan            /service-areas                    301
+/service-areas/sherrill            /service-areas                    301
+/service-areas/social_hill         /service-areas                    301
+/service-areas/sparkman            /service-areas                    301
+/service-areas/sulphur_springs     /service-areas                    301
+/service-areas/traskwood           /service-areas                    301
+/service-areas/tucker              /service-areas                    301
+/service-areas/wabbaseka           /service-areas                    301
+/service-areas/white_hall          /service-areas                    301
 
 # --- Param-URL duplicates ------------------------------------------------------
-/?keywordutm_source=google         /                                 301
+# NOT handled here. Cloudflare _redirects cannot match on query strings: a rule
+# written as `/?keywordutm_source=google  /  301` parses as plain `/`, which makes
+# the homepage 301 to itself — an infinite loop that takes the whole site down.
+# (That shipped once and was caught on the preview deploy.)
+#
+# The malformed `?keyword`/`?utm_source` dupes the old site leaked into the index
+# are handled instead by:
+#   - robots.txt  ->  Disallow: /*?
+#   - a self-referencing <link rel="canonical"> on every page, which folds any
+#     ?param variant back into the clean URL.
+# If a param URL ever needs a true 301, do it with a Cloudflare Redirect Rule
+# (those can match query strings); never in this file.
