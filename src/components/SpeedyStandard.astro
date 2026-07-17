@@ -1,0 +1,146 @@
+---
+/**
+ * "The Speedy Standard" (supplement §5).
+ *
+ * ── NO GUARANTEE LANGUAGE. Owner instruction, 2026-07-16: "no guarantee.....
+ * simply can't". ──────────────────────────────────────────────────────────────
+ *
+ * The spec drafted this as "Quote in 24 hours · Most roofs done in 1 day ·
+ * Spotless cleanup — guaranteed". That is a warranty: it promises a future
+ * outcome on every job, and a roofer cannot honestly promise a 1-day roof
+ * sight-unseen. The owner declined it, and they are right to.
+ *
+ * So this block reports what customers actually wrote, and says so plainly.
+ * Each line is footnoted with a verbatim 5-star review (standardProof in
+ * reviews.ts). The framing is past-tense and attributed — "here is what people
+ * describe" — never "here is what you will get".
+ *
+ * check-claims.js fails the build on guarantee/warranty language site-wide.
+ * If the client ever wants a real guarantee, it needs their sign-off and their
+ * wording, and it belongs in a contract before it belongs on a web page.
+ */
+import { standardProof } from '../data/reviews';
+import { rating } from '../data/business';
+
+export interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+
+const lines = [
+  {
+    title: 'Quotes, often same day',
+    body: 'Call and we come look. Most people get their written number fast — sometimes the same day.',
+    proof: standardProof.quote,
+  },
+  {
+    title: 'Most roofs, one day',
+    body: 'A typical Hot Springs roof goes on in a day. Big or cut-up roofs take longer, and we tell you which yours is up front.',
+    proof: standardProof.speed,
+  },
+  {
+    title: 'We clean up after ourselves',
+    body: 'We haul off the old roof, sweep, and run a magnet for nails before we leave.',
+    proof: standardProof.cleanup,
+  },
+];
+---
+
+<section class={`section ${alt ? 'section-alt' : ''}`} aria-labelledby="speedy-standard">
+  <div class="wrap">
+    <p class="eyebrow">The Speedy Standard</p>
+    <h2 id="speedy-standard">What our customers say we do</h2>
+    <p class="lede intro">
+      Not a promise — a pattern. This is what {rating.count} Google reviewers describe, in their
+      own words.
+    </p>
+
+    <ul class="standard">
+      {
+        lines.map((line) => (
+          <li>
+            <h3>{line.title}</h3>
+            <p>{line.body}</p>
+            <figure>
+              <blockquote>
+                <p>“{line.proof.snippet}”</p>
+              </blockquote>
+              <figcaption>
+                {/* Each footnote is one reviewer's own 5-star review — never the
+                    4.9 aggregate, which would misattribute the site-wide average
+                    to an individual person. */}
+                {line.proof.name} &middot;
+                <span class="star" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="visually-hidden">5 out of 5 stars</span> on Google
+              </figcaption>
+            </figure>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .standard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .standard li {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--red-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    max-width: none;
+  }
+
+  .standard h3 {
+    margin-top: 0;
+    font-size: var(--step-1);
+  }
+
+  .standard > li > p {
+    color: var(--charcoal-700);
+    flex: 1;
+  }
+
+  figure {
+    margin: 0;
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-sm);
+  }
+
+  blockquote {
+    margin: 0 0 var(--space-xs);
+  }
+
+  blockquote p {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--charcoal-800);
+    font-style: italic;
+  }
+
+  figcaption {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .star {
+    color: var(--star);
+  }
+</style>

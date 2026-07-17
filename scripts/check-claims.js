@@ -28,6 +28,35 @@ const RULES = [
   { name: 'BBB accreditation claim', re: /\bBBB\s+(?:accredited|member|accreditation)\b|accredited\s+by\s+the\s+BBB|better\s+business\s+bureau\s+accredited/gi },
   { name: 'unapproved BBB mention', re: /\bBBB\b|better\s+business\s+bureau/gi },
   { name: 'price-beat promise', re: /\b(?:beat\s+any\s+(?:price|quote)|lowest\s+price\s+guaranteed|cheapest\s+in\s+town)\b/gi },
+  /**
+   * No guarantee or warranty language. Owner instruction 2026-07-16:
+   * "no guarantee.....simply can't".
+   *
+   * The supplement spec's §5 drafted "Spotless cleanup — guaranteed"; a roofer
+   * cannot promise a future outcome on an unseen roof, and a guarantee on a web
+   * page is a term the business would be held to. The Speedy Standard block
+   * reports what reviewers describe instead.
+   *
+   * Neutral uses are allowed via ALLOWED_GUARANTEE below (e.g. explaining that
+   * a manufacturer warranty exists, or that we will NOT guarantee a claim
+   * outcome) — those inform the customer rather than promise them something.
+   */
+  { name: 'guarantee/warranty promise', re: /\bguarantee(?:d|s)?\b|\bwarrant(?:y|ies|ed)\b/gi },
+];
+
+/**
+ * Guarantee-adjacent phrasing that is informational, not a promise. Stripped
+ * before the guarantee rule runs. Keep this list tight and specific — each entry
+ * should be a sentence we have actually reviewed.
+ */
+const ALLOWED_GUARANTEE = [
+  // Explaining that we do NOT promise an insurance outcome — the opposite of a claim.
+  /Anyone who guarantees a paid claim is telling you a story\./g,
+  /We do not guarantee what your insurance will pay\./g,
+  // Answering "will a repair void my roof warranty?" — describes a third-party warranty.
+  /\bvoid my roof warranty\b/g,
+  /\bmanufacturer(?:'s|’s)? warranty\b/g,
+  /\bwarranty terms\b/g,
 ];
 
 /**
@@ -42,8 +71,9 @@ let failed = 0;
 for (const page of pages()) {
   let text = textOf(page.html);
 
-  // Clear the approved BBB strings first; any other BBB phrasing still fails.
+  // Clear approved phrasings first; anything else still trips the rules below.
   for (const allowed of ALLOWED_BBB) text = text.replace(allowed, '');
+  for (const allowed of ALLOWED_GUARANTEE) text = text.replace(allowed, '');
 
   for (const rule of RULES) {
     const hits = [...new Set(text.match(rule.re) ?? [])];

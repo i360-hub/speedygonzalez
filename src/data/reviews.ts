@@ -366,48 +366,23 @@ export const standardProof = {
 } as const;
 
 /**
- * The four sub-5-star reviews, for the /reviews honesty block (supplement §7).
+ * ── 5-STAR ONLY. Owner instruction, 2026-07-16. ───────────────────────────────
  *
- * NOTE — the supplement's wording was wrong on two counts and is corrected here:
- *   1. It said "every sub-5-star review concerns a missed estimate appointment."
- *      There are FIVE sub-5-star reviews. The fifth is a 4★ from WILLIAM GEORGE
- *      reading "Excellent work and professionalism personified!" — sub-5-star,
- *      but praise, not a complaint. It is not listed here.
- *   2. William Nickels is not an estimate no-show; he says the job was agreed
- *      and then abandoned. Still pre-work, but not "an estimate appointment".
+ * No review below 5 stars appears anywhere on this site, in any form — not
+ * quoted, not summarised, not counted, not alluded to. The supplement spec's §7
+ * "honesty block" (which displayed the four critical reviews) was built and has
+ * been removed at the owner's direction. Do not reinstate it, and do not add a
+ * `criticalReviews`-style export.
  *
- * What IS true, and what the page says: all four negative reviews concern
- * scheduling and follow-up BEFORE any work started. None concerns a finished
- * roof. Verified against all 152 reviews on 2026-07-16.
+ * This is enforced by scripts/check-reviews.js, which fails the build if any
+ * review object here has rating !== 5. The `Review` type also pins rating to the
+ * literal 5, so TypeScript rejects it before the gate does.
+ *
+ * If someone later wants the honesty angle back, that is the owner's call to
+ * reverse — not a code review's.
  */
-export const criticalReviews: { gbpId: number; name: string; rating: number; text: string }[] = [
-  {
-    gbpId: 2143830,
-    name: 'Whitney Hilton',
-    rating: 1,
-    text: 'Called and had an appointment made for an estimate, the owner Tony never showed up and said he forgot when I called. I appreciated the honesty so setup another time in which he came out. He gave me a quote and told me he’d be on vacation but would contact me about getting everything setup once back. Never heard from him. Reached out to him and several times he was supposed to come out and never showed. Not professional nor reliable.',
-  },
-  {
-    gbpId: 2143832,
-    name: 'Janet Bissell',
-    rating: 1,
-    text: "My experience with Speedy Gonzales was I called for a quote for my single wide mobile home (they were recommended by the guy who cut a tree for me). They came out to give an estimate and I called back twice when I didn't hear from them and have yet to hear or see anyone from this business since and that was around late October.",
-  },
-  {
-    gbpId: 2143848,
-    name: 'Don Everright',
-    rating: 2,
-    text: "Didn't even bother to show up. Lied to me twice.",
-  },
-  {
-    gbpId: 2143857,
-    name: 'William Nickels',
-    rating: 2,
-    text: 'Agreed to do job and then disappeared. Repeated failed attempts to reach via text and messages.',
-  },
-];
 
-/** Wall on /reviews: every placed review, de-duplicated by gbpId. */
+/** Wall on /reviews: every placed review, de-duplicated by gbpId. All 5-star. */
 export const allReviews: Review[] = Object.values(reviewsByPage)
   .flat()
   .filter((review, i, arr) => arr.findIndex((r) => r.gbpId === review.gbpId) === i);

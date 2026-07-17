@@ -22,7 +22,7 @@ faqs:
   - q: How fast can you get to Bryant?
     a: Quickly. Bryant is a straight shot up I-30 from our Hot Springs shop, and it takes our crews about 35 minutes. We answer the phone 24 hours a day, seven days a week. If water is coming into your house, tell us and we move you up the list.
   - q: My Bryant house is new. Can it already need a roof?
-    a: Yes, and it happens here a lot. Bryant grew fast, and many homes went up with basic builder shingles. Those shingles are the cheapest part of a new house. One hard hailstorm can finish them well before the warranty year on the paperwork.
+    a: Yes, and it happens here a lot. Bryant grew fast, and many homes went up with basic builder shingles. Those shingles are the cheapest part of a new house. One hard hailstorm can finish them years before you would ever expect to need a roof.
   - q: How do I know if my Bryant roof has hail damage?
     a: You usually cannot tell from the ground, which is the problem. Hail knocks granules off the shingle and leaves small bruises you only see up close. Look for granules in your gutters and downspouts. Then call us for a free inspection and photos.
   - q: Do you work with my HOA in Bryant?

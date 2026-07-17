@@ -79,6 +79,6 @@ For shingle options, see [shingle roofing](/services/shingle-roofing). If wind c
 
 Our own crews. We are a licensed Arkansas roofing contractor, license number RR0540931024, at 207 Albert Pike Road in Hot Springs. Over 20 years here, 20 trained people on staff.
 
-After a big hail storm, out-of-state crews flood the area and vanish when the season ends. We are still here when you need the warranty.
+After a big hail storm, out-of-state crews flood the area and vanish when the season ends. We are still here, at the same address, when you need us again.
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern). [Contact us](/contact) or call 501-359-5550, seven days a week. Financing is on our [financing](/financing) page.

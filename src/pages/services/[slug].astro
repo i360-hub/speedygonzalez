@@ -6,6 +6,7 @@ import Prose from '../../components/Prose.astro';
 import Faq from '../../components/Faq.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
+import SpeedyStandard from '../../components/SpeedyStandard.astro';
 import { faqSchema, serviceSchema } from '../../data/schema';
 import { slugToCity } from '../../data/areas';
 
@@ -44,6 +45,8 @@ const schema = [
   schema={schema}
 >
   <Hero eyebrow="Hot Springs, Arkansas" h1={d.h1} summary={d.summary} image={d.heroImage} />
+
+  <SpeedyStandard />
 
   <div class="wrap layout">
     <article>
