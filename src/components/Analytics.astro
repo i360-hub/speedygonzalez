@@ -11,11 +11,15 @@
  *
  * tel: clicks are the site's primary conversion; they fire a `tel_click`
  * event (marked as a key event in the GA UI).
+ *
+ * Microsoft Clarity (project nuwye6o5vo) rides the same lazy trigger for
+ * heatmaps + session recordings. Its hosts are allow-listed in _headers CSP.
  */
 const GA_ID = 'G-255G62CQC9';
+const CLARITY_ID = 'nuwye6o5vo';
 ---
 
-<script is:inline define:vars={{ GA_ID }}>
+<script is:inline define:vars={{ GA_ID, CLARITY_ID }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
@@ -32,6 +36,13 @@ const GA_ID = 'G-255G62CQC9';
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     document.head.appendChild(s);
+
+    // Microsoft Clarity — heatmaps + session recordings, same lazy trigger.
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', CLARITY_ID);
   }
 
   ['pointerdown', 'scroll', 'keydown', 'touchstart'].forEach(function (evt) {
