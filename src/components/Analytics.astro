@@ -1,0 +1,52 @@
+---
+/**
+ * GA4 — property "SpeedyGonzalezRoofing" (Impact360Media account), stream
+ * G-255G62CQC9. Same stream the old Duda site reported to, so history is
+ * continuous across the rebuild.
+ *
+ * Loaded lazily: gtag.js is injected on the first user interaction (or a
+ * 3.5s fallback for passive visitors) so it never competes with LCP and the
+ * Lighthouse 100s survive. Events queue into dataLayer before the script
+ * arrives, so nothing is lost — GA stamps them when it loads.
+ *
+ * tel: clicks are the site's primary conversion; they fire a `tel_click`
+ * event (marked as a key event in the GA UI).
+ */
+const GA_ID = 'G-255G62CQC9';
+---
+
+<script is:inline define:vars={{ GA_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID, { send_page_view: true });
+
+  var loaded = false;
+  function loadGtag() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  ['pointerdown', 'scroll', 'keydown', 'touchstart'].forEach(function (evt) {
+    addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  setTimeout(loadGtag, 3500);
+
+  // Primary conversion: any tap on a tel: link (sticky call bar, buttons, text links).
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    loadGtag();
+    gtag('event', 'tel_click', {
+      link_text: (a.textContent || '').trim().slice(0, 60),
+      page_path: location.pathname,
+    });
+  });
+</script>
