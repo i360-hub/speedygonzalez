@@ -9,6 +9,8 @@ export const CITY_NAMES: Record<string, string> = {
   arkadelphia: 'Arkadelphia',
   'pine-bluff': 'Pine Bluff',
   'mount-ida': 'Mount Ida',
+  amity: 'Amity',
+  glenwood: 'Glenwood',
 };
 
 export const slugToCity = (slug: string) =>

@@ -82,7 +82,6 @@
 # its line below. The link gate fails if you forget the second step.
 /service-areas/alexander           /service-areas                    301
 /service-areas/altheimer           /service-areas                    301
-/service-areas/amity               /service-areas                    301
 /service-areas/bauxite             /service-areas                    301
 /service-areas/bismarck            /service-areas                    301
 /service-areas/bonnerdale          /service-areas                    301
@@ -91,7 +90,6 @@
 /service-areas/donaldson           /service-areas                    301
 /service-areas/fountain_lake       /service-areas                    301
 /service-areas/friendship          /service-areas                    301
-/service-areas/glenwood            /service-areas                    301
 /service-areas/gurdon              /service-areas                    301
 /service-areas/hensley             /service-areas                    301
 /service-areas/jessieville         /service-areas                    301

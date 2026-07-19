@@ -136,6 +136,8 @@ export const areaServed = [
   'Arkadelphia',
   'Pine Bluff',
   'Mount Ida',
+  'Amity',
+  'Glenwood',
   'Lake Hamilton',
   'Bismarck',
   'Sheridan',
