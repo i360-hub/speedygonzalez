@@ -91,8 +91,19 @@ build that scores 100 idle. If you see a wild regression, check `uptime` first.
 
 ## Deploy
 
-Cloudflare Pages: build `npm run build`, output `dist`. Auto-deploys on push to
-`main`; PRs get preview deploys.
+Host is a Cloudflare **Pages** project (`speedy-gonzalez-roofing`), output `dist`.
+
+**The Pages project is NOT git-connected** (`Git Provider: No`). A raw `git push`
+does not build or deploy anything on Cloudflare's side. Deploys happen one of two
+ways, both a direct upload of `dist/`:
+
+1. **Automatic (normal path):** push to `main` → GitHub Actions (`ci.yml`) runs
+   build + gates + Lighthouse, then — only if all pass — runs
+   `wrangler pages deploy dist --project-name=speedy-gonzalez-roofing --branch=main`.
+   A red gate never ships. PRs run the gates but never deploy. This needs the
+   `CLOUDFLARE_API_TOKEN` repo secret (Account → Cloudflare Pages → Edit).
+2. **Manual fallback:** `npm run build && npx wrangler pages deploy dist --project-name=speedy-gonzalez-roofing --branch=main`
+   from an authed machine. Use if CI is down or the token is missing.
 
 `public/_redirects` and `public/_headers` ship as-is. **Host canonicalization
 (http→https, non-www→www) must be a Cloudflare Redirect Rule** — `_redirects`
