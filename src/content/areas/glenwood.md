@@ -31,45 +31,36 @@ faqs:
   - q: Do you roof cabins and river places around Glenwood?
     a: Yes. The Caddo River runs through Glenwood and Lake Greeson is just west, so there are cabins, second homes, and weekend places all over. Many owners are not around much. We photograph everything we find and everything we do, so you can see the roof without making the drive out.
   - q: How fast can you get to a leak in Glenwood?
-    a: Slower than in town, but we come. Call 501-359-5550 and tell us water is getting in, and we move that job up the list. We can tarp the roof to stop the damage while we schedule the real repair, so a small leak does not turn into a ruined ceiling.
+    a: It runs a little behind an in-town call, but we get there. Call 501-359-5550 and tell us water is getting in, and we move that job up the list. We can tarp the roof to stop the damage while we schedule the real repair, so a small leak does not turn into a ruined ceiling.
 heroImage: /images/metal-roofing
 order: 10
 ---
 
 ## Will you drive out to Glenwood?
 
-Yes. Glenwood sits on US-70 where the highway crosses the Caddo River, about an hour southwest of our shop at 207 Albert Pike Rd. Plenty of roofers will not make that drive. We will.
+Yes. Glenwood sits on US-70 where the highway crosses the Caddo River, about an hour southwest of our shop at 207 Albert Pike Rd. A lot of crews will not run that far out US-70. We do.
 
-Pike County is rural, and that is exactly why people here get skipped. Your inspection and estimate are free anyway.
+Pike County is rural, and that is exactly why folks here get passed over. Your free inspection stands the same as it would in Hot Springs.
 
 ## Do rural jobs cost more out here?
 
-No. Free inspections and free estimates apply in Glenwood the same as in town. The drive is ours to solve, not something we add to your bill.
+No. Free inspections and free estimates apply in Glenwood the same as in town. The run up US-70 is ours to cover, not a line on your bill.
 
-One thing helps us show up ready. Tell us about the road in when you call.
-
-| What we ask about | Why it matters |
-| --- | --- |
-| Driveway length and grade | We bring the right truck |
-| Turnaround room | Dump trailers need space |
-| Overhanging trees | Tall loads need clearance |
-| Gate or locked access | We plan our arrival time |
-
-Answer those, and we get it right the first trip.
+One thing helps. When you call, say what the road in is like — a steep gravel drive, limbs hanging over the lane, a gate at the end. That tells us which truck and dump trailer to bring so we are set up on the first trip.
 
 ## What roof works best in the Ouachitas?
 
-Metal, for most homes out here. Glenwood sits deep in the Ouachita Mountains, and trees hang over almost everything. Limbs fall. Wet leaves sit and hold moisture on the roof.
+Metal, for most houses in these hills. Glenwood sits deep in the Ouachita Mountains, where hardwoods hang over the roof and the river keeps the air damp. Limbs come down, and wet leaves sit in the valleys.
 
-A [metal roof](/services/metal-roofing) shrugs that off and lasts 40 to 70 years. When you live away from town, a roof you never think about is worth a lot.
+A [metal roof](/services/metal-roofing) throws all of that off and runs 40 to 70 years. This far up US-70, a roof you can forget about is worth real money.
 
-We also install [shingle roofs](/services/shingle-roofing) when that is the better fit for your house and budget.
+If a [shingle roof](/services/shingle-roofing) suits your house and budget better, we will install that instead.
 
 ## Do you roof cabins around the Caddo River and Lake Greeson?
 
-Yes. The Caddo River runs through Glenwood and Lake Greeson is just to the west, so the area is full of cabins, river places, and weekend homes. Many owners live somewhere else.
+Yes. The Caddo River draws floaters and anglers right through town, and Lake Greeson sits just west, so cabins and weekend places are everywhere. Most of those owners live over in Hot Springs or Little Rock.
 
-That makes photos matter. We document what we find and what we do, so you can see the roof without making the drive.
+So we work by photo. We shoot the roof, mark what needs doing, and send it — you decide without driving up on a Saturday.
 
 ## What about the shops along US-70?
 
@@ -77,9 +68,16 @@ Some of those need something different. Low slope commercial roofs cannot take s
 
 Put shingles on a flat roof and it will leak. Every time. We handle both kinds.
 
-## Does Glenwood get storm and hail damage?
+## What damages roofs in Glenwood?
 
-Same as anywhere in the Ouachitas. Hail and straight-line wind hit Pike County too, and insurance often pays for the damage.
+Storms and the setting both. Hail and straight-line wind hit Pike County like the rest of the Ouachitas, and the river and the tree cover work on a roof the rest of the year.
+
+| Around Glenwood | What it does to a roof |
+| --- | --- |
+| Caddo River fog and damp | Streaks the north slopes, feeds algae |
+| Heavy Ouachita tree cover | Drops limbs, packs the valleys |
+| Spring hail and wind | Strips granules, lifts shingles |
+| Low-slope US-70 storefronts | Need TPO, never shingles |
 
 We inspect free and meet your adjuster. Read [hail damage repair](/services/hail-damage-repair) and [storm damage repair](/services/storm-damage-repair). We also handle [roof repair](/services/roof-repair), [leak repair](/services/roof-leak-repair), [gutters](/services/gutters), and [siding](/services/siding).
 

@@ -28,9 +28,9 @@ faqs:
   - q: Does Amity get enough storms to worry about my roof?
     a: Yes. Clark County sits in the same severe weather belt as the rest of central Arkansas, and hail and straight-line wind roll through every spring. Most of the damage we find here is wind and hail, not a direct hit. Both can end a roof, and both are often covered by insurance.
   - q: Is a metal roof a good idea out here?
-    a: Often, yes. The country around Amity is wooded and close to the Ouachita National Forest, so limbs fall and wet leaves sit. Metal handles that better than shingles and lasts 40 to 70 years. When you live away from town, a roof you never think about is worth a lot.
+    a: Often, yes. The country around Amity is wooded and close to the Ouachita National Forest, so limbs fall and wet leaves sit. Metal handles that better than shingles and lasts 40 to 70 years. That is worth a lot when you are a long gravel drive from the nearest crew.
   - q: How fast can you get to a leak in Amity?
-    a: Slower than in town, but we come. Call 501-359-5550 and say water is getting in, and we move that job up. We can tarp the roof to stop the damage while we schedule the real repair, so a small leak does not turn into a ceiling.
+    a: A bit longer than a call in town, but we get there. Call 501-359-5550 and say water is getting in, and we move that job up. We can tarp the roof to stop the damage while we schedule the real repair, so a small leak does not turn into a ceiling.
 heroImage: /images/hail-inspection
 order: 9
 ---
@@ -43,47 +43,36 @@ You get the same free inspection, the same crews, and the same written price a H
 
 ## Do rural jobs cost more out here?
 
-No. Free inspections and free estimates apply in Amity the same as in town. The drive is ours to solve, not something we tack onto your bill.
+No. Free inspections and free estimates apply in Amity the same as in town. The drive down Highway 8 is ours to cover, not something we tack onto your bill.
 
-One thing helps us show up ready. Tell us about the road in when you call.
+One thing helps. When you call, tell us what the road in is like. A long gravel grade, a low branch over the lane, or a locked gate all change which truck and trailer we load. Say so up front and we roll in ready the first trip, not the second.
 
-| What we ask about | Why it matters |
+## What wears out a roof around Amity?
+
+Weather and the woods, mostly. Clark County catches the same spring hail and straight-line wind as the rest of central Arkansas, and the Caddo bottoms and the Ouachita National Forest do the slow damage the rest of the year.
+
+| Around Amity | What it does to a roof |
 | --- | --- |
-| Driveway length and grade | We bring the right truck |
-| Turnaround room | Dump trailers need space |
-| Overhanging trees | Tall loads need clearance |
-| Gate or locked access | We plan our arrival time |
+| Spring hail off the Ouachitas | Bruises shingles, strips the granules |
+| Caddo River bottom humidity | Keeps decking damp, rots the edges |
+| Pine litter from the forest | Packs the valleys, holds water on the roof |
+| Straight-line wind | Peels ridge caps and lifts shingles |
 
-Answer those, and we get it right the first trip.
-
-## Does Amity have a storm problem?
-
-It has an Arkansas storm problem. Clark County sits in the same weather belt as the rest of central Arkansas, and severe spring storms roll through every year.
-
-Most of what we see is wind and hail, not a direct hit. That is still enough to finish a roof.
-
-| Storm type | What it does | What to look for |
-| --- | --- | --- |
-| Hail | Knocks off granules | Grit in the gutters |
-| Straight-line wind | Lifts and tears shingles | Shingles in the yard |
-| Tornado | Structural damage | Call us right away |
-| Heavy rain | Finds old flashing | Ceiling stains inside |
-
-If a storm hits, call 501-359-5550. We tarp active leaks to stop water getting in.
+If a storm hits, call 501-359-5550. We get up there fast and tarp anything letting water in.
 
 ## What roof works best around Amity?
 
-For a lot of homes out here, metal. The country toward the Ouachita National Forest is wooded, and trees hang over almost everything. Limbs fall. Wet leaves sit.
+For a lot of homes out here, metal. Lots near the forest sit under hardwood and pine, and the limbs and litter never let up on a shingle roof.
 
-A [metal roof](/services/metal-roofing) shrugs that off and lasts 40 to 70 years. When you live away from town, a roof you never think about is worth a lot.
+A [metal roof](/services/metal-roofing) sheds all of that and runs 40 to 70 years before you think about it again. Out here that means fewer crews coming back down Highway 8.
 
-We also install [shingle roofs](/services/shingle-roofing) when that is the better fit for your house and budget.
+When a [shingle roof](/services/shingle-roofing) fits your house and budget better, we will say so and install that instead.
 
 ## Do you work on places near the Caddo River and DeGray Lake?
 
-Yes. The Caddo River runs just north of Amity down toward DeGray Lake, and there are cabins and second homes along the water. Many owners live somewhere else.
+Yes. The Caddo River runs just north of Amity and feeds DeGray Lake, and the water draws cabins and second homes. A lot of those owners live in Little Rock or Dallas and only get out on weekends.
 
-That makes photos matter. We document what we find and what we do, so you can see the roof without making the drive.
+So we work by photo. We shoot the roof before and after and send it, and you decide on your own time without driving down.
 
 ## What roofing services do you offer in Amity?
 
