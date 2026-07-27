@@ -39,8 +39,8 @@ const SIZES = '(min-width: 800px) 760px, 100vw';
 <figure class="ba" data-ba>
   {heading && <figcaption class="ba-heading">{heading}</figcaption>}
 
-  <!-- --pos inline so the first paint is centered before JS runs (progressive
-       enhancement: with JS off, the CSS default and this agree at 50%). -->
+  <!-- pos is set inline so the first paint is centered before JS runs
+       (progressive enhancement: with JS off, the CSS default agrees at 50%). -->
   <div class="ba-stage" style="--pos: 50%">
     <!-- After sits underneath; before is clipped on top and revealed by the slider. -->
     <picture>

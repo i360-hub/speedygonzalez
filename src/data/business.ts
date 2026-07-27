@@ -173,8 +173,39 @@ export const businessSchema = (withRating = false) => {
       addressCountry: business.address.country,
     },
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
+    description:
+      'Licensed Hot Springs, Arkansas roofing contractor with 20+ years and ' +
+      '500+ projects. Shingle, metal, and flat roofs, repairs, storm and hail ' +
+      'damage, gutters and siding, plus insurance-claim support.',
+    // Coordinates of the 207 Albert Pike Rd office, Hot Springs, AR 71913.
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 34.496726482568214,
+      longitude: -93.07188953627265,
+    },
     openingHours: business.hoursSchema,
     priceRange: '$$',
+    // The nine services, tied to the business entity so Google can associate the
+    // catalog with this local business (each also has its own Service node on its
+    // page, referencing this #business via provider @id).
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Roofing Services',
+      itemListElement: [
+        'Shingle Roofing',
+        'Metal Roofing',
+        'TPO / Flat Roofing',
+        'Roof Repair',
+        'Roof Leak Repair',
+        'Storm Damage Repair',
+        'Hail Damage Repair',
+        'Gutters',
+        'Siding',
+      ].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name },
+      })),
+    },
     // State licenses as machine-readable identifiers (not just body text).
     identifier: [
       {

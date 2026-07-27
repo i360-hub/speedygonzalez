@@ -14,6 +14,13 @@
 # Host + protocol canonicalization (http->https, non-www->www) is handled by a
 # Cloudflare Redirect Rule, not here — _redirects can't match on hostname.
 
+# --- Sitemap alias -------------------------------------------------------------
+# @astrojs/sitemap emits sitemap-index.xml (declared in robots.txt), never
+# sitemap.xml. Tools and humans try /sitemap.xml by default; 301 that path to the
+# real index instead of letting it 404. No file backs /sitemap.xml, so this rule
+# fires cleanly and shadows nothing.
+/sitemap.xml                       /sitemap-index.xml                301
+
 # --- Old service pages -> new /services/* silo ---------------------------------
 /shingle-roofs                    /services/shingle-roofing       301
 /metal-roofs                      /services/metal-roofing         301
@@ -169,6 +176,84 @@
 /service-areas/hot_springs_village/ /service-areas/hot-springs-village 301
 /service-areas/pine_bluff/         /service-areas/pine-bluff         301
 /service-areas/mount_ida/          /service-areas/mount-ida          301
+
+# Slash variants of the remaining legacy sources — the old root-level blog posts,
+# the GSC-reconciliation URLs, and the doorway-town slugs. Same reasoning as
+# above: a redirect source has no backing file, so `/x/` would 404 while `/x`
+# 301s. Confirmed live before this block existed: `/roof-replacement-cost-hot-
+# springs-ar/` and `/service-areas/lake_hamilton/` both 404'd. Generated from the
+# rules above, so every target here is one that already resolves.
+/financing/  /insurance-claims  301
+/how-to-find-a-leak-in-a-metal-roof-hot-springs/  /blog/find-leak-metal-roof  301
+/metal-roofing-hot-springs-ar-what-to-know/  /blog/metal-vs-shingles-arkansas  301
+/arkansas-hail-season-2025-what-hot-springs-homeowners-must-know-final/  /blog/arkansas-hail-season  301
+/roof-replacement-cost-hot-springs-ar/  /blog/roof-replacement-cost-arkansas  301
+/signs-you-need-a-new-roof-hot-springs-homeowners-guide/  /blog/signs-you-need-a-new-roof  301
+/tpo-roofing-hot-springs-ar-flat-roof-guide/  /services/tpo-flat-roofing  301
+/storm-damage-roof-repair-hot-springs-ar/  /services/storm-damage-repair  301
+/gutters-arkansas-hot-springs-why-they-matter/  /services/gutters  301
+/roof-maintenance-guide-hot-springs-homeowners/  /services/roof-repair  301
+/hot-springs-village-poa-roof-approval-guide/  /service-areas/hot-springs-village  301
+/roofing-contractors-hot-springs-your-ultimate-guide/  /  301
+/trusted-roofers-in-hot-springs-for-quality-roofing-solutions/  /  301
+/service-areas/hot_springs/  /service-areas/hot-springs  301
+/service-areas/alexander/  /service-areas  301
+/service-areas/altheimer/  /service-areas  301
+/service-areas/bauxite/  /service-areas  301
+/service-areas/bismarck/  /service-areas  301
+/service-areas/bonnerdale/  /service-areas  301
+/service-areas/caddo_valley/  /service-areas  301
+/service-areas/carthage/  /service-areas  301
+/service-areas/donaldson/  /service-areas  301
+/service-areas/fountain_lake/  /service-areas  301
+/service-areas/friendship/  /service-areas  301
+/service-areas/gurdon/  /service-areas  301
+/service-areas/hensley/  /service-areas  301
+/service-areas/jessieville/  /service-areas  301
+/service-areas/kirby/  /service-areas  301
+/service-areas/lake_hamilton/  /service-areas  301
+/service-areas/langley/  /service-areas  301
+/service-areas/leola/  /service-areas  301
+/service-areas/littlerock/  /service-areas  301
+/service-areas/lonsdale/  /service-areas  301
+/service-areas/mabelvale/  /service-areas  301
+/service-areas/midway/  /service-areas  301
+/service-areas/mountain_pine/  /service-areas  301
+/service-areas/murfreesboro/  /service-areas  301
+/service-areas/nashville/  /service-areas  301
+/service-areas/newhope/  /service-areas  301
+/service-areas/norman/  /service-areas  301
+/service-areas/pearcy/  /service-areas  301
+/service-areas/perla/  /service-areas  301
+/service-areas/poyen/  /service-areas  301
+/service-areas/prattsville/  /service-areas  301
+/service-areas/redfield/  /service-areas  301
+/service-areas/rockport/  /service-areas  301
+/service-areas/rockwell/  /service-areas  301
+/service-areas/royal/  /service-areas  301
+/service-areas/sheridan/  /service-areas  301
+/service-areas/sherrill/  /service-areas  301
+/service-areas/social_hill/  /service-areas  301
+/service-areas/sparkman/  /service-areas  301
+/service-areas/sulphur_springs/  /service-areas  301
+/service-areas/traskwood/  /service-areas  301
+/service-areas/tucker/  /service-areas  301
+/service-areas/wabbaseka/  /service-areas  301
+/service-areas/white_hall/  /service-areas  301
+/replace-your-roof/  /services/shingle-roofing  301
+/services/roof-replacement/  /services/shingle-roofing  301
+/metal-roofing-vs-shingles-in-hot-springs-which-is-right-for-you/  /blog/metal-vs-shingles-arkansas  301
+/benton-family-neighborhoods-protecting-your-most-important-investment/  /service-areas/benton  301
+/benton-commercial-and-residential-comprehensive-roofing-solutions/  /service-areas/benton  301
+/malvern-area-storm-recovery-community-support-and-professional-roofing/  /service-areas/malvern  301
+/malvern-commercial-roofing-supporting-local-business-growth/  /service-areas/malvern  301
+/hot-springs-village-maintenance-keeping-your-roof-in-peak-condition/  /service-areas/hot-springs-village  301
+/hot-springs-village-retirement-community-senior-focused-roofing-services/  /service-areas/hot-springs-village  301
+/hot-springs-downtown-business-district-commercial-roofing-excellence/  /service-areas/hot-springs  301
+/hot-springs-summer-2025-how-local-events-and-weather-impact-your-roofing-needs/  /blog  301
+/arkansas-roofing-excellence-why-local-expertise-matters-for-your-home/  /about  301
+/four-city-service-excellence-local-expertise-across-hot-springs-region/  /service-areas  301
+/feed/atom/  /rss.xml  301
 
 # --- Param-URL duplicates ------------------------------------------------------
 # NOT handled here. Cloudflare _redirects cannot match on query strings: a rule
