@@ -61,3 +61,38 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ebde15c2b5b062431c1c983a9ffcb2ea
           command: pages deploy dist --project-name=speedy-gonzalez-roofing --branch=main
+
+      # Ping IndexNow with the just-built sitemap URLs so Bing/Yandex/etc. recrawl
+      # promptly. Same guard as the deploy step (real push to main + token present)
+      # so it only fires on an actual production deploy, never on PRs. Key is public
+      # (served at /<key>.txt), so no secret needed. Best-effort — a failure here
+      # must not fail the run.
+      - name: Notify IndexNow
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && env.CF_API_TOKEN != '' }}
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request, urllib.error
+          key  = "50a17a8e8196a44d1ba47c8114b5acc2"
+          host = "www.speedygonzalezroofing.com"
+          urls = re.findall(r"<loc>(.*?)</loc>", open("dist/sitemap-0.xml", encoding="utf-8").read())
+          if not urls:
+              raise SystemExit("No URLs found in dist/sitemap-0.xml")
+          body = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=json.dumps(body).encode("utf-8"),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+          )
+          try:
+              r = urllib.request.urlopen(req, timeout=30)
+              print(f"IndexNow accepted (HTTP {r.status}) — submitted {len(urls)} URLs")
+          except urllib.error.HTTPError as e:
+              print(f"IndexNow HTTP {e.code}: {e.read().decode(errors='replace')}")
+              raise
+          PY
