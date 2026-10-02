@@ -22,6 +22,8 @@ faqs:
     a: Repair when the damage is in one area and your roof still has years left. Replace when shingles are curling all over, granules fill your gutters, or the roof is past 20 years old. Our free inspection tells you which one you are looking at.
   - q: Will a repair void my roof warranty?
     a: A proper repair by a licensed roofer should not. Bad patch jobs by a handyman can. We are a licensed Arkansas roofing contractor, license number RR0540931024, and we repair roofs the way the material is meant to be installed.
+  - q: Do you do roof maintenance?
+    a: Yes. We inspect your roof, fix small problems, and check your gutters while we are up there. A cracked pipe boot or a loose shingle caught early is a small job. Left alone, it turns into a leak. Call 501-359-5550 to set up a visit.
   - q: Do you fix roofs you did not install?
     a: Yes. Most repairs we do are on roofs another company put on. We do not care who installed it. We care whether it can be fixed well. If it cannot, we will tell you that instead of taking your money.
   - q: Will insurance cover my roof repair?
@@ -77,6 +79,24 @@ Then your insurance may pay for it. Wind, hail, and fallen limbs are covered on 
 We photograph everything, write it up, and meet your adjuster on site. See [storm damage repair](/services/storm-damage-repair) and [hail damage repair](/services/hail-damage-repair) for how that works.
 
 We have handled hundreds of claims across Garland County.
+
+## Do you do roof maintenance?
+
+Yes. We inspect your roof, fix the small problems we find, and check your gutters while we are up there. A cracked pipe boot or a loose shingle caught early is a small job. Left alone, it turns into a leak and a bigger bill.
+
+A checkup makes sense after a big storm and before you buy or sell a house. Call 501-359-5550 to set one up.
+
+## Do you install or fix attic vents?
+
+Yes. We install ridge, soffit, and gable vents, and we fix vents that are damaged or blocked. Good airflow lets heat and moisture out of your attic. That helps your shingles last longer and keeps mold out of the wood.
+
+A hot, damp attic is hard on a roof from the inside. We check your vents during every inspection.
+
+## Do you fix rotted wood and framing?
+
+Yes. We replace rotted decking and fascia, and we rebuild framing that a storm or a fallen limb broke. Inside, we fix sagging ceilings and water-damaged framing after a leak. One crew handles the roof and the wood under it.
+
+For bigger jobs inside the house, see [construction and remodeling](/services/construction-remodeling).
 
 ## How fast can you get out here?
 

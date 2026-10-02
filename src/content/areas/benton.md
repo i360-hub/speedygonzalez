@@ -22,6 +22,7 @@ servicesOffered:
   - hail-damage-repair
   - gutters
   - siding
+  - construction-remodeling
 faqs:
   - q: Do you really cover Benton, or just Hot Springs?
     a: We really cover Benton. Our shop is at 207 Albert Pike Rd in Hot Springs, and Benton is a straight shot up I-30. Saline County is a regular part of our week, not a favor we do once in a while. Crews run there all season.

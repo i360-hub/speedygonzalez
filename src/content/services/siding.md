@@ -1,9 +1,9 @@
 ---
 title: Siding
 metaTitle: Siding Installation Hot Springs AR | Speedy Gonzalez
-metaDescription: Siding installation and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates. Call 501-359-5550.
+metaDescription: Siding installation, repair, and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates. Call 501-359-5550.
 h1: Siding Installation in Hot Springs, Arkansas
-summary: We install and replace siding across Hot Springs and Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
+summary: We install, repair, and replace siding across Hot Springs and Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
 heroImage: /images/hot-springs-roofing-hero
 order: 9
 relatedAreas:
@@ -22,6 +22,8 @@ faqs:
     a: Vinyl lasts 20 to 40 years in Arkansas. Fiber cement lasts 30 to 50. Metal lasts 40 or more. Heat and humidity are the enemy here, and dark colors fade faster than light ones on the south side of a house.
   - q: How do I know my siding needs replacing?
     a: Look for warped or cracked boards, soft spots you can push a finger into, and paint that will not hold. Rising energy bills and mold on interior walls mean water is getting behind the siding. Once rot starts, replacement costs less than repeated repairs.
+  - q: Can you repair my siding instead of replacing it?
+    a: Yes, when the damage is in one spot and the wall behind it is sound. We fix cracked, loose, or storm-damaged siding and match what you have where we can. If rot has spread, we will tell you, because repeated repairs cost more than replacing the wall.
   - q: How long does a siding job take?
     a: Most homes take three to five days. Bigger homes or rotten sheathing underneath can push it to a week. We do not tear off more than we can close up in a day, so your house is never left open overnight.
   - q: Can you do siding and my roof at the same time?
@@ -71,6 +73,12 @@ Look for warped or cracked boards, paint that will not stick, and soft spots you
 Bubbling or rippled vinyl usually means heat damage or moisture behind it.
 
 If rot has started, repeated repairs cost more than replacing the wall.
+
+## Do you repair siding or only replace it?
+
+We do both. We fix cracked, loose, or storm-damaged siding and match the material you have where we can. A repair is the right call when the damage is in one spot and the wall behind it is sound. That seals your house against wind and rain again.
+
+If water has been getting behind the siding for a while, we check the sheathing first. We tell you straight whether a repair will hold.
 
 ## What happens during a siding job?
 

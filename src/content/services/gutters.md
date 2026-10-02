@@ -20,6 +20,8 @@ faqs:
     a: Seamless gutters are formed from one long piece of metal on site, cut to fit your house. There are no joints along the run, so there is almost nothing to leak. Sectional gutters from a hardware store are joined every ten feet, and every joint is a future drip.
   - q: How often should I clean my gutters?
     a: Twice a year for most Hot Springs homes, in late spring and again after the leaves drop. If you have oaks or pines close to the house, make it three or four times. Clogged gutters overflow, and that water goes straight into your fascia and foundation.
+  - q: Do you clean gutters?
+    a: Yes. We clear out leaves and debris so heavy rain drains the way it should. We clean gutters on homes and businesses around Hot Springs, Hot Springs Village, and Lake Hamilton. Call 501-359-5550 to set up a cleaning.
   - q: Are gutter guards worth it?
     a: They help if trees hang over your roof, which is common around Hot Springs and the Ouachita Mountains. Guards cut down on cleaning, but they do not end it. Fine debris still gets through. Think of them as less cleaning, not no cleaning.
   - q: Do gutters really protect my foundation?
@@ -69,6 +71,18 @@ Watch for water spilling over the front edge in rain, sagging sections, peeling 
 Rust streaks and separated corners are the easy ones to spot.
 
 If your fascia board is soft, water has been getting in for a while. That is a repair, not a cleaning.
+
+## Do you clean gutters?
+
+Yes. We clear out leaves and debris so heavy rain drains the way it should. Clogged gutters overflow, and that water soaks your fascia and pools at your foundation. We clean gutters on homes and businesses around Hot Springs, Hot Springs Village, and Lake Hamilton.
+
+While we are up there we check for sagging runs, loose downspouts, and leaks.
+
+## Do you repair soffit and fascia?
+
+Yes. We replace soffit and fascia boards that are rotted or storm-damaged. Those boards hold your gutters up and let air into your attic. New boards also keep pests out and give your roof line a clean edge.
+
+Soft fascia usually means a gutter has been overflowing for a while. We fix the cause along with the board.
 
 ## Do gutter guards work around Hot Springs?
 

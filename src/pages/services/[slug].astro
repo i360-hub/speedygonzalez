@@ -8,6 +8,7 @@ import CtaBand from '../../components/CtaBand.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
 import SpeedyStandard from '../../components/SpeedyStandard.astro';
 import InlinePhoto from '../../components/InlinePhoto.astro';
+import BeforeAfter from '../../components/BeforeAfter.astro';
 import { faqSchema, serviceSchema } from '../../data/schema';
 import { slugToCity } from '../../data/areas';
 
@@ -52,6 +53,10 @@ const servicePhoto: Record<string, { name: string; caption: string }> = {
   gutters: {
     name: 'finished-metal-porch',
     caption: 'A finished Hot Springs home after exterior work by our crew.',
+  },
+  'construction-remodeling': {
+    name: 'metal-building-carport',
+    caption: 'A steel building and carport we built in Garland County.',
   },
   siding: {
     name: 'cedar-post-carport',
@@ -112,6 +117,13 @@ const schema = [
         )
       }
 
+      {
+        /* The one verified same-home pair: an exterior remodel (see before-after.json). */
+        entry.id === 'construction-remodeling' && (
+          <BeforeAfter id="hot-springs-exterior-remodel" />
+        )
+      }
+
       <Faq faqs={d.faqs} />
     </article>
 
@@ -158,7 +170,17 @@ const schema = [
 
   <ReviewStrip slug={entry.id} alt />
 
-  <CtaBand />
+  {
+    /* The default band asks about a roof inspection, which is wrong for a remodel. */
+    entry.id === 'construction-remodeling' ? (
+      <CtaBand
+        heading="Ready to talk about your project?"
+        body="Tell us what you want done. We look at the job and give you a written price before we start."
+      />
+    ) : (
+      <CtaBand />
+    )
+  }
 </Base>
 
 <style>

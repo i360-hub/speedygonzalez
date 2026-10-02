@@ -22,6 +22,7 @@ servicesOffered:
   - hail-damage-repair
   - gutters
   - siding
+  - construction-remodeling
 faqs:
   - q: How far is Malvern from your Hot Springs shop?
     a: Malvern is close. Our office is at 207 Albert Pike Rd in Hot Springs, and Malvern sits southeast on the way to I-30. Crews get there in about 30 minutes. Hot Spring County is regular territory for us, not a long-distance job we take once a year.

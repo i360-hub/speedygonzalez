@@ -23,6 +23,7 @@ servicesOffered:
   - hail-damage-repair
   - gutters
   - siding
+  - construction-remodeling
 faqs:
   - q: Are you a local Hot Springs roofing company?
     a: Yes. Our office is at 207 Albert Pike Rd in Hot Springs, and we have worked here for over 20 years. We are not a storm chaser passing through town. Our own crews do the work, and you can drive to our shop and talk to us in person.

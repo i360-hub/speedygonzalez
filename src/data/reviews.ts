@@ -398,6 +398,13 @@ const publishedById = (gbpId: number) => {
 
 reviewsByPage['roof-replacement'] = [19151851, 2143827, 2143805].map(publishedById);
 
+/**
+ * /services/construction-remodeling, same rule: three reviews already published
+ * above that describe work beyond the roof (interior wall and ceiling repair and
+ * paint; siding and a covered pool deck; "roofing or construction needs").
+ */
+reviewsByPage['construction-remodeling'] = [2143816, 2143821, 4916741].map(publishedById);
+
 export const allReviews: Review[] = Object.values(reviewsByPage)
   .flat()
   .filter((review, i, arr) => arr.findIndex((r) => r.gbpId === review.gbpId) === i);

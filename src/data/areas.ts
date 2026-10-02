@@ -32,6 +32,7 @@ export const SERVICE_NAMES: Record<string, string> = {
   'hail-damage-repair': 'Hail damage repair',
   gutters: 'Gutter installation & repair',
   siding: 'Siding',
+  'construction-remodeling': 'Construction & remodeling',
 };
 
 export const slugToService = (slug: string) => SERVICE_NAMES[slug] ?? slug;

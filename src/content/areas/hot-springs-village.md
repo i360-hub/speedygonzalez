@@ -21,6 +21,7 @@ servicesOffered:
   - hail-damage-repair
   - gutters
   - siding
+  - construction-remodeling
 faqs:
   - q: Do I need POA approval for a new roof in Hot Springs Village?
     a: Usually yes, if you change the color or the material. The POA reviews architectural changes in the Village, and roofs count. A like-for-like replacement is simpler than switching from shingles to metal. We are used to this step and will help you prepare what you need.

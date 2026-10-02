@@ -22,6 +22,8 @@ faqs:
     a: Usually not. Water enters the roof, runs down the wood decking or along a rafter, and drips wherever it finally stops. The real entry point is often several feet away and higher up. That is why we trace the water path instead of just patching above the stain.
   - q: How much does roof leak repair cost?
     a: It depends on where the water gets in and how long it has been getting in. A cracked pipe boot is quick to replace. If water has been running for months, rotten decking adds to the job. We inspect for free and give you a written price before we touch anything.
+  - q: Do you install and repair skylights?
+    a: Yes. We put in new skylights and fix ones that leak, crack, or fog up. Most skylight leaks come from flashing or a seal that failed. We flash and seal it the right way, so you keep the light and lose the leak.
   - q: Can I just put a tarp on it myself?
     a: A tarp buys you time in an emergency, but it is not a fix, and getting on a wet roof is dangerous. Call us instead at 501-359-5550. We answer seven days a week and can often tarp your roof the same day.
   - q: Will my insurance pay to fix a leak?
@@ -67,6 +69,18 @@ It depends on where the water gets in and how long it has been getting in. Repla
 That is the real reason to call early. A boot replaced today costs a fraction of the decking job it turns into next year.
 
 We do not quote leaks over the phone. Every roof is different.
+
+## Do you install and repair skylights?
+
+Yes. We put in new skylights and fix ones that leak, crack, or fog up. Most skylight leaks come from flashing or a seal that failed, not from the glass. We flash and seal it the right way, so you keep the light and lose the leak.
+
+We work skylights into shingle and metal roofs alike.
+
+## Can you stop moisture problems that are not a roof leak?
+
+Often, yes. We trace where the water gets in and stop it. Then we look at drainage and attic airflow, because trapped moisture leads to mold and rot. Arkansas humidity makes a small moisture problem grow fast.
+
+Sometimes the fix is better attic vents. Sometimes it is [gutters](/services/gutters) that move water away from the house. We tell you which one it is.
 
 ## What if my whole roof is worn out?
 

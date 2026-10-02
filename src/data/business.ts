@@ -196,7 +196,7 @@ export const businessSchema = (withRating = false) => {
       'Licensed, Latino-owned Hot Springs, Arkansas roofing contractor with 20+ ' +
       'years and 500+ projects. Roof replacement, shingle, metal, and flat roofs, ' +
       'commercial roofing, repairs, storm and hail damage, gutters and siding, ' +
-      'plus insurance-claim support. Se habla español.',
+      'construction and remodeling, plus insurance-claim support. Se habla español.',
     knowsLanguage: ['en', 'es'],
     // Coordinates of the 207 Albert Pike Rd office, Hot Springs, AR 71913.
     geo: {
@@ -206,8 +206,9 @@ export const businessSchema = (withRating = false) => {
     },
     openingHours: business.hoursSchema,
     priceRange: '$$',
-    // The eleven service pages plus the two services that live on their own
-    // pages elsewhere (/insurance-claims, /contact), tied to the business entity
+    // The twelve service pages, the services that have a section on one of those
+    // pages (skylights, attic vents, kitchens, drywall...), and the two that live
+    // elsewhere (/insurance-claims, /contact), tied to the business entity
     // so Google can associate the catalog with this local business (each service
     // page also has its own Service node, referencing this #business via
     // provider @id). Names match the Google Business Profile service list.
@@ -228,6 +229,26 @@ export const businessSchema = (withRating = false) => {
         'Siding',
         'Roof Inspection',
         'Insurance Claim Assistance',
+        // Sections on /services/roof-repair and /services/roof-leak-repair
+        'Roof Maintenance',
+        'Attic Vent Installation and Repair',
+        'Skylight Installation and Repair',
+        'Structural Repairs',
+        'Water and Moisture Control',
+        // Sections on /services/gutters and /services/siding
+        'Gutter Cleaning',
+        'Soffit and Fascia Repair',
+        'Siding Repair',
+        // /services/construction-remodeling
+        'Construction and Remodeling',
+        'Kitchen Remodeling',
+        'Bathroom Remodeling',
+        'Home Renovations',
+        'Drywall Installation',
+        'Flooring Installation and Repair',
+        'Interior Painting',
+        'Exterior Painting',
+        'New Building Construction',
       ].map((name) => ({
         '@type': 'Offer',
         itemOffered: { '@type': 'Service', name },
