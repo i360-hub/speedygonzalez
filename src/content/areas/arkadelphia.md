@@ -12,9 +12,11 @@ landmarks:
   - Ouachita River
   - Interstate 30 corridor
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - tpo-flat-roofing
+  - commercial-roofing
   - roof-repair
   - roof-leak-repair
   - storm-damage-repair

@@ -21,6 +21,10 @@ const faqs = [
     a: 'Over 20 years. Our shop is at 207 Albert Pike Rd in Hot Springs, and we have finished more than 500 projects across Garland County and central Arkansas.',
   },
   {
+    q: 'Do you speak Spanish?',
+    a: 'Yes. Se habla español. We are a Latino-owned company, and we speak Spanish and English. Call 501-359-5550 and talk to us in the one you like best.',
+  },
+  {
     q: 'Do you use subcontractors?',
     a: 'No. We have 20 trained people on staff, and our own crews do the work. The people on your roof work for us. That is how we keep the quality where we want it.',
   },
@@ -33,7 +37,7 @@ const faqs = [
 
 <Base
   title="About Speedy Gonzalez Roofing | Hot Springs, AR"
-  description="Licensed Hot Springs roofing contractor with 20+ years and 500+ projects. Our own crews, free inspections, insurance claim help. Call 501-359-5550."
+  description="Licensed, Latino-owned Hot Springs roofer with 20+ years and 500+ projects. Our own crews, free inspections. Se habla español. Call 501-359-5550."
   path="/about"
   preloadImage="/images/shingle-roofing"
   breadcrumbs={[{ href: '/about', label: 'About' }]}
@@ -42,7 +46,7 @@ const faqs = [
   <Hero
     eyebrow="About us"
     h1="Roofers From Hot Springs, For Hot Springs"
-    summary="Speedy Gonzalez Roofing has spent more than 20 years on Arkansas roofs. We are licensed, we run our own crews, and our shop is right here at 207 Albert Pike Rd."
+    summary="Speedy Gonzalez Roofing has spent more than 20 years on Arkansas roofs. We are licensed and Latino-owned, we run our own crews, and our shop is right here at 207 Albert Pike Rd."
     image="/images/shingle-roofing"
   />
 
@@ -50,7 +54,8 @@ const faqs = [
     <div class="wrap prose-block">
       <h2>Who is Speedy Gonzalez Roofing?</h2>
       <p>
-        We are a licensed roofing contractor in Hot Springs, Arkansas. Our shop sits at{' '}
+        We are a licensed, {business.ownership} roofing contractor in Hot Springs, Arkansas. Our
+        shop sits at{' '}
         {business.address.street}. We hold Arkansas roofing license {business.licenses.roofing}{' '}
         and home improvement license {business.licenses.homeImprovement}.
       </p>
@@ -99,6 +104,15 @@ const faqs = [
           </p>
         </div>
       </div>
+
+      <h2>Do you speak Spanish?</h2>
+      <p>
+        Yes. <span lang="es">Se habla español.</span> We are a {business.ownership} company,
+        and we speak Spanish and English.
+      </p>
+      <p>
+        Call {business.phones.primary} and talk to us in the one you like best.
+      </p>
 
       <h2>How do I check you out before I call?</h2>
       <p>Please do. Everything we claim is public and you can verify all of it yourself.</p>

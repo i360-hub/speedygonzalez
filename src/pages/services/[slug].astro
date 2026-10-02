@@ -17,6 +17,10 @@ import { slugToCity } from '../../data/areas';
  * it does not fit. { name = manifest photo, caption }.
  */
 const servicePhoto: Record<string, { name: string; caption: string }> = {
+  'roof-replacement': {
+    name: 'reroof-in-progress-tyvek',
+    caption: 'A full roof replacement in progress on a large Hot Springs home.',
+  },
   'metal-roofing': {
     name: 'metal-roof-lakefront',
     caption: 'A standing seam metal roof we installed on a Hot Springs lakefront home.',
@@ -143,6 +147,7 @@ const schema = [
         <h2>Other services</h2>
         <ul class="area-links">
           <li><a href="/services">All roofing services</a></li>
+          <li><a href="/services/roof-replacement">Roof replacement</a></li>
           <li><a href="/services/roof-repair">Roof repair</a></li>
           <li><a href="/services/storm-damage-repair">Storm damage repair</a></li>
           <li><a href="/insurance-claims">Insurance claim help</a></li>

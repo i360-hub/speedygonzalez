@@ -138,8 +138,7 @@
 # the closest-intent live page to keep whatever residual equity remains on-topic.
 #
 # Dead long-form content pages (blog/doorway pages Duda has since deleted):
-/replace-your-roof                                                             /services/shingle-roofing          301
-/services/roof-replacement                                                     /services/shingle-roofing          301
+/replace-your-roof                                                             /services/roof-replacement          301
 /metal-roofing-vs-shingles-in-hot-springs-which-is-right-for-you               /blog/metal-vs-shingles-arkansas   301
 /benton-family-neighborhoods-protecting-your-most-important-investment         /service-areas/benton              301
 /benton-commercial-and-residential-comprehensive-roofing-solutions             /service-areas/benton              301
@@ -240,8 +239,7 @@
 /service-areas/tucker/  /service-areas  301
 /service-areas/wabbaseka/  /service-areas  301
 /service-areas/white_hall/  /service-areas  301
-/replace-your-roof/  /services/shingle-roofing  301
-/services/roof-replacement/  /services/shingle-roofing  301
+/replace-your-roof/  /services/roof-replacement  301
 /metal-roofing-vs-shingles-in-hot-springs-which-is-right-for-you/  /blog/metal-vs-shingles-arkansas  301
 /benton-family-neighborhoods-protecting-your-most-important-investment/  /service-areas/benton  301
 /benton-commercial-and-residential-comprehensive-roofing-solutions/  /service-areas/benton  301

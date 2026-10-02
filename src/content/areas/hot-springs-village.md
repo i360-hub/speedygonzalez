@@ -12,6 +12,7 @@ landmarks:
   - East Gate
   - West Gate
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - roof-repair

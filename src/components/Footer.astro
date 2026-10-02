@@ -2,9 +2,11 @@
 import { business, telHref } from '../data/business';
 
 const services = [
+  { href: '/services/roof-replacement', label: 'Roof Replacement' },
   { href: '/services/shingle-roofing', label: 'Shingle Roofing' },
   { href: '/services/metal-roofing', label: 'Metal Roofing' },
   { href: '/services/tpo-flat-roofing', label: 'TPO / Flat Roofing' },
+  { href: '/services/commercial-roofing', label: 'Commercial Roofing' },
   { href: '/services/roof-repair', label: 'Roof Repair' },
   { href: '/services/roof-leak-repair', label: 'Roof Leak Repair' },
   { href: '/services/storm-damage-repair', label: 'Storm Damage Repair' },
@@ -35,8 +37,8 @@ const year = new Date().getFullYear();
       <div>
         <img src="/logo-white.png" alt="Speedy Gonzalez Roofing" width="170" height="54" />
         <p class="tagline">
-          Licensed roofing contractor in Hot Springs, Arkansas. {business.experience} of roofs
-          done right.
+          Licensed, {business.ownership} roofing contractor in Hot Springs, Arkansas.{' '}
+          {business.experience} of roofs done right. <span lang="es">Se habla español.</span>
         </p>
         <ul class="contact">
           <li>{business.address.street}, {business.address.city} {business.address.state}{' '}

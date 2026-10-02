@@ -11,6 +11,7 @@ landmarks:
   - Ouachita National Forest
   - Highway 270
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - roof-repair

@@ -68,11 +68,13 @@ const faqs = [
   <section class="section entity">
     <div class="wrap">
       <p class="lede">
-        <strong>Speedy Gonzalez Roofing</strong> is a licensed roofing contractor at{' '}
+        <strong>Speedy Gonzalez Roofing</strong> is a licensed, {business.ownership} roofing
+        contractor at{' '}
         {business.address.street}, {business.address.city}, {business.address.state}{' '}
         {business.address.zip} (Arkansas roofing license {business.licenses.roofing}). We
-        install and repair shingle, metal, and flat roofs for homeowners in Hot Springs and
-        across central Arkansas. We are open {business.hours}.
+        replace and repair shingle, metal, and flat roofs for homes and businesses in Hot Springs
+        and across central Arkansas. We speak English and Spanish. We are open{' '}
+        {business.hours}.
       </p>
       <ul class="proof">
         {business.proofPoints.map((point) => <li>{point}</li>)}

@@ -10,6 +10,7 @@ landmarks:
   - Alcoa Road
   - Reynolds Road
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - roof-repair

@@ -12,6 +12,7 @@ landmarks:
   - Ouachita National Forest
   - Clark County
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - roof-repair

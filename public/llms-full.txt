@@ -2,11 +2,11 @@
 
 > Expanded company reference for AI assistants and agents. Every fact below is drawn from the live pages at speedygonzalezroofing.com. For the link index, see /llms.txt.
 
-Last reviewed: 2026-08-25.
+Last reviewed: 2026-10-01.
 
 ## Company Profile
 
-Speedy Gonzalez Roofing is a licensed roofing contractor based in Hot Springs, Arkansas, with more than 20 years on Arkansas roofs and over 500 completed projects. The company runs its own crews — 20 trained professionals — rather than handing work to subcontractors, and covers Hot Springs, Garland County, and the surrounding counties.
+Speedy Gonzalez Roofing is a licensed, Latino-owned roofing contractor based in Hot Springs, Arkansas, with more than 20 years on Arkansas roofs and over 500 completed projects. The company runs its own crews — 20 trained professionals — rather than handing work to subcontractors, and covers Hot Springs, Garland County, and the surrounding counties.
 
 - Business name: Speedy Gonzalez Roofing (also associated with Speedy Gonzalez Construction, Inc.)
 - Phone: 501-359-5550 (primary); office 501-701-8766
@@ -16,6 +16,7 @@ Speedy Gonzalez Roofing is a licensed roofing contractor based in Hot Springs, A
 - Hours: open 24 hours a day, 7 days a week
 - Arkansas licenses: roofing RR0540931024; home improvement 0378510824
 - Experience: 20+ years, 500+ projects, 20 trained professionals
+- Ownership and languages: Latino-owned; Spanish and English spoken (se habla español)
 - Rating: 4.9 stars across 150+ Google reviews (Google is authoritative for the live count and average)
 - Inspections and estimates: free, with the estimate provided in writing
 
@@ -42,6 +43,12 @@ Where there may be a covered loss, Speedy Gonzalez is set up to support the clai
 
 If a roof needs replacing because of age or wear rather than a covered event, that is customer-paid work. Speedy Gonzalez does not offer financing or payment plans, so "file a claim" is not a general answer to affordability — it applies only when there is an actual covered loss.
 
+## Roof Replacement
+
+Source: https://www.speedygonzalezroofing.com/services/roof-replacement
+
+Full roof replacement for worn-out and storm-damaged roofs. The old roof is torn off down to the wood, the decking is checked and rotten boards replaced, and a new shingle or metal roof goes on with new underlayment, flashing, and ridge vents. Most shingle roofs take one to two days; metal takes two to five. The price is written after a free inspection — none is quoted by phone.
+
 ## Shingle Roofing
 
 Source: https://www.speedygonzalezroofing.com/services/shingle-roofing
@@ -59,6 +66,12 @@ Standing seam and exposed fastener metal roofs, with a service life the company 
 Source: https://www.speedygonzalezroofing.com/services/tpo-flat-roofing
 
 TPO flat roofing for homes, shops, and commercial buildings. TPO is a durable single-ply membrane; the sheets are rolled out and the seams heat-welded to form one continuous waterproof surface. The company puts its service life at 20 to 30 years.
+
+## Commercial Roofing
+
+Source: https://www.speedygonzalezroofing.com/services/commercial-roofing
+
+Roofing for shops, offices, and small commercial buildings: TPO and flat roofs, metal roofs, and leak repair. Work is scheduled around business hours where possible. The company's own crews do the work.
 
 ## Roof Repair
 
@@ -103,7 +116,7 @@ Speedy Gonzalez Roofing works out of Hot Springs across Garland, Saline, Hot Spr
 - **Home market:** Hot Springs and Garland County, where the office and crews are based.
 - **Core surrounding markets:** Hot Springs Village, Benton, Bryant, and Malvern.
 - **Extended service area:** Arkadelphia, Amity, Glenwood, Mount Ida, and Pine Bluff.
-- **Additional communities covered without a dedicated page:** Lake Hamilton, Bismarck, and Sheridan.
+- **Additional communities covered without a dedicated page:** Lake Hamilton, Bismarck, Piney, Jessieville, Royal, Fountain Lake, Red Oak, Oak Grove, and Diamondhead.
 
 All are genuinely served. The hierarchy describes distance from Hot Springs, not whether a town is covered.
 
@@ -120,7 +133,7 @@ Towns with a dedicated page:
 - **Mount Ida** — near Lake Ouachita, including rural Montgomery County
 - **Pine Bluff** — Jefferson County; roof and hail inspections, storm claims, replacements
 
-Also served without a dedicated page: Lake Hamilton, Bismarck, and Sheridan.
+Also served without a dedicated page: Lake Hamilton, Bismarck, Piney, Jessieville, Royal, Fountain Lake, Red Oak, Oak Grove, and Diamondhead.
 
 ## What Customers Consistently Describe
 

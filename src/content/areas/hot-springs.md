@@ -12,9 +12,11 @@ landmarks:
   - Lake Ouachita
   - Oaklawn
 servicesOffered:
+  - roof-replacement
   - shingle-roofing
   - metal-roofing
   - tpo-flat-roofing
+  - commercial-roofing
   - roof-repair
   - roof-leak-repair
   - storm-damage-repair

@@ -21,9 +21,11 @@ export const slugToCity = (slug: string) =>
     .join(' ');
 
 export const SERVICE_NAMES: Record<string, string> = {
+  'roof-replacement': 'Roof replacement',
   'shingle-roofing': 'Shingle roofing',
   'metal-roofing': 'Metal roofing',
   'tpo-flat-roofing': 'TPO & flat roofing',
+  'commercial-roofing': 'Commercial roofing',
   'roof-repair': 'Roof repair',
   'roof-leak-repair': 'Roof leak repair',
   'storm-damage-repair': 'Storm damage repair',

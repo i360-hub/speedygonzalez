@@ -383,6 +383,21 @@ export const standardProof = {
  */
 
 /** Wall on /reviews: every placed review, de-duplicated by gbpId. All 5-star. */
+/**
+ * /services/roof-replacement reuses three reviews already published above —
+ * each one describes a full roof replacement. Looked up by gbpId so the text
+ * stays in one place and stays verbatim. No new review is added here.
+ */
+const publishedById = (gbpId: number) => {
+  const found = Object.values(reviewsByPage)
+    .flat()
+    .find((review) => review.gbpId === gbpId);
+  if (!found) throw new Error(`reviews.ts: no published review with gbpId ${gbpId}`);
+  return found;
+};
+
+reviewsByPage['roof-replacement'] = [19151851, 2143827, 2143805].map(publishedById);
+
 export const allReviews: Review[] = Object.values(reviewsByPage)
   .flat()
   .filter((review, i, arr) => arr.findIndex((r) => r.gbpId === review.gbpId) === i);

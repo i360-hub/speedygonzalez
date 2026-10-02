@@ -62,6 +62,14 @@ export const business = {
   },
   experience: '20+ years',
   /**
+   * Latino-owned, and the crew speaks Spanish. Both are set on the Google
+   * Business Profile (attributes "Identifies as Latino-owned" and "Language
+   * assistance: Spanish"), read 2026-10-01. Kept here so the site and the
+   * profile say the same thing.
+   */
+  ownership: 'Latino-owned',
+  languages: ['English', 'Spanish'],
+  /**
    * NO FINANCING. Confirmed 2026-07-16: the business does not offer financing of
    * any kind. The build spec's proof_points listed "financing available" and it
    * was wrong — the claim shipped across 24 files before this was caught. A
@@ -79,6 +87,8 @@ export const business = {
     '500+ projects completed',
     '20 trained professionals',
     'BBB A+ Rated',
+    'Latino-owned',
+    'Se habla español',
     'Free inspections and estimates',
     'Insurance claim support',
   ],
@@ -140,7 +150,16 @@ export const areaServed = [
   'Glenwood',
   'Lake Hamilton',
   'Bismarck',
-  'Sheridan',
+  // Communities listed as service areas on the Google Business Profile
+  // (location 15761, read 2026-10-01). Sheridan was removed the same day: it
+  // was never on the profile.
+  'Piney',
+  'Jessieville',
+  'Royal',
+  'Fountain Lake',
+  'Red Oak',
+  'Oak Grove',
+  'Diamondhead',
 ] as const;
 
 export const telHref = (phone: string) => `tel:+1${phone.replace(/\D/g, '')}`;
@@ -174,9 +193,11 @@ export const businessSchema = (withRating = false) => {
     },
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
     description:
-      'Licensed Hot Springs, Arkansas roofing contractor with 20+ years and ' +
-      '500+ projects. Shingle, metal, and flat roofs, repairs, storm and hail ' +
-      'damage, gutters and siding, plus insurance-claim support.',
+      'Licensed, Latino-owned Hot Springs, Arkansas roofing contractor with 20+ ' +
+      'years and 500+ projects. Roof replacement, shingle, metal, and flat roofs, ' +
+      'commercial roofing, repairs, storm and hail damage, gutters and siding, ' +
+      'plus insurance-claim support. Se habla español.',
+    knowsLanguage: ['en', 'es'],
     // Coordinates of the 207 Albert Pike Rd office, Hot Springs, AR 71913.
     geo: {
       '@type': 'GeoCoordinates',
@@ -185,22 +206,28 @@ export const businessSchema = (withRating = false) => {
     },
     openingHours: business.hoursSchema,
     priceRange: '$$',
-    // The nine services, tied to the business entity so Google can associate the
-    // catalog with this local business (each also has its own Service node on its
-    // page, referencing this #business via provider @id).
+    // The eleven service pages plus the two services that live on their own
+    // pages elsewhere (/insurance-claims, /contact), tied to the business entity
+    // so Google can associate the catalog with this local business (each service
+    // page also has its own Service node, referencing this #business via
+    // provider @id). Names match the Google Business Profile service list.
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Roofing Services',
       itemListElement: [
+        'Roof Replacement',
         'Shingle Roofing',
         'Metal Roofing',
         'TPO / Flat Roofing',
+        'Commercial Roofing',
         'Roof Repair',
         'Roof Leak Repair',
         'Storm Damage Repair',
         'Hail Damage Repair',
         'Gutters',
         'Siding',
+        'Roof Inspection',
+        'Insurance Claim Assistance',
       ].map((name) => ({
         '@type': 'Offer',
         itemOffered: { '@type': 'Service', name },
