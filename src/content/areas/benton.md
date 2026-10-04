@@ -1,6 +1,6 @@
 ---
 city: Benton
-metaTitle: Roofing Contractors in Benton, AR | Speedy Gonzalez
+metaTitle: Roofers in Benton, AR | Speedy Gonzalez Roofing
 metaDescription: Roofers in Benton, AR. Shingle and metal roofs, repairs, and hail damage claims for Saline County homes. Free estimates. Call 501-359-5550.
 h1: Roofing Contractors in Benton, Arkansas
 localIntro: Benton sits on I-30 between Hot Springs and Little Rock, and it has grown fast. We roof both the older homes near downtown and the newer subdivisions spreading out from the interstate.

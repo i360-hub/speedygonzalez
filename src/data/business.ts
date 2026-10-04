@@ -223,6 +223,7 @@ export const businessSchema = (withRating = false) => {
         'Commercial Roofing',
         'Roof Repair',
         'Roof Leak Repair',
+        'Emergency Roof Repair',
         'Storm Damage Repair',
         'Hail Damage Repair',
         'Gutters',

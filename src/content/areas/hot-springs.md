@@ -1,8 +1,8 @@
 ---
 city: Hot Springs
-metaTitle: Roofers in Hot Springs, AR | Speedy Gonzalez Roofing
-metaDescription: Roofing contractors in Hot Springs, AR. Roof repair, replacement, and storm damage help. Free inspections and estimates. Call 501-359-5550.
-h1: Roofing Contractors in Hot Springs, Arkansas
+metaTitle: Hot Springs Neighborhoods We Roof | Speedy Gonzalez Roofing
+metaDescription: Where we roof in Hot Springs and Garland County, neighborhood by neighborhood, and how fast we get there. Free inspections. Call 501-359-5550.
+h1: 'Roofing in Hot Springs Neighborhoods: Lake Hamilton, Oaklawn, Downtown'
 localIntro: Hot Springs is our home base. Our shop sits at 207 Albert Pike Rd, minutes from downtown, Lake Hamilton, and the national park. We have roofed Garland County homes for over 20 years.
 landmarks:
   - Hot Springs National Park
@@ -19,6 +19,7 @@ servicesOffered:
   - commercial-roofing
   - roof-repair
   - roof-leak-repair
+  - emergency-roof-repair
   - storm-damage-repair
   - hail-damage-repair
   - gutters
@@ -68,7 +69,7 @@ We also do [roof repair](/services/roof-repair), [leak repair](/services/roof-le
 
 Fast. Most Hot Springs addresses are a short drive from Albert Pike. We answer the phone 24 hours a day, seven days a week.
 
-If water is coming in, say so when you call. We move active leaks to the front of the list and tarp the roof to stop the damage.
+If water is coming in, say so when you call. We move active leaks to the front of the list and tarp the roof to stop the damage. See [emergency roof repair](/services/emergency-roof-repair).
 
 ## Do you help with hail and storm claims here?
 

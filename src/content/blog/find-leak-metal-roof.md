@@ -77,7 +77,7 @@ Call when you cannot find it, when it is on a steep pitch, or when the drip keep
 
 We inspect for free. We photograph what we find and show you the picture, so you can see your roof without standing on it.
 
-Learn more about [roof leak repair](/services/roof-leak-repair) and [metal roofing](/services/metal-roofing), or see the rest of our work in [Hot Springs](/service-areas/hot-springs).
+Learn more about [roof leak repair](/services/roof-leak-repair) and [metal roofing](/services/metal-roofing), or see what else your [Hot Springs roofers](/) do.
 
 ## Who fixes it?
 
