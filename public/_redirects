@@ -131,6 +131,17 @@
 /service-areas/wabbaseka           /service-areas                    301
 /service-areas/white_hall          /service-areas                    301
 
+# Old Duda doorway pages for northeast Arkansas towns we do not serve. These were
+# still returning 404 after launch (found in the Oct 2026 crawl review).
+/service-areas/brookland           /service-areas                    301
+/service-areas/cash                /service-areas                    301
+/service-areas/paragould           /service-areas                    301
+/service-areas/trumann             /service-areas                    301
+/service-areas/brookland/  /service-areas  301
+/service-areas/cash/  /service-areas  301
+/service-areas/paragould/  /service-areas  301
+/service-areas/trumann/  /service-areas  301
+
 # --- Google Search Console reconciliation --------------------------------------
 # URLs Google still tracks that a live crawl of the Duda site never surfaced —
 # pulled from the GSC "Not found (404)" and "Crawled - currently not indexed"

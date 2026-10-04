@@ -13,6 +13,21 @@ import { faqSchema, serviceSchema } from '../../data/schema';
 import { slugToCity } from '../../data/areas';
 
 /**
+ * Blog guides that answer the questions people ask before buying each service.
+ * The posts already link to their service page; this is the link back, so the
+ * guides are reachable from the pages that rank. Only real topical matches.
+ */
+const relatedGuides: Record<string, string[]> = {
+  'metal-roofing': ['metal-vs-shingles-arkansas', 'find-leak-metal-roof'],
+  'shingle-roofing': ['metal-vs-shingles-arkansas', 'signs-you-need-a-new-roof'],
+  'roof-replacement': ['roof-replacement-cost-arkansas', 'signs-you-need-a-new-roof'],
+  'roof-repair': ['signs-you-need-a-new-roof'],
+  'roof-leak-repair': ['find-leak-metal-roof'],
+  'hail-damage-repair': ['arkansas-hail-season'],
+  'storm-damage-repair': ['arkansas-hail-season'],
+};
+
+/**
  * A real, verified inline photo per service (supplement §3.2), keyed by slug.
  * Only slugs with a genuinely relevant photo get one — no forcing a photo where
  * it does not fit. { name = manifest photo, caption }.
@@ -71,6 +86,12 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const d = entry.data;
+
+const guideSlugs = relatedGuides[entry.id] ?? [];
+const allPosts = await getCollection('blog');
+const guides = guideSlugs
+  .map((slug) => allPosts.find((post) => post.id === slug))
+  .filter((post) => post !== undefined);
 const path = `/services/${entry.id}`;
 const { Content } = await render(entry);
 
@@ -154,6 +175,21 @@ const schema = [
         </ul>
         <a href="/service-areas">See all service areas</a>
       </div>
+
+      {
+        guides.length > 0 && (
+          <div class="card">
+            <h2>Helpful roofing guides</h2>
+            <ul class="area-links">
+              {guides.map((g) => (
+                <li>
+                  <a href={`/blog/${g.id}`}>{g.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
 
       <div class="card">
         <h2>Other services</h2>
