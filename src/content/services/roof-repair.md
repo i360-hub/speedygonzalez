@@ -100,7 +100,7 @@ For bigger jobs inside the house, see [construction and remodeling](/services/co
 
 ## How fast can you get out here?
 
-Often the same day or the next. We answer 24 hours a day, seven days a week. If water is running into your house, say so when you call and we will move you up.
+Often the same day or the next. We answer 24 hours a day, seven days a week. If water is running into your house, say so when you call and we will move you up. That is an [emergency roof repair](/services/emergency-roof-repair).
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 

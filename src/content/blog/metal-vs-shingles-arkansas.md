@@ -84,7 +84,7 @@ Get a free inspection first. We climb your roof, take photos, and show you what 
 
 Sometimes the answer is neither. If your roof has ten good years left, we tell you that. A [roof repair](/services/roof-repair) may be all you need.
 
-Read more about [shingle roofing](/services/shingle-roofing) and [metal roofing](/services/metal-roofing), or see how we work across [Hot Springs](/service-areas/hot-springs).
+Read more about [shingle roofing](/services/shingle-roofing) and [metal roofing](/services/metal-roofing), or see how your [Hot Springs roofers](/) work.
 
 ## Who will do the work?
 

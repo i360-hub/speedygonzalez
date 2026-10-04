@@ -82,6 +82,6 @@ We tell you what you need and what can wait. Those are two different lists.
 
 Our own crews do the work, and we are at 207 Albert Pike Rd in Hot Springs. We are licensed in Arkansas under RR0540931024, with over 20 years here, more than 500 projects, and 20 trained people on staff. Our rating is 4.9.
 
-Compare [shingle roofing](/services/shingle-roofing) against [metal roofing](/services/metal-roofing), or see our work across [Hot Springs](/service-areas/hot-springs).
+Compare [shingle roofing](/services/shingle-roofing) against [metal roofing](/services/metal-roofing), or meet your [Hot Springs roofers](/).
 
 Want a real number on your roof? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week.

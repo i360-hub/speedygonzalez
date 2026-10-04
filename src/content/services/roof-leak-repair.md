@@ -92,7 +92,7 @@ If the roof still has life in it, we do the repair and you keep your money. See 
 
 ## How fast can you get here?
 
-Often the same day or the next. We answer around the clock, any day, at 501-359-5550. Tell us if water is coming in right now and we will move you up the list.
+Often the same day or the next. We answer around the clock, any day, at 501-359-5550. Tell us if water is coming in right now and we will move you up the list. That is an [emergency roof repair](/services/emergency-roof-repair).
 
 We serve [Hot Springs](/service-areas/hot-springs), [Hot Springs Village](/service-areas/hot-springs-village), [Benton](/service-areas/benton), [Bryant](/service-areas/bryant), and [Malvern](/service-areas/malvern).
 

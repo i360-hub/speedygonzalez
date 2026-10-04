@@ -28,6 +28,7 @@ export const SERVICE_NAMES: Record<string, string> = {
   'commercial-roofing': 'Commercial roofing',
   'roof-repair': 'Roof repair',
   'roof-leak-repair': 'Roof leak repair',
+  'emergency-roof-repair': 'Emergency roof repair',
   'storm-damage-repair': 'Storm damage repair',
   'hail-damage-repair': 'Hail damage repair',
   gutters: 'Gutter installation & repair',

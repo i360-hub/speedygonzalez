@@ -405,6 +405,14 @@ reviewsByPage['roof-replacement'] = [19151851, 2143827, 2143805].map(publishedBy
  */
 reviewsByPage['construction-remodeling'] = [2143816, 2143821, 4916741].map(publishedById);
 
+/**
+ * /services/emergency-roof-repair, same rule: three reviews already published
+ * above that describe an urgent call (a leak the day before a winter storm,
+ * fixed within three hours; same-day photos and cover after a storm; "a small
+ * emergency"). No new review is added here.
+ */
+reviewsByPage['emergency-roof-repair'] = [2938337, 2143844, 2143923].map(publishedById);
+
 export const allReviews: Review[] = Object.values(reviewsByPage)
   .flat()
   .filter((review, i, arr) => arr.findIndex((r) => r.gbpId === review.gbpId) === i);

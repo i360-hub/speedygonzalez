@@ -78,7 +78,7 @@ Clear your gutters and get a check in late winter. A roof that is already weak t
 
 Debris matters more than people think, especially under the tree cover around Lake Hamilton and Lake Ouachita. Packed valleys hold water. Clean [gutters](/services/gutters) move it away.
 
-We work throughout [Hot Springs](/service-areas/hot-springs) and Garland County. Learn more about [hail damage repair](/services/hail-damage-repair) and [roof repair](/services/roof-repair).
+We are [Hot Springs roofers](/) who work all over Garland County. Learn more about [hail damage repair](/services/hail-damage-repair) and [roof repair](/services/roof-repair).
 
 ## Who should look at your roof?
 

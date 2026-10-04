@@ -40,7 +40,7 @@ The other reason to move fast is your insurance. Claims get harder to prove as t
 
 ## What should I do right after a storm?
 
-Get everyone safe, then call 501-359-5550. Do not climb a wet or damaged roof. Take photos from the ground if it is safe. We can often tarp your roof the same day to stop water from getting into your house.
+Get everyone safe, then call 501-359-5550. Do not climb a wet or damaged roof. Take photos from the ground if it is safe. We can often tarp your roof the same day to stop water from getting into your house. If water is coming in right now, that is an [emergency roof repair](/services/emergency-roof-repair).
 
 Once the water is stopped, we do a full inspection and write up what we find.
 
