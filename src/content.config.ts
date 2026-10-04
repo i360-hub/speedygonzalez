@@ -50,6 +50,9 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('Speedy Gonzalez Roofing'),
     heroImage: z.string(),
+    // What the lead photo shows. On a post the lead photo is content, not a
+    // decorative background, so it needs real alt text.
+    heroAlt: z.string().min(1),
     tags: z.array(z.string()),
     faqs: z.array(faq).optional(),
   }),

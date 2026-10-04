@@ -5,6 +5,7 @@ description: What drives the price of a new roof in Hot Springs, AR — size, pi
 pubDate: 2026-04-09
 author: Speedy Gonzalez Roofing
 heroImage: /images/shingle-roofing
+heroAlt: "A large new home wrapped in house wrap with a freshly installed dark shingle roof and a roofer on the ridge."
 tags: [Costs, Roof Replacement]
 faqs:
   - q: How much does a new roof cost in Hot Springs, Arkansas?

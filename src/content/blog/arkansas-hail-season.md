@@ -5,6 +5,7 @@ description: Arkansas hail season runs roughly March through June. Learn what ha
 pubDate: 2026-02-26
 author: Speedy Gonzalez Roofing
 heroImage: /images/hail-damage
+heroAlt: "Close-up of an asphalt shingle with a hail bruise where the granules have been knocked off."
 tags: [Hail Damage, Storm Season]
 faqs:
   - q: When is hail season in Arkansas?

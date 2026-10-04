@@ -1,7 +1,14 @@
 User-agent: *
 Allow: /
 
-# Kill param-URL duplicates (the old site leaked ?keyword/utm variants into the index).
-Disallow: /*?
+# Cloudflare's own endpoints (email obfuscation links to /cdn-cgi/l/email-protection,
+# which 404s when fetched directly). Keep crawlers off them.
+Disallow: /cdn-cgi/
+
+# Query-string URLs are deliberately NOT disallowed. Every page carries a
+# self-referencing canonical, and Google can only read that canonical if it is
+# allowed to crawl the ?param variant. A blanket `Disallow: /*?` left
+# /?keywordutm_source=google stuck as "Indexed, though blocked by robots.txt"
+# (Search Console, Oct 2026).
 
 Sitemap: https://www.speedygonzalezroofing.com/sitemap-index.xml
