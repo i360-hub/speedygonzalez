@@ -24,9 +24,9 @@ servicesOffered:
   - construction-remodeling
 faqs:
   - q: Do I need POA approval for a new roof in Hot Springs Village?
-    a: Usually yes, if you change the color or the material. The POA reviews architectural changes in the Village, and roofs count. A like-for-like replacement is simpler than switching from shingles to metal. We are used to this step and will help you prepare what you need.
+    a: Yes. The POA's residential rules require a permit for roofing on existing homes, and its permit portal lists replacement roofing as a permit type. A like-for-like replacement is simpler than switching from shingles to metal. We are used to this step and will help you prepare what you need.
   - q: Can I put a metal roof on my Village home?
-    a: Often yes, but the POA has to approve the material and color first. Metal is a strong choice under Village tree cover because limbs and moisture do less harm to it. Ask us early, and we will walk you through the approval before we order anything.
+    a: Yes, with limits. The POA's roofing application calls for standing seam or flat-panel batten systems with concealed fasteners, in a matte or low-sheen finish. Corrugated panels and exposed fasteners are not permitted. Ask us early, and we will walk you through the permit before we order anything.
   - q: Why do Village roofs collect so much debris?
     a: Tree cover. The Village kept its woods, so pines and oaks hang over most homes. Needles and leaves pack into valleys and gutters, hold water, and rot the roof from the top down. Village roofs need cleaning and checking more often than roofs on open ground.
   - q: Do you work for people who are away part of the year?
@@ -45,16 +45,16 @@ We know the drill at the gates. We know the roads wind. Our crews plan for it.
 
 ## Do I need POA approval to replace my roof?
 
-Usually yes. The POA reviews architectural changes in the Village, and your roof is one of them. If you change the color or the material, expect to get approval first.
+Yes. The POA's residential rules require [a permit for roofing on existing homes](/blog/hot-springs-village-roof-replacement-rules), and its Architectural Control Committee reviews each one. The rules call for earth-tone colors. If you change the color or the material, expect more questions.
 
 We are used to this. We can tell you what the POA will want to see and help you get your paperwork together before we order material.
 
 | What you want to do | POA approval | How hard is it |
 | --- | --- | --- |
-| Same shingle, same color | Usually simple | Easy |
-| New shingle color | Approval needed | Straightforward |
-| Shingles to metal | Approval needed | Plan ahead |
-| Emergency leak repair | Fix first, ask after | We tarp same day |
+| Same shingle, same color | Permit needed | Simple |
+| New shingle color | Permit needed | Straightforward |
+| Shingles to metal | Permit needed, ask early | Plan ahead |
+| Emergency leak | Tarp first, then the permit | We can often tarp same day |
 
 Always confirm current rules with the POA. They set the standard, not us.
 

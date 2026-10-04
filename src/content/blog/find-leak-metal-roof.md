@@ -1,15 +1,16 @@
 ---
 title: How to Find a Leak in a Metal Roof
-metaTitle: How to Find a Leak in a Metal Roof | Speedy
+metaTitle: How to Find a Leak in a Metal Roof | Hot Springs, AR
 description: Metal roof leaking? Check the screws, seams, and flashing first. A step-by-step guide from Hot Springs roofers. Free inspection. Call 501-359-5550.
 pubDate: 2026-01-22
+updatedDate: 2026-10-04
 author: Speedy Gonzalez Roofing
 heroImage: /images/roof-repair
 heroAlt: "A Speedy Gonzalez Roofing crew working at a two-story white house, with ladders set up and a company banner on the porch."
 tags: [Roof Repair, Metal Roofing]
 faqs:
   - q: Where do metal roofs leak most often?
-    a: Metal roofs leak at the fasteners first. The rubber washer under each screw dries out and cracks over 15 to 20 years, and water follows the screw down. After that, check the seams, the flashing around chimneys and vents, and the valleys. The flat panels almost never leak.
+    a: Metal roofs leak at the fasteners first. We see the rubber washer under each screw dry out and crack over 15 to 20 years, and water follows the screw down. After that, check the seams, the flashing around chimneys and vents, and the valleys. The flat panels almost never leak.
   - q: Can I find a metal roof leak myself?
     a: You can often find it from inside the attic, and that is the safest place to look. Go up on a bright day and hunt for daylight, wet wood, or rust trails. Stay off the roof itself. Wet metal is slick, and a fall is worse than a leak.
   - q: Why is the water stain far from the actual leak?
@@ -20,7 +21,7 @@ faqs:
 
 ## Where do metal roofs leak first?
 
-Metal roofs leak at the screws first, not the panels. The rubber washer under each fastener dries out and cracks after 15 to 20 years of Arkansas sun. Water then follows the screw straight down. Seams, flashing, and valleys come next. Flat panel is almost never the problem.
+Metal roofs leak at the screws first, not the panels. In our experience, the rubber washer under each fastener dries out and cracks after 15 to 20 years of Arkansas sun. Water then follows the screw straight down. Seams, flashing, and valleys come next. Flat panel is almost never the problem.
 
 Here is where to look, in order.
 
@@ -71,6 +72,8 @@ Two more things to skip:
 - **Do not tighten every screw hard.** Overtightening crushes the washer and makes a new leak.
 - **Do not ignore a small drip.** Wet decking rots quietly for months.
 
+If water is coming in right now, start with [what to do in the first hour of a roof leak](/blog/roof-leaking-what-to-do).
+
 ## When should you call a roofer?
 
 Call when you cannot find it, when it is on a steep pitch, or when the drip keeps coming back. Those three point to flashing or seam work, and that is hand work. It is also the point where guessing starts costing more than a repair.
@@ -78,6 +81,8 @@ Call when you cannot find it, when it is on a steep pitch, or when the drip keep
 We inspect for free. We photograph what we find and show you the picture, so you can see your roof without standing on it.
 
 Learn more about [roof leak repair](/services/roof-leak-repair) and [metal roofing](/services/metal-roofing), or see what else your [Hot Springs roofers](/) do.
+
+For the long view, read [how long a metal roof lasts and what fails first](/blog/how-long-does-a-metal-roof-last).
 
 ## Who fixes it?
 

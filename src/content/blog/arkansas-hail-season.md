@@ -3,13 +3,14 @@ title: "Arkansas Hail Season: What Hot Springs Homeowners Should Know"
 metaTitle: Arkansas Hail Season | Hot Springs Roofing Guide
 description: Arkansas hail season runs roughly March through June. Learn what hail does to your roof, how to spot damage, and what to do next. Call 501-359-5550.
 pubDate: 2026-02-26
+updatedDate: 2026-10-04
 author: Speedy Gonzalez Roofing
 heroImage: /images/hail-damage
 heroAlt: "Close-up of an asphalt shingle with a hail bruise where the granules have been knocked off."
 tags: [Hail Damage, Storm Season]
 faqs:
   - q: When is hail season in Arkansas?
-    a: Hail season in Arkansas runs roughly March through June. Spring is when warm gulf air meets cold air aloft, and that mix builds the tall storms that make hail. Garland County sees the same pattern most years. April and May are usually the busiest weeks for us.
+    a: Hail season in Arkansas runs roughly March through June. Spring is when warm gulf air meets cold air aloft, and that mix builds the tall storms that make hail. In federal storm records, about seven in ten reports of large hail in Garland County fall in those four months, and April is the peak.
   - q: How does hail damage a shingle roof?
     a: Hail knocks the granules off your shingles. Those granules are the shield that protects the asphalt from sunlight. Once they are gone, the exposed shingle dries out, cracks, and fails years early. The bruise often looks minor from the ground while the damage underneath is real.
   - q: Can I see hail damage from the ground?
@@ -20,14 +21,14 @@ faqs:
 
 ## When is hail season in Arkansas?
 
-Arkansas hail season runs roughly March through June. Spring is when warm, wet gulf air slides in under cold air high above. That clash builds tall storms, and tall storms make hail. Garland County sits near the edge of hail alley, so we see this pattern most years.
+Arkansas hail season runs roughly March through June. Spring is when warm, wet gulf air slides in under cold air high above. That clash builds tall storms, and tall storms make hail. In federal storm records from 1955 through 2025, about seven in ten reports of hail an inch or larger in Garland County fall in those four months.
 
 Here is the rough shape of a typical year.
 
 | Time of year | Hail risk | What to do |
 | --- | --- | --- |
-| March–April | Rising | Clear gutters, book a check |
-| May–June | Highest | Inspect after each storm |
+| March–April | Highest | Clear gutters early, inspect after each storm |
+| May–June | High | Inspect after each storm |
 | July–September | Low | Fix what spring found |
 | October–February | Low | Plan next year's work |
 
@@ -39,13 +40,17 @@ That delay is what fools people. Your roof looks fine, so you move on.
 
 Then two summers of Arkansas heat cook the bare spots. Now you have a leak, and the storm that caused it is long past.
 
-Metal reacts differently. Hail dents a panel, but a dent rarely leaks. Read about [metal roofing](/services/metal-roofing) if you want a roof that ignores this.
+Metal reacts differently. Hail dents a panel, but a dent rarely leaks. Read about [metal roofing](/services/metal-roofing) if you want a roof that handles hail differently.
+
+Big hail does happen here. On June 14, 2023, the National Weather Service reported hail up to softball size on the south side of Hot Springs, including around Lake Hamilton.
 
 Size matters more than the number of stones. Pea-sized hail on a healthy roof usually does nothing. Golf ball hail bruises shingles across a whole slope in one pass. Wind direction matters too, because a slope facing the storm takes far more than the sheltered side.
 
 ## How do you spot hail damage from the ground?
 
 Look at your gutters and your soft metal. Piles of granules in the gutters mean your shingles took a beating. Dents in vents, downspouts, and flashing tell you the hail was big enough to matter. You cannot judge the shingles themselves from below.
+
+Our guide on [what hail damage looks like](/blog/what-hail-damage-looks-like) shows the difference between a hail bruise and normal wear.
 
 Check these spots after a storm:
 
@@ -60,9 +65,9 @@ Get the roof inspected within a few days. Take photos of anything you can see sa
 
 Stay off the roof even if you feel fine on a ladder. Storm debris and loose granules make a roof slick.
 
-Be careful who you let up there. Big storms pull in crews from out of state who knock doors for a week and leave. Ask any roofer for their Arkansas license number and a local address before they touch your house.
+Be careful who you let up there. Big storms pull in crews from out of state who knock doors for a week and leave. Ask any roofer for their Arkansas license number and a local address before they touch your house. You can [check a roofer's license](/blog/check-roofer-license-arkansas) on the state's website in two minutes.
 
-If water is already coming in, we tarp same day. See [storm damage repair](/services/storm-damage-repair) and [roof leak repair](/services/roof-leak-repair).
+If water is already coming in, call us. We can often tarp a roof the same day. See [emergency roof repair](/services/emergency-roof-repair), [storm damage repair](/services/storm-damage-repair), and [roof leak repair](/services/roof-leak-repair).
 
 ## Should you file an insurance claim?
 
@@ -85,3 +90,8 @@ We are [Hot Springs roofers](/) who work all over Garland County. Learn more abo
 Our own crews. We are at 207 Albert Pike Rd in Hot Springs, licensed in Arkansas under RR0540931024. Over 20 years here, more than 500 projects, and 20 trained people on staff. We have handled hundreds of storm claims across Garland County.
 
 Storm season coming or already through? [Contact us](/contact) or call 501-359-5550 for a free inspection and estimate. We answer 24 hours a day, seven days a week.
+
+## Where these numbers come from
+
+- [NOAA Storm Prediction Center hail reports, 1955 to 2025](https://www.spc.noaa.gov/wcm/)
+- [National Weather Service Little Rock: June 2023 storm summary](https://www.weather.gov/lzk/jun2023yr.htm)
