@@ -5,6 +5,7 @@ description: Metal or shingles for your Hot Springs home? Compare cost, lifespan
 pubDate: 2026-03-18
 author: Speedy Gonzalez Roofing
 heroImage: /images/metal-roofing
+heroAlt: "A blue two-story home with a stone lower level and a light-colored metal roof, seen from the front yard."
 tags: [Metal Roofing, Buying Guide]
 faqs:
   - q: Is a metal roof worth the extra money in Arkansas?

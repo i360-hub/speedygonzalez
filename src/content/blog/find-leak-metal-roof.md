@@ -5,6 +5,7 @@ description: Metal roof leaking? Check the screws, seams, and flashing first. A 
 pubDate: 2026-01-22
 author: Speedy Gonzalez Roofing
 heroImage: /images/roof-repair
+heroAlt: "A Speedy Gonzalez Roofing crew working at a two-story white house, with ladders set up and a company banner on the porch."
 tags: [Roof Repair, Metal Roofing]
 faqs:
   - q: Where do metal roofs leak most often?

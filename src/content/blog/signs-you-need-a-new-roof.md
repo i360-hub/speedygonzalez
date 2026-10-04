@@ -5,6 +5,7 @@ description: Curling shingles, granules in the gutter, a sagging line. Seven sig
 pubDate: 2026-05-14
 author: Speedy Gonzalez Roofing
 heroImage: /images/roof-inspection
+heroAlt: "A chalk circle marking a damaged spot on brown asphalt shingles during a roof inspection."
 tags: [Roof Replacement, Maintenance]
 faqs:
   - q: How do I know if I need a new roof or just a repair?
