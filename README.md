@@ -26,6 +26,25 @@ The schemas enforce the 60-char title / 155-char description limits at build tim
 - `src/content/areas/*.md` → `/service-areas/<slug>`
 - `src/content/blog/*.md` → `/blog/<slug>`
 
+### Scheduling blog posts
+
+A post goes live on its `pubDate`. Until then it has no page, no sitemap entry,
+no RSS item, and no link from a service page. Nothing needs to be pushed on the
+day: CI rebuilds every morning and deploys only when a new post is due.
+
+- **Schedule a post:** give it a future `pubDate`.
+- **Hold a post:** add `draft: true`. It stays hidden whatever its date.
+- **Linking ahead:** a link to a scheduled post is fine. Until the target is
+  live, a one-sentence paragraph that only links to it is left out, and any
+  other link to it shows as plain text (`scripts/unlink-unpublished.mjs`).
+- **Check scheduled posts now:** `npm run gates:scheduled` builds the site as
+  of a far-future date, drafts included, and runs the gates on it. CI does this
+  on every push and PR, so a post cannot fail on its publish morning.
+- **Preview a date:** `PUBLISH_AS_OF=2027-01-10 npm run build`.
+
+Every list of posts must come from `getPublishedPosts()` in `src/lib/posts.ts`,
+never `getCollection('blog')` directly.
+
 Adding a service or city page means adding one markdown file. It automatically
 appears in the hub, the footer, the sitemap, and the 404 page, and gets its own
 `Service`/`RoofingContractor` + `FAQPage` + `BreadcrumbList` JSON-LD.

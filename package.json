@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/unlink-unpublished.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "readability": "node scripts/readability.js",
@@ -17,7 +17,8 @@
     "check:nap": "node scripts/check-nap.js",
     "check:reviews": "node scripts/check-reviews.js",
     "gates": "npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:nap && npm run check:reviews && npm run check:overflow && npm run check:spacing",
-    "check:spacing": "node scripts/check-spacing.js"
+    "check:spacing": "node scripts/check-spacing.js",
+    "gates:scheduled": "PUBLISH_AS_OF=2099-01-01 INCLUDE_DRAFTS=1 npm run build && npm run readability && npm run validate:schema && npm run validate:html && npm run linkcheck && npm run check:claims && npm run check:nap && npm run check:overflow && npm run check:spacing"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

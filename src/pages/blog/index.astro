@@ -1,12 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../lib/posts';
 import Base from '../../layouts/Base.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { srcset, fallback } from '../../data/images';
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
-);
+const posts = await getPublishedPosts();
 
 const [featured, ...rest] = posts;
 

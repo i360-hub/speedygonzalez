@@ -1,8 +1,9 @@
 ---
-title: 7 Signs You Need a New Roof
-metaTitle: 7 Signs You Need a New Roof | Speedy Gonzalez
+title: 7 Signs You Need a New Roof in Hot Springs
+metaTitle: 7 Signs You Need a New Roof in Hot Springs | Speedy
 description: Curling shingles, granules in the gutter, a sagging line. Seven signs your Hot Springs roof is done. Free inspection and estimate. Call 501-359-5550.
 pubDate: 2026-05-14
+updatedDate: 2026-10-04
 author: Speedy Gonzalez Roofing
 heroImage: /images/roof-inspection
 heroAlt: "A chalk circle marking a damaged spot on brown asphalt shingles during a roof inspection."
@@ -60,7 +61,7 @@ Stand across the street and sight along the ridge. It should be straight.
 
 If it is not, call somebody. Do not go up there yourself.
 
-Missing shingles are the sign people worry about most. Honestly, they matter least. A few blown off in a storm is a repair. It only means a new roof when they keep going missing, because that tells you the shingles are too brittle to hold a nail.
+Missing shingles are the sign people worry about most. Honestly, they matter least. A few blown off in a storm is a repair. It only means a new roof when they keep going missing, because that tells you the shingles are too brittle to hold a nail. You may have read about a [25% rule](/blog/25-percent-rule-roofing-arkansas) that forces a full replacement. That rule is Florida's, not Arkansas's.
 
 ## What about stains and daylight?
 
@@ -73,6 +74,8 @@ See [roof leak repair](/services/roof-leak-repair) and [storm damage repair](/se
 ## How old is too old?
 
 Most shingle roofs here last 15 to 25 years. Past 20, watch it closely. Metal runs 40 to 70 years, so age alone rarely condemns a metal roof. If you do not know how old your roof is, that is reason enough to have someone look.
+
+Our guide on [how long a roof lasts in Arkansas](/blog/how-long-does-a-roof-last-arkansas) explains what moves the number.
 
 Tree cover matters too. Homes under the pines near Lake Hamilton and the Ouachita Mountains collect debris, hold moisture, and wear out faster than roofs in the open.
 

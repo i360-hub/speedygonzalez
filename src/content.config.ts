@@ -55,6 +55,9 @@ const blog = defineCollection({
     heroAlt: z.string().min(1),
     tags: z.array(z.string()),
     faqs: z.array(faq).optional(),
+    // Hides a post everywhere regardless of pubDate. A post with a future
+    // pubDate is hidden on its own until that date (see src/lib/posts.ts).
+    draft: z.boolean().default(false),
   }),
 });
 

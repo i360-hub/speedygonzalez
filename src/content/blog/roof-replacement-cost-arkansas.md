@@ -3,6 +3,7 @@ title: What Does a New Roof Cost in Hot Springs, Arkansas?
 metaTitle: New Roof Cost in Hot Springs, AR | Speedy Gonzalez
 description: What drives the price of a new roof in Hot Springs, AR — size, pitch, shape, and decking. Free inspection and a written number. Call 501-359-5550.
 pubDate: 2026-04-09
+updatedDate: 2026-10-04
 author: Speedy Gonzalez Roofing
 heroImage: /images/shingle-roofing
 heroAlt: "A large new home wrapped in house wrap with a freshly installed dark shingle roof and a roofer on the ridge."
@@ -31,6 +32,8 @@ Your material is the first fork in the road.
 
 Shingles cost less to put on. Metal costs more up front and lasts two to three times as long. Neither is the right answer for everyone.
 
+For metal, see [what drives the cost of a metal roof](/blog/metal-roof-cost-arkansas).
+
 You get a real number in writing after a free inspection.
 
 ## What makes one roof cost more than another?
@@ -58,6 +61,8 @@ Repair if the roof is sound and the problem is small. Replace if the roof is nea
 
 We will tell you which one you need. If your roof has good years left, we say so.
 
+Our guide on [how long a roof lasts in Arkansas](/blog/how-long-does-a-roof-last-arkansas) gives the ranges.
+
 Age is the quickest test. Take the age of your roof and compare it to the life of the material. A shingle roof at year eight is worth repairing. The same roof at year 22 is not.
 
 Read more about [roof repair](/services/roof-repair) and [roof leak repair](/services/roof-leak-repair).
@@ -69,6 +74,8 @@ Insurance may cover a roof damaged by hail or wind. It will not cover a roof tha
 Arkansas hail season runs roughly March through June, so storm claims are common in Garland County.
 
 We inspect for free, document damage with photos, and meet your adjuster on the roof. See [hail damage repair](/services/hail-damage-repair) and [storm damage repair](/services/storm-damage-repair).
+
+To see how a new roof can change what you pay for insurance, read [does a new roof lower your home insurance in Arkansas](/blog/new-roof-home-insurance-arkansas).
 
 ## What else might you need?
 

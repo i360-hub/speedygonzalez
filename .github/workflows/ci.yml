@@ -4,6 +4,13 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+  # Daily rebuild so blog posts scheduled by pubDate go live on their date
+  # without anyone pushing (see src/lib/posts.ts). 10:23 UTC is early morning
+  # Central. On a day with nothing new to publish the run stops after the build:
+  # no gates, no Lighthouse, no deploy.
+  schedule:
+    - cron: "23 10 * * *"
 
 jobs:
   build-and-gate:
@@ -24,38 +31,73 @@ jobs:
       - name: Install
         run: npm ci
 
-      # The overflow gate drives a real headless browser.
+
+      # The overflow and spacing gates drive a real headless browser.
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+
+      # Scheduled blog posts are not in the real build until their date, so gate
+      # them now: build the site as of a far-future date with drafts included
+      # and run the content gates on that. A post that would fail on its publish
+      # morning fails here, in the PR that adds it. Skipped on the daily run.
+      - name: Gate scheduled posts
+        if: github.event_name != 'schedule'
+        run: npm run gates:scheduled
 
       # Gate 1 — spec §11.1: the build itself must be clean.
       # Content-collection zod schemas enforce the 60/155 char meta limits here.
       - name: Build
         run: npm run build
 
+      # Scheduled runs only continue when the build has URLs the live site does
+      # not have yet (a post whose pubDate has arrived). Pushes, PRs and manual
+      # runs always continue. If the live sitemap cannot be read, continue.
+      - name: Anything new to publish?
+        id: changes
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          grep -o '<loc>[^<]*</loc>' dist/sitemap-0.xml | sort > /tmp/built
+          if ! curl -sf "https://www.speedygonzalezroofing.com/sitemap-0.xml?cb=$(date +%s)" -o /tmp/live.xml; then
+            echo "Could not read the live sitemap; continuing to be safe."
+            echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          grep -o '<loc>[^<]*</loc>' /tmp/live.xml | sort > /tmp/live
+          if diff -q /tmp/built /tmp/live >/dev/null; then
+            echo "No new URLs today. Nothing to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            diff /tmp/live /tmp/built || true
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # Gates 2-6 — spec §11.3, §11.4, §11.5, §11.6, plus §9 (no layout shift).
       # Readability (FK grade <= 8), JSON-LD validity, internal links +
       # zero orphan 404s across all 84 legacy URLs, single-H1/title/canonical,
       # and no horizontal scroll at 375px.
       - name: Content + SEO gates
+        if: steps.changes.outputs.changed == 'true'
         run: npm run gates
 
       # Gate 6 — spec §11.2 / §0 thresholds:
       # perf >= 95, seo = 100, a11y >= 95, best-practices >= 95,
       # LCP < 2.0s, CLS < 0.05, TBT < 200ms. Mobile, throttled, 3 runs each.
       - name: Lighthouse CI
+        if: steps.changes.outputs.changed == 'true'
         run: npx lhci autorun --config=lighthouserc.json
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      # Deploy to Cloudflare Pages — ONLY on a real push to main, and ONLY after
+      # Deploy to Cloudflare Pages — ONLY from main (a push, the daily scheduled
+      # run when a post's date has arrived, or a manual run), and ONLY after
       # every gate above passed (same job = sequential; any earlier failure aborts
       # the run before we get here). This is what makes deploy gated: a red build
       # never ships. PRs run the gates but never deploy. Publishes the `dist/`
       # already built above via a direct upload (this project is NOT git-connected
       # on Cloudflare's side — CI is the automation).
       - name: Deploy to Cloudflare Pages (production)
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && env.CF_API_TOKEN != '' }}
+        if: ${{ steps.changes.outputs.changed == 'true' && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && env.CF_API_TOKEN != '' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -68,7 +110,7 @@ jobs:
       # (served at /<key>.txt), so no secret needed. Best-effort — a failure here
       # must not fail the run.
       - name: Notify IndexNow
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && env.CF_API_TOKEN != '' }}
+        if: ${{ steps.changes.outputs.changed == 'true' && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && env.CF_API_TOKEN != '' }}
         continue-on-error: true
         run: |
           python3 - <<'PY'

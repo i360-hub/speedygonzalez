@@ -11,24 +11,41 @@ import InlinePhoto from '../../components/InlinePhoto.astro';
 import BeforeAfter from '../../components/BeforeAfter.astro';
 import { faqSchema, serviceSchema } from '../../data/schema';
 import { slugToCity } from '../../data/areas';
+import { getPublishedPosts } from '../../lib/posts';
 
 /**
  * Blog guides that answer the questions people ask before buying each service.
  * The posts already link to their service page; this is the link back, so the
  * guides are reachable from the pages that rank. Only real topical matches.
+ * A slug listed here shows up only once that post is published (pubDate reached
+ * and not a draft), so scheduled posts can be listed ahead of time.
  */
 const relatedGuides: Record<string, string[]> = {
-  'metal-roofing': ['metal-vs-shingles-arkansas', 'find-leak-metal-roof'],
+  'metal-roofing': [
+    'metal-vs-shingles-arkansas',
+    'find-leak-metal-roof',
+    'how-long-does-a-metal-roof-last',
+    'metal-roof-over-shingles',
+    'metal-roof-cost-arkansas',
+  ],
   'shingle-roofing': [
     'metal-vs-shingles-arkansas',
     'signs-you-need-a-new-roof',
     'roof-replacement-cost-arkansas',
+    'architectural-vs-3-tab-shingles',
   ],
-  'roof-replacement': ['roof-replacement-cost-arkansas', 'signs-you-need-a-new-roof'],
-  'roof-repair': ['signs-you-need-a-new-roof'],
-  'roof-leak-repair': ['find-leak-metal-roof'],
-  'hail-damage-repair': ['arkansas-hail-season'],
-  'storm-damage-repair': ['arkansas-hail-season'],
+  'roof-replacement': [
+    'roof-replacement-cost-arkansas',
+    'signs-you-need-a-new-roof',
+    'how-long-does-a-roof-last-arkansas',
+    'roof-permit-hot-springs',
+    'new-roof-home-insurance-arkansas',
+  ],
+  'roof-repair': ['signs-you-need-a-new-roof', '25-percent-rule-roofing-arkansas'],
+  'roof-leak-repair': ['find-leak-metal-roof', 'roof-leaking-what-to-do'],
+  'emergency-roof-repair': ['roof-leaking-what-to-do'],
+  'hail-damage-repair': ['arkansas-hail-season', 'what-hail-damage-looks-like'],
+  'storm-damage-repair': ['arkansas-hail-season', 'check-roofer-license-arkansas'],
 };
 
 /**
@@ -96,7 +113,8 @@ const { entry } = Astro.props;
 const d = entry.data;
 
 const guideSlugs = relatedGuides[entry.id] ?? [];
-const allPosts = await getCollection('blog');
+// Published posts only: a scheduled guide appears here on its publish date.
+const allPosts = await getPublishedPosts();
 const guides = guideSlugs
   .map((slug) => allPosts.find((post) => post.id === slug))
   .filter((post) => post !== undefined);
