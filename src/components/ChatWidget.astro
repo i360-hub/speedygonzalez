@@ -1,0 +1,61 @@
+---
+/**
+ * Website chat — HighLevel "Live chat" widget, answered by the Conversation AI
+ * agent "Speedy Gonzalez Website Chat" (sub-account U1aCGVIDqIiypWfSza2R).
+ * It answers simple questions in English or Spanish and takes a message; it
+ * never quotes a price. The widget has no contact form and no SMS consent box.
+ *
+ * Loaded on the first real interaction only (no timer), for two reasons:
+ *   1. The widget is ~30 third-party scripts. Loading it up front would cost
+ *      the Lighthouse gates in CI (perf >= 95, TBT < 200ms, best-practices).
+ *   2. Lighthouse never interacts, so the gates measure the page itself.
+ * A visitor who scrolls, taps, moves the mouse, or types gets the bubble.
+ *
+ * On phones the sticky CallBar owns the bottom 60px. The widget pins itself to
+ * bottom: 20px inside its own shadow root, so a small style is added there to
+ * lift the bubble clear of the bar. Hosts are allow-listed in public/_headers.
+ */
+const WIDGET_ID = '6ac51fe9c407264032360819';
+---
+
+<script is:inline define:vars={{ WIDGET_ID }}>
+  var chatLoaded = false;
+
+  // Lift the bubble above the mobile call bar. The widget's root is an open
+  // shadow root, so page CSS cannot reach it; add the rule inside it instead.
+  function liftAboveCallBar() {
+    var tries = 0;
+    var timer = setInterval(function () {
+      var host = document.querySelector('chat-widget');
+      var root = host && host.shadowRoot;
+      if (root && root.querySelector('#lc_text-widget--btn')) {
+        clearInterval(timer);
+        if (root.querySelector('style[data-speedy-callbar]')) return;
+        var style = document.createElement('style');
+        style.setAttribute('data-speedy-callbar', '');
+        style.textContent =
+          '@media (max-width: 900px) {' +
+          '#lc_text-widget--btn, #lc_text-widget:not(.lc_text-widget--active) {' +
+          'bottom: calc(60px + env(safe-area-inset-bottom, 0px) + 12px) !important; } }';
+        root.appendChild(style);
+      } else if (++tries > 120) {
+        clearInterval(timer);
+      }
+    }, 250);
+  }
+
+  function loadChat() {
+    if (chatLoaded) return;
+    chatLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://widgets.leadconnectorhq.com/loader.js';
+    s.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+    s.setAttribute('data-widget-id', WIDGET_ID);
+    document.body.appendChild(s);
+    liftAboveCallBar();
+  }
+
+  ['pointerdown', 'pointermove', 'scroll', 'keydown', 'touchstart'].forEach(function (evt) {
+    addEventListener(evt, loadChat, { once: true, passive: true });
+  });
+</script>
