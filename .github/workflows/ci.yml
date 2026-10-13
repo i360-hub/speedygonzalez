@@ -6,11 +6,15 @@ on:
   pull_request:
   workflow_dispatch:
   # Daily rebuild so blog posts scheduled by pubDate go live on their date
-  # without anyone pushing (see src/lib/posts.ts). 10:23 UTC is early morning
-  # Central. On a day with nothing new to publish the run stops after the build:
-  # no gates, no Lighthouse, no deploy.
+  # without anyone pushing (see src/lib/posts.ts). GitHub starts scheduled runs
+  # late, often by 5 to 9 hours (October 2026: a 10:23 UTC schedule started
+  # between 15:50 and 19:50 UTC). So there are two tries: 05:07 UTC (midnight
+  # Central) and 12:37 UTC. pubDate is midnight UTC, so the first try can
+  # already publish. A run with nothing new stops after the build: no gates,
+  # no Lighthouse, no deploy. The second try is a no-op once the first deployed.
   schedule:
-    - cron: "23 10 * * *"
+    - cron: "7 5 * * *"
+    - cron: "37 12 * * *"
 
 jobs:
   build-and-gate:
