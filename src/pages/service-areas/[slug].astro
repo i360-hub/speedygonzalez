@@ -6,6 +6,8 @@ import Prose from '../../components/Prose.astro';
 import Faq from '../../components/Faq.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import ReviewStrip from '../../components/ReviewStrip.astro';
+import AreaJobs from '../../components/AreaJobs.astro';
+import { regionalReviewPages } from '../../data/reviews';
 import { faqSchema, localAreaSchema } from '../../data/schema';
 import { slugToService } from '../../data/areas';
 import { business, telHref } from '../../data/business';
@@ -59,6 +61,8 @@ const localPhone = business.phones.primary;
         <Content />
       </Prose>
 
+      {d.jobs?.length ? <AreaJobs ids={d.jobs} city={d.city} intro={d.jobsIntro} /> : null}
+
       <Faq faqs={d.faqs} heading={`${d.city} roofing questions`} />
     </article>
 
@@ -109,7 +113,11 @@ const localPhone = business.phones.primary;
     </aside>
   </div>
 
-  <ReviewStrip slug={entry.id} heading={`What ${d.city} customers said`} alt />
+  <ReviewStrip
+    slug={entry.id}
+    heading={regionalReviewPages.has(entry.id) ? 'What Hot Springs-area customers said' : `What ${d.city} customers said`}
+    alt
+  />
 
   <CtaBand heading={`Need a roofer in ${d.city}?`} />
 </Base>

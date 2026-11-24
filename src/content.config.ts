@@ -37,6 +37,11 @@ const areas = defineCollection({
     faqs: z.array(faq).min(3),
     heroImage: z.string(),
     order: z.number().default(0),
+    // Job story ids from src/data/jobs.ts shown on the page (AreaJobs.astro).
+    jobs: z.array(z.string()).optional(),
+    // Required in spirit whenever none of `jobs` happened in this city: it says
+    // so plainly, and the block heading stops naming the city.
+    jobsIntro: z.string().optional(),
   }),
 });
 

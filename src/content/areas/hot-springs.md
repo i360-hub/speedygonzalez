@@ -38,6 +38,7 @@ faqs:
     a: Yes. Inspections and estimates are free anywhere in Garland County. We photograph what we find and walk you through it. If your roof is fine, we tell you it is fine and you owe us nothing.
 heroImage: /images/hot-springs-roofing-hero
 order: 1
+jobs: ['pre-closing-replacement', '23-squares-one-day', 'lake-house-hail-2023']
 ---
 
 ## Do you serve all of Hot Springs?

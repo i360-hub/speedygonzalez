@@ -1,0 +1,122 @@
+---
+/**
+ * "Jobs from around here" on a city page. Pulls real job stories by id from
+ * src/data/jobs.ts (one source, shared with /jobs), each anchored to a real
+ * 5-star Google review, and links to the full story on /jobs.
+ *
+ * Why this exists: city pages that are all template copy read like the
+ * programmatic lead-gen pages that crowd local roofing results. Real jobs with
+ * real reviews are proof those pages cannot fake.
+ *
+ * HONESTY: every card shows where the job actually happened (`story.where`).
+ * When a city has no job of its own yet, the page passes `intro` to say so
+ * plainly, and the heading names Hot Springs, not the city. Never relabel a
+ * job to a town it did not happen in.
+ */
+import { jobById } from '../data/jobs';
+import { allReviews } from '../data/reviews';
+import { inlineSrc, inlineSet, photoByName } from '../data/photos';
+
+export interface Props {
+  ids: string[];
+  city: string;
+  /** Set when none of the jobs are in this city. Shown above the cards. */
+  intro?: string;
+}
+
+const { ids, city, intro } = Astro.props;
+const stories = ids.map(jobById);
+const local = !intro;
+const heading = local ? `What jobs have you done in ${city}?` : 'What jobs have you done near here?';
+
+const reviewer = (gbpId: number) => {
+  const r = allReviews.find((x) => x.gbpId === gbpId);
+  if (!r) throw new Error(`AreaJobs: no published review ${gbpId}`);
+  return r;
+};
+---
+
+<section class="area-jobs" aria-labelledby="area-jobs-h">
+  <h2 id="area-jobs-h">{heading}</h2>
+  {intro ? <p>{intro}</p> : <p>Here are real jobs from {city}. Each one has a real Google review from the customer.</p>}
+
+  <div class="cards">
+    {
+      stories.map((story) => {
+        const photo = photoByName(story.photo)!;
+        const r = reviewer(story.gbpId);
+        return (
+          <article class="card job">
+            <picture>
+              <source type="image/avif" srcset={inlineSet(story.photo, 'avif')} sizes="(min-width: 900px) 280px, 100vw" />
+              <source type="image/webp" srcset={inlineSet(story.photo, 'webp')} sizes="(min-width: 900px) 280px, 100vw" />
+              <img
+                src={inlineSrc(story.photo, 'jpg')}
+                srcset={inlineSet(story.photo, 'jpg')}
+                sizes="(min-width: 900px) 280px, 100vw"
+                alt={photo.alt}
+                width="800"
+                height="600"
+                loading="lazy"
+              />
+            </picture>
+            <p class="where">{story.where}</p>
+            <h3>{story.headline}</h3>
+            <p>{story.body[0]}</p>
+            <p class="by">
+              <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              Google review by {r.name}
+            </p>
+            <a href={`/jobs#${story.id}`}>Read the full story</a>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .area-jobs {
+    margin-top: var(--space-xl);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .job img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-sm);
+  }
+
+  .where {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--red-700);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .job h3 {
+    margin-top: 0;
+    font-size: var(--step-1);
+  }
+
+  .by {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--charcoal-700);
+  }
+
+  .stars {
+    color: var(--star);
+    margin-right: 0.3rem;
+  }
+</style>
