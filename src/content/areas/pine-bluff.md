@@ -35,6 +35,8 @@ faqs:
     a: Yes. We photograph the damage, document it, and meet your adjuster on the roof. We have handled hundreds of storm claims. We never pressure anyone into filing a claim on a healthy roof, and we do not guess at what your policy covers.
 heroImage: /images/storm-damage
 order: 7
+jobs: ['pre-closing-replacement', 'lake-house-hail-2023']
+jobsIntro: We have not written up a Pine Bluff job yet. These two are from the Hot Springs area. The same crews drive to Pine Bluff, about an hour and a half east.
 ---
 
 ## Do you serve Pine Bluff?

@@ -35,6 +35,7 @@ faqs:
     a: The Village is close. Our office is at 207 Albert Pike Rd in Hot Springs, and the drive to the gates takes about 30 minutes. That means real crews, not a company driving in from Little Rock or out of state.
 heroImage: /images/metal-roof-home
 order: 2
+jobs: ['ef2-tornado-hsv']
 ---
 
 ## Do you roof inside Hot Springs Village?

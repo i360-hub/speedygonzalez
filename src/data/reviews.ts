@@ -413,6 +413,33 @@ reviewsByPage['construction-remodeling'] = [2143816, 2143821, 4916741].map(publi
  */
 reviewsByPage['emergency-roof-repair'] = [2938337, 2143844, 2143923].map(publishedById);
 
+/**
+ * City pages, same rule: reviews already published above, looked up by gbpId.
+ * No new review is added here.
+ *
+ * Hot Springs: the pre-closing replacement ("Hot Springs area"), Jeffrey Erwin
+ * (location: Hot Springs, AR), and the 23-squares-in-a-day job.
+ *
+ * Bryant, Malvern, Pine Bluff: there is no review on file from these towns yet.
+ * These are Hot Springs-area customers, so those pages are listed in
+ * `regionalReviewPages` and the strip heading says "Hot Springs-area customers",
+ * never "Bryant customers". When a real review from the town comes in, add it
+ * above, swap it in here, and drop the page from `regionalReviewPages`.
+ *   Bryant (newer homes, speed): 23 squares in a day, same-day quote and next-
+ *     day reroof, a new roof in a day and a half.
+ *   Malvern (metal, shops, honest repairs): metal roof after May hail, a
+ *     difficult metal repair, "didn't try to up charge".
+ *   Pine Bluff (older homes, claims, distance): called back when others did
+ *     not, insurance knowledge, walked through the hail claim.
+ */
+reviewsByPage['hot-springs'] = [19151851, 4916741, 16801167].map(publishedById);
+reviewsByPage['bryant'] = [16801167, 17258347, 2143805].map(publishedById);
+reviewsByPage['malvern'] = [2143818, 5929479, 2143905].map(publishedById);
+reviewsByPage['pine-bluff'] = [2143904, 2143811, 2143814].map(publishedById);
+
+/** City pages whose reviews are not from that city. See the note above. */
+export const regionalReviewPages = new Set(['hot-springs', 'bryant', 'malvern', 'pine-bluff']);
+
 export const allReviews: Review[] = Object.values(reviewsByPage)
   .flat()
   .filter((review, i, arr) => arr.findIndex((r) => r.gbpId === review.gbpId) === i);

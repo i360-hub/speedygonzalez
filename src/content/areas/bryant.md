@@ -32,6 +32,8 @@ faqs:
     a: We handle emergency tarping to stop water from getting in. Call 501-359-5550 and tell us water is coming in. A tarp is not a repair, but it protects your ceilings, floors, and belongings while we get you a real fix scheduled.
 heroImage: /images/roof-repair
 order: 4
+jobs: ['23-squares-one-day', 'ef2-tornado-hsv']
+jobsIntro: We have not written up a Bryant job yet. These two are from Hot Springs and the Village. The same crews drive up I-30 to Bryant, about 35 minutes from our shop.
 ---
 
 ## How fast can you get to Bryant?

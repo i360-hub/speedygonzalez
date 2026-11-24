@@ -36,6 +36,8 @@ faqs:
     a: Yes. Hot Spring County has a lot of shops, barns, and outbuildings, and we roof them. Exposed fastener metal is usually the best value on those buildings. We also handle flat roofs with TPO when a building has a low slope.
 heroImage: /images/metal-roofing
 order: 5
+jobs: ['lake-house-hail-2023', 'pre-closing-replacement']
+jobsIntro: We have not written up a Malvern job yet. These two are from the Hot Springs area. The same crews work Malvern, about 30 minutes from our shop.
 ---
 
 ## Do you roof in Malvern and Hot Spring County?

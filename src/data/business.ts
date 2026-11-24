@@ -96,6 +96,14 @@ export const business = {
     facebook: 'https://facebook.com/SpeedyGonzalezRoofing',
     instagram: 'https://www.instagram.com/speedygonzalezroofing/',
   },
+  /**
+   * The Google Business Profile's public Maps URL, by CID. CID 8285522231007601914
+   * is the "Speedy Gonzalez Roofing" listing returned in Garland County local
+   * packs (501-359-5550, 4.9 / 152 reviews), read 2026-11-24. Linking the site
+   * entity to the GBP entity in sameAs is the strongest disambiguation signal
+   * available for a local business.
+   */
+  gbpMapsUrl: 'https://maps.google.com/?cid=8285522231007601914',
   primaryMarket: 'Hot Springs, AR',
 } as const;
 
@@ -268,10 +276,11 @@ export const businessSchema = (withRating = false) => {
         value: business.licenses.homeImprovement,
       },
     ],
-    // sameAs disambiguates the entity in Google's Knowledge Graph. The BBB
+    // sameAs disambiguates the entity in Google's Knowledge Graph. The GBP Maps
+    // URL ties this node to the Business Profile itself. The BBB
     // profile is filed under "Speedy Gonzalez Construction, Inc." — the same
     // real business (see legalNote) — so it belongs here alongside the socials.
-    sameAs: [business.social.facebook, business.social.instagram, bbb.profileUrl],
+    sameAs: [business.gbpMapsUrl, business.social.facebook, business.social.instagram, bbb.profileUrl],
   };
 
   if (withRating && rating.verified) {
