@@ -1,6 +1,6 @@
 ---
 title: Commercial Roofing
-metaTitle: Commercial Roofing Hot Springs AR | Speedy Gonzalez
+metaTitle: Commercial Roofing Hot Springs AR | TPO, Metal, Repairs
 metaDescription: Commercial roofing in Hot Springs, AR. TPO, flat, and metal roofs for shops and offices. Free inspection and written price. Call 501-359-5550.
 h1: Commercial Roofing in Hot Springs, Arkansas
 summary: We install and repair roofs on shops, offices, and small commercial buildings across Hot Springs. That covers TPO and flat roofs, metal roofs, and leak repair. We can often work around your business hours.

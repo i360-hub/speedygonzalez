@@ -1,6 +1,6 @@
 ---
 title: Roof Leak Repair
-metaTitle: Roof Leak Repair Hot Springs AR | Speedy Gonzalez
+metaTitle: Roof Leak Repair Hot Springs AR | We Find the Source
 metaDescription: Roof leak repair in Hot Springs, AR. We find the real source and stop it. Free inspection, licensed crews, open 7 days. Call 501-359-5550.
 h1: Roof Leak Repair in Hot Springs, Arkansas
 summary: We find and stop roof leaks across Hot Springs and Garland County. Water rarely enters where the stain shows, so we trace the leak to its real source and fix that instead of patching the symptom.
@@ -81,6 +81,12 @@ We work skylights into shingle and metal roofs alike.
 Often, yes. We trace where the water gets in and stop it. Then we look at drainage and attic airflow, because trapped moisture leads to mold and rot. Arkansas humidity makes a small moisture problem grow fast.
 
 Sometimes the fix is better attic vents. Sometimes it is [gutters](/services/gutters) that move water away from the house. We tell you which one it is.
+
+## Who is the best person to fix a leaking roof?
+
+A roofer is. A handyman can patch the spot where water drips, but the leak often starts somewhere else on the roof. A roofer traces the water to where it really gets in, like a cracked pipe boot or bad flashing, and fixes that. Otherwise the stain comes back with the next rain.
+
+We trace every leak before we fix it, so you pay for one repair, not three.
 
 ## What if my whole roof is worn out?
 

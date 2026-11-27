@@ -3,7 +3,7 @@ city: Malvern
 metaTitle: Roofing Contractors in Malvern, AR | Speedy Gonzalez
 metaDescription: Roofers in Malvern, AR. Metal roofs, shingles, repairs, and storm damage help for Hot Spring County. Free estimates. Call 501-359-5550.
 h1: Roofing Contractors in Malvern, Arkansas
-localIntro: Malvern sits on I-30 southeast of Hot Springs and is known as the Brick Capital of the World. We roof homes across Hot Spring County, from town out toward Lake Catherine.
+localIntro: We are roofing contractors for Malvern and all of Hot Spring County. Malvern sits on I-30 southeast of Hot Springs and is known as the Brick Capital of the World, and we roof homes from town out toward Lake Catherine.
 landmarks:
   - Downtown Malvern
   - Hot Spring County Courthouse

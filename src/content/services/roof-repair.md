@@ -1,6 +1,6 @@
 ---
 title: Roof Repair
-metaTitle: Roof Repair Hot Springs AR | Speedy Gonzalez Roofing
+metaTitle: Roof Repair Hot Springs AR | Open 24/7, Free Inspection
 metaDescription: Fast roof repair in Hot Springs, AR. Leaks, missing shingles, storm damage. Free inspection, licensed crews, open 7 days. Call 501-359-5550.
 h1: Roof Repair in Hot Springs, Arkansas
 summary: We repair roofs across Hot Springs and Garland County, from a few missing shingles to storm damage. Your inspection is free, and we tell you honestly whether a repair will hold or your roof needs replacing.
@@ -97,6 +97,12 @@ A hot, damp attic is hard on a roof from the inside. We check your vents during 
 Yes. We replace rotted decking and fascia, and we rebuild framing that a storm or a fallen limb broke. Inside, we fix sagging ceilings and water-damaged framing after a leak. One crew handles the roof and the wood under it.
 
 For bigger jobs inside the house, see [construction and remodeling](/services/construction-remodeling).
+
+## Who should I call for roof repair in Hot Springs?
+
+Call a licensed local roofer with its own crews and a shop in town. We are a licensed Arkansas roofing contractor, license number RR0540931024, and have fixed roofs around Hot Springs for over 20 years. We answer 24 hours a day, speak English and Spanish, and tell you plainly if a repair will hold.
+
+You can [check any Arkansas roofer's license](/blog/check-roofer-license-arkansas) before you hire them. We hope you do.
 
 ## How fast can you get out here?
 

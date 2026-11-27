@@ -1,9 +1,9 @@
 ---
 title: Roof Replacement
-metaTitle: Roof Replacement Hot Springs AR | Speedy Gonzalez
+metaTitle: Roof Replacement Hot Springs AR | Free Inspection
 metaDescription: Full roof replacement in Hot Springs, AR. Tear-off, new decking where needed, shingle or metal. Free inspection. Call 501-359-5550.
 h1: Roof Replacement in Hot Springs, Arkansas
-summary: We replace worn-out and storm-damaged roofs across Hot Springs and Garland County. We tear off the old roof, fix the wood underneath, and put on a new shingle or metal roof. Every job starts with a free inspection.
+summary: Roof replacement in Hot Springs and Garland County, done by our own crews. We tear off the old roof, fix the wood underneath, and install a new shingle or metal roof. Every job starts with a free inspection.
 heroImage: /images/shingle-roofing
 order: 0.5
 relatedAreas:
@@ -60,6 +60,12 @@ Here is the job, step by step:
 - **Cleanup.** We run a magnet over the grass and driveway for nails.
 
 You get a walk-through before we pull out. If something looks off to you, we fix it then.
+
+## Is a roof installation the same as a roof replacement?
+
+For most homes, yes. When people in Hot Springs look for a roof installation, they usually mean a new roof on a house that already has one. That is a roof replacement. The old roof comes off, we check the wood under it, and the new roof is installed on a clean, solid deck.
+
+Building something new from the ground up? Our construction crew builds new buildings from site prep to the roof. See [construction and remodeling](/services/construction-remodeling).
 
 ## What kind of new roof should I pick?
 

@@ -1,6 +1,6 @@
 ---
 title: Hail Damage Repair
-metaTitle: Hail Damage Roof Repair | Hot Springs, AR
+metaTitle: Hail Damage Roof Repair Hot Springs AR | Claim Help
 metaDescription: Hail damage roof repair in Hot Springs, AR. Free hail inspection, photo documentation, insurance claim support. Call 501-359-5550.
 h1: Hail Damage Roof Repair in Hot Springs, Arkansas
 summary: We inspect and repair hail-damaged roofs across Hot Springs and Garland County. Hail damage often hides from the ground, so we get on your roof, photograph every bruise, and help you file the claim.
@@ -74,6 +74,12 @@ You can replace the shingles with the same thing, step up to impact-rated shingl
 Metal is the long game. It dents, but it rarely leaks, and it lasts 40 to 70 years. Read more on our [metal roofing](/services/metal-roofing) page.
 
 For shingle options, see [shingle roofing](/services/shingle-roofing). If wind came with the hail, [storm damage repair](/services/storm-damage-repair) covers that too.
+
+## What should I look for in a hail damage roofer?
+
+Pick a hail damage roofer with an Arkansas license, a real address in town, and reviews from people near you. After a big storm, crews from out of state often come through. When a hail roof has a problem a year later, you want a roofer who is still here to fix it.
+
+You can [check a roofer's Arkansas license](/blog/check-roofer-license-arkansas) in a few minutes. Ours is RR0540931024.
 
 ## Who do you send to my house?
 

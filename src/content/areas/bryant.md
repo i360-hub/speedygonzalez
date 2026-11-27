@@ -1,9 +1,9 @@
 ---
 city: Bryant
-metaTitle: Roofing Contractors in Bryant, AR | Speedy Gonzalez
+metaTitle: Roofers in Bryant, AR | Speedy Gonzalez Roofing
 metaDescription: Roofers in Bryant, AR. Roof repair, replacement, and hail damage claims for newer Saline County homes. Free inspections. Call 501-359-5550.
-h1: Roofing Contractors in Bryant, Arkansas
-localIntro: Bryant sits on I-30 right next to Benton, and it is full of newer homes and young families. Most roofs we see here are builder-grade shingles hitting the age where hail finally ends them.
+h1: Roofers in Bryant, Arkansas
+localIntro: Our roofers work all over Bryant, which sits on I-30 right next to Benton and is full of newer homes and young families. Most roofs we see here are builder-grade shingles hitting the age where hail finally ends them.
 landmarks:
   - Downtown Bryant
   - Interstate 30 corridor

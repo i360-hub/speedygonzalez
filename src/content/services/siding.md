@@ -1,9 +1,9 @@
 ---
 title: Siding
-metaTitle: Siding Installation Hot Springs AR | Speedy Gonzalez
-metaDescription: Siding installation, repair, and replacement in Hot Springs, AR. Vinyl, fiber cement, and metal. Free estimates. Call 501-359-5550.
-h1: Siding Installation in Hot Springs, Arkansas
-summary: We install, repair, and replace siding across Hot Springs and Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
+metaTitle: Siding Contractor Hot Springs AR | Speedy Gonzalez
+metaDescription: Siding contractor in Hot Springs, AR. Siding installation, repair, and replacement in vinyl, fiber cement, and metal. Free estimates. Call 501-359-5550.
+h1: Siding Contractor in Hot Springs, Arkansas
+summary: We are a siding contractor in Hot Springs that installs, repairs, and replaces siding across Garland County. New siding seals your home against Arkansas rain and heat, cuts your energy bills, and changes how your house looks more than anything else you can do.
 heroImage: /images/hot-springs-roofing-hero
 order: 9
 relatedAreas:
@@ -78,7 +78,7 @@ If rot has started, repeated repairs cost more than replacing the wall.
 
 We do both. We fix cracked, loose, or storm-damaged siding and match the material you have where we can. A repair is the right call when the damage is in one spot and the wall behind it is sound. That seals your house against wind and rain again.
 
-If water has been getting behind the siding for a while, we check the sheathing first. We tell you straight whether a repair will hold.
+If water has been getting behind the siding for a while, we check the sheathing first. We tell you straight whether a repair will hold. See [siding repair](/services/siding-repair).
 
 ## What happens during a siding job?
 

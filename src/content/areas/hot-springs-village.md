@@ -1,9 +1,9 @@
 ---
 city: Hot Springs Village
-metaTitle: Roofing in Hot Springs Village, AR | Speedy Gonzalez
+metaTitle: Roofing Contractors in Hot Springs Village, AR | Speedy
 metaDescription: Roofing contractors in Hot Springs Village, AR. We know the POA approval process. Free inspections and estimates. Call 501-359-5550 today.
 h1: Roofing Contractors in Hot Springs Village, Arkansas
-localIntro: Hot Springs Village is one of the largest gated communities in the country, and roofs here sit under heavy tree cover. We roof throughout the Village and work with the POA architectural approval process.
+localIntro: We are roofing contractors who work throughout Hot Springs Village, one of the largest gated communities in the country. Roofs here sit under heavy tree cover, and we work with the POA architectural approval process.
 landmarks:
   - Lake DeSoto
   - Lake Cortez

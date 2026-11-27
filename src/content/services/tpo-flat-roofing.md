@@ -1,6 +1,6 @@
 ---
 title: TPO & Flat Roofing
-metaTitle: TPO Flat Roofing Hot Springs AR | Speedy Gonzalez
+metaTitle: TPO & Flat Roof Repair Hot Springs AR | Speedy
 metaDescription: TPO and flat roof installs for Hot Springs, AR homes and shops. Seamless membrane and a free inspection. Call 501-359-5550.
 h1: TPO and Flat Roofing in Hot Springs, Arkansas
 summary: We install TPO flat roofs on homes, shops, and commercial buildings across Hot Springs. TPO is a tough rubber-like membrane that seals your flat roof in one sheet and lasts 20 to 30 years.
@@ -76,6 +76,12 @@ Look for these warning signs.
 | Stains on your ceiling | Active leak, act now |
 
 If you have an active leak, our [roof leak repair](/services/roof-leak-repair) crew can find it and stop it.
+
+## Do you repair flat roofs or only replace them?
+
+We do both. Flat roof repair in Hot Springs is often the right call when one seam has opened, a spot was punctured, or a drain is clogged and water is pooling. We find the leak and fix it. When the old roof is cracked and holding water all over, a new TPO roof is usually a better fix than chasing leaks.
+
+We tell you which one you have after we look at it.
 
 ## Do you do TPO on commercial buildings?
 
