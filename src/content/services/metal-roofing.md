@@ -1,6 +1,6 @@
 ---
 title: Metal Roofing
-metaTitle: Metal Roofing Hot Springs AR | Speedy Gonzalez
+metaTitle: Metal Roofing Hot Springs AR | Homes and Shops
 metaDescription: Standing seam and metal roof installs in Hot Springs, AR. Built for Arkansas hail and heat. Free estimates. Licensed roofers. Call 501-359-5550.
 h1: Metal Roofing in Hot Springs, Arkansas
 summary: We install standing seam and exposed fastener metal roofs across Hot Springs and Garland County. A metal roof lasts 40 to 70 years and stands up to Arkansas hail better than any shingle.
@@ -77,6 +77,12 @@ Read more about [hail damage repair](/services/hail-damage-repair) and [storm da
 Most metal roofs take two to five days. Standing seam takes longer than shingles because every panel is cut and locked by hand.
 
 Weather matters. We do not install metal in the rain. If a storm rolls through mid-job, we dry the roof in and come back.
+
+## Do you put metal roofs on shops and carports?
+
+Yes. We put metal roofs on shops, carports, porches, and outbuildings, not just houses. We also wrap shops in metal siding. Metal is a good fit for these buildings because it lasts a long time, sheds water fast, and holds up to Arkansas hail.
+
+We have built a steel building with carport wings in Garland County and put a metal porch roof on a Hot Springs home. One customer had us roof a shop and wrap the whole thing in metal.
 
 ## Who installs your metal roof?
 

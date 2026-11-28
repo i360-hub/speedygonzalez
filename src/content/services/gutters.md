@@ -1,6 +1,6 @@
 ---
 title: Gutters
-metaTitle: Gutter Installation Hot Springs AR | Speedy Gonzalez
+metaTitle: Gutter Installation Hot Springs AR | Seamless Gutters
 metaDescription: Seamless gutter installation and repair in Hot Springs, AR. Protect your roof and foundation. Free estimates. Call 501-359-5550.
 h1: Gutter Installation in Hot Springs, Arkansas
 summary: We install and repair seamless gutters across Hot Springs and Garland County. Good gutters move water off your roof and away from your foundation, which stops the two most expensive problems a house can have.
@@ -76,13 +76,13 @@ If your fascia board is soft, water has been getting in for a while. That is a r
 
 Yes. We clear out leaves and debris so heavy rain drains the way it should. Clogged gutters overflow, and that water soaks your fascia and pools at your foundation. We clean gutters on homes and businesses around Hot Springs, Hot Springs Village, and Lake Hamilton.
 
-While we are up there we check for sagging runs, loose downspouts, and leaks.
+While we are up there we check for sagging runs, loose downspouts, and leaks. See [gutter cleaning](/services/gutter-cleaning) for what a cleaning includes.
 
 ## Do you repair soffit and fascia?
 
 Yes. We replace soffit and fascia boards that are rotted or storm-damaged. Those boards hold your gutters up and let air into your attic. New boards also keep pests out and give your roof line a clean edge.
 
-Soft fascia usually means a gutter has been overflowing for a while. We fix the cause along with the board.
+Soft fascia usually means a gutter has been overflowing for a while. We fix the cause along with the board. See [soffit and fascia repair](/services/soffit-fascia-repair).
 
 ## Do gutter guards work around Hot Springs?
 

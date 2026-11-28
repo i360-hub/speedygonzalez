@@ -1,6 +1,6 @@
 ---
 title: Storm Damage Repair
-metaTitle: Storm Damage Roof Repair | Hot Springs, AR
+metaTitle: Storm Damage Roof Repair Hot Springs AR | Tarps, Claims
 metaDescription: Storm damage roof repair in Hot Springs, AR. Emergency tarping, free inspection, insurance claim help. Open 7 days. Call 501-359-5550.
 h1: Storm Damage Roof Repair in Hot Springs, Arkansas
 summary: We repair storm-damaged roofs across Hot Springs and Garland County. Call us after a storm and we will tarp your roof, document the damage with photos, and meet your insurance adjuster on site.

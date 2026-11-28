@@ -49,9 +49,9 @@ Not sure where your job fits? Call 501-359-5550 and tell us what you want done.
 
 Yes. In a kitchen we update cabinets, counters, flooring, and lighting. In a bathroom we do anything from a tub-to-shower swap to a full remodel, with new tile and fixtures. One contractor runs your job from the first visit through cleanup.
 
-We talk through what you want before we price it. Then you get one written number.
+We talk through what you want before we price it. Then you get one written number. See [kitchen remodeling](/services/kitchen-remodeling) and [bathroom remodeling](/services/bathroom-remodeling).
 
-## Do you do drywall, flooring, and painting?
+## Do you do drywall installation, flooring, and painting?
 
 Yes. We hang, tape, and finish drywall so walls and ceilings are ready for paint. We install laminate, vinyl plank, and tile floors, and we fix floors that are worn or water-damaged. We paint inside and outside.
 

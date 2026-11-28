@@ -414,6 +414,14 @@ reviewsByPage['construction-remodeling'] = [2143816, 2143821, 4916741].map(publi
 reviewsByPage['emergency-roof-repair'] = [2938337, 2143844, 2143923].map(publishedById);
 
 /**
+ * /services/roof-inspection, same rule: three reviews already published above
+ * that describe an inspection or a first look at the roof ("Quick inspection
+ * and repair"; same-day photos after a storm; a quick look after a hail storm).
+ * No new review is added here.
+ */
+reviewsByPage['roof-inspection'] = [2143903, 2143844, 2143875].map(publishedById);
+
+/**
  * City pages, same rule: reviews already published above, looked up by gbpId.
  * No new review is added here.
  *

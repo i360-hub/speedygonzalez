@@ -1,6 +1,6 @@
 ---
 title: Emergency Roof Repair
-metaTitle: Emergency Roof Repair in Hot Springs, AR | Open 24 Hours
+metaTitle: Emergency Roof Repair Hot Springs AR | Open 24 Hours
 metaDescription: Roof leaking right now? We answer 24 hours a day and can often tarp your roof the same day. Free inspection. Hot Springs, AR. Call 501-359-5550.
 h1: Emergency Roof Repair in Hot Springs, Arkansas
 summary: Water coming into your house cannot wait. Call 501-359-5550 at any hour. We answer 24 hours a day, seven days a week, and can often tarp your roof the same day. Then we come back and do the real repair.

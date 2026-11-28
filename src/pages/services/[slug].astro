@@ -46,6 +46,8 @@ const relatedGuides: Record<string, string[]> = {
   'emergency-roof-repair': ['roof-leaking-what-to-do'],
   'hail-damage-repair': ['arkansas-hail-season', 'what-hail-damage-looks-like'],
   'storm-damage-repair': ['arkansas-hail-season', 'check-roofer-license-arkansas'],
+  'roof-inspection': ['signs-you-need-a-new-roof', 'what-hail-damage-looks-like', 'how-long-does-a-roof-last-arkansas'],
+  'skylight-installation': ['roof-leaking-what-to-do'],
 };
 
 /**
@@ -54,6 +56,10 @@ const relatedGuides: Record<string, string[]> = {
  * it does not fit. { name = manifest photo, caption }.
  */
 const servicePhoto: Record<string, { name: string; caption: string }> = {
+  'roof-inspection': {
+    name: 'aged-shingle-inspection',
+    caption: 'Worn, patched shingles found during a Hot Springs roof inspection.',
+  },
   'roof-replacement': {
     name: 'reroof-in-progress-tyvek',
     caption: 'A full roof replacement in progress on a large Hot Springs home.',
@@ -119,6 +125,8 @@ const guides = guideSlugs
   .map((slug) => allPosts.find((post) => post.id === slug))
   .filter((post) => post !== undefined);
 const path = `/services/${entry.id}`;
+// Interior jobs: the default CTA band asks about a roof inspection, which is wrong here.
+const remodelPages = new Set(['construction-remodeling', 'kitchen-remodeling', 'bathroom-remodeling']);
 const { Content } = await render(entry);
 
 const breadcrumbs = [
@@ -235,7 +243,7 @@ const schema = [
 
   {
     /* The default band asks about a roof inspection, which is wrong for a remodel. */
-    entry.id === 'construction-remodeling' ? (
+    remodelPages.has(entry.id) ? (
       <CtaBand
         heading="Ready to talk about your project?"
         body="Tell us what you want done. We look at the job and give you a written price before we start."
